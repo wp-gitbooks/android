@@ -16,6 +16,11 @@
 ![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803213908.jpg)
 
 
+
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131153124.webp)
+
+
+
 # 一、Java内存布局
 
 ## 1、Java内部布局全貌
