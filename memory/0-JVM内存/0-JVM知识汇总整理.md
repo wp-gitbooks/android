@@ -11,14 +11,9 @@
 
 ![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071458361.png)
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720110122)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720110122.png)
 
 ![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803213908.jpg)
-
-
-
-![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131153124.webp)
-
 
 
 # 一、Java内存布局
@@ -57,7 +52,7 @@ Java 虚拟机在执行 Java 程序的过程中会把它管理的内存划分成
 
 **JDK 1.8 之前：**
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725104934)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725104934.png)
 
 
 ![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303192251893.png)
@@ -164,7 +159,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 **分配方式有 “指针碰撞” 和 “空闲列表” 两种，选择那种分配方式由 Java 堆是否规整决定，而 Java 堆是否规整又由所采用的垃圾收集器是否带有压缩整理功能决定。**
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105039)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105039.png)
 
 #### 2）内存分配并发问题
 
@@ -173,7 +168,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 - 对分配内存空间的动作进行同步处理（采用 CAS + 失败重试来保障更新操作的原子性）；
 - 把内存分配的动作按照线程划分在不同的空间之中进行，即每个线程在 Java 堆中预先分配一小块内存，称为本地线程分配缓冲（Thread Local Allocation Buffer, TLAB）。哪个线程要分配内存，就在哪个线程的 TLAB 上分配。只有 TLAB 用完并分配新的 TLAB 时，才需要同步锁。通过-XX:+/-UserTLAB参数来设定虚拟机是否使用TLAB。
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105045)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105045.png)
 
 ### （3）初始化零值
 
@@ -201,7 +196,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 这部分主要用来存储对象自身的运行时数据，如hashCode、GC分代年龄等。`mark word`的位长度为JVM的一个Word大小，也就是说32位JVM的`Mark word`为32位，64位JVM为64位。为了让一个字大小存储更多的信息，JVM将字的最低两个位设置为标记位，不同标记位下的Mark Word示意如下：
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105146)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105146.png)
 
 ```
 |-------------------------------------------------------|--------------------|
@@ -286,7 +281,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 垃圾回收主要就是防止JVM溢出而存在的一套JVM自动回收垃圾机制，主要需要弄明白下面几个问题：
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105332)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105332.png)
 
 ## 1、内存如何分配和回收的
 
@@ -355,7 +350,7 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 - 首先第一次GC，将Eden区红色全部干掉，绿色全部扔到from里面区
 
-  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105429)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105429.png)
 
 - 这里简单看一下第二次GC是怎么进行操作的，首先Eden区和from区这个时候又出现了许多红点（带清理的对象），这次JVM的操作就不是直接再Survivor区域上将对象干掉，这次他会收先将from区域里面的红点全部干点，然后剩余的绿点顺位进入to区域，eden区域同样按这个原理清空， 放入to区域之后，再将from区域和to区域交换，始终保证to区域是空闲的状态，这样就可以非常完美的解决碎片化问题。
 
@@ -363,7 +358,7 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 堆中几乎放着所有的对象实例，对堆垃圾回收前的第一步就是要判断那些对象已经死亡（即不能再被任何途径使用的对象）。
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105438)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105438.png)
 
 ### （1）怎么判断对象已死亡
 
@@ -379,7 +374,7 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 这个算法的基本思想就是通过一系列的称为 **“GC Roots”** 的对象作为起点，从这些节点开始向下搜索，节点所走过的路径称为引用链，当一个对象到 GC Roots 没有任何引用链相连的话，则证明此对象是不可用的。
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808110252)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808110252.png)
 
 ### （2）四种引用是怎么进行垃圾回收的
 
@@ -457,7 +452,7 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 
 ### （1）垃圾收集算法
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105634)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105634.png)
 
 #### 1）标记清除算法
 
@@ -478,7 +473,7 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 
 根据老年代的特点提出的一种标记算法，标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象回收，而是让所有存活的对象向一端移动，然后直接清理掉端边界以外的内存。
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105707)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105707.png)
 
 #### 4）分代收集算法
 
@@ -495,19 +490,19 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 
 下图展示了7种作用于不同分代的收集器，其中用于回收新生代的收集器包括Serial、PraNew、Parallel Scavenge，回收老年代的收集器包括Serial Old、Parallel Old、CMS，还有用于回收整个Java堆的G1收集器。不同收集器之间的连线表示它们可以搭配使用。
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105816)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105816.png)
 
 - Serial收集器（复制算法): 新生代单线程收集器，标记和清理都是单线程，优点是简单高效；
 
-  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105822)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105822.png)
 
 - ParNew收集器 (复制算法): 新生代收并行集器，实际上是Serial收集器的多线程版本，在多核CPU环境下有着比Serial更好的表现；
 
-  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105826)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105826.png)
 
 - Parallel Scavenge收集器 (复制算法): 新生代并行收集器，追求高吞吐量，高效利用 CPU。吞吐量 = 用户线程时间/(用户线程时间+GC线程时间)，高吞吐量可以高效率的利用CPU时间，尽快完成程序的运算任务，适合后台应用等对交互相应要求不高的场景；
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105831)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105831.png)
 
 - Serial Old收集器 (标记-整理算法): 老年代单线程收集器，Serial收集器的老年代版本；
 - Parallel Old收集器 (标记-整理算法)：老年代并行收集器，吞吐量优先，Parallel Scavenge收集器的老年代版本；
@@ -532,7 +527,7 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 
 - **并发清除：** 开启用户线程，同时 GC 线程开始对未标记的区域做清扫。
 
-  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105842)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105842.png)
 
 从它的名字就可以看出它是一款优秀的垃圾收集器，主要优点：**并发收集、低停顿**。但是它有下面三个明显的缺点：
 
@@ -568,7 +563,7 @@ G1 收集器的运作大致分为以下几个步骤：
 
 一个类的完整生命周期如下：
 
-![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105855)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105855.png)
 
 Class 文件需要加载到虚拟机中之后才能运行和使用，那么虚拟机是如何加载这些 Class 文件呢？
 
