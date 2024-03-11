@@ -39,22 +39,22 @@ ActivityRefWatch、RefWatcher、RefWatcherBuilder、AndroidRefWatcherBuilder
 WatchExecutor、AndroidWatchExecutor
 
 
-![image-20210624104707366](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210624104707.png)
+![image-20210624104707366](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210624104707.png)
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210624104800)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210624104800)
 
 
 ## 流程
 
-![LeakCanary注册流程](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210624105147)
+![LeakCanary注册流程](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210624105147)
 
-![image-20210416100120875](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100120.png)
+![image-20210416100120875](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100120.png)
 
 
 
-![image-20210416100040423](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100040.png)
+![image-20210416100040423](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100040.png)
 
 
 
@@ -70,20 +70,20 @@ https://square.github.io/leakcanary/fundamentals-how-leakcanary-works/
 
 
 ### 核心原理
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303181651029.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303181651029.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303181656480.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303181656480.png)
 
 
 ### Reference和ReferenceQueue
 [[内存引用-Reference和ReferenceQueue]]
 
-![image-20210416100507414](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100507.png)
+![image-20210416100507414](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100507.png)
 
 
 
-![image-20210416100524676](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100524.png)
+![image-20210416100524676](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100524.png)
 
 
 ### 详细的发现保留对象
@@ -97,7 +97,7 @@ KeyedReference ------>Key
 当调用watch函数，先生成一个key，加入到Set中，并且创建一个KeyedReference(key,referneceQuence)，当activity被回收的时候，就会加入到referenceQuence，当从referenceQuence队列出队，并且通过key，在Set中查找，能找到证明还没出队，说明这个是有内存泄露可能。
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100548.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100548.png)
 
 
 
@@ -577,7 +577,7 @@ private Instance findLeakingReference(String key, Snapshot snapshot) {
 
 ### gc方式
 
-![image-20210416100829216](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100829.png)
+![image-20210416100829216](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100829.png)
 
 ```java
 public interface GcTrigger {
@@ -642,7 +642,7 @@ https://mp.weixin.qq.com/s?__biz=MzUzODQxMzYxNQ==&mid=2247483754&idx=1&sn=f5ea64
 
 
 
-![image-20210416101336383](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416101336.png)
+![image-20210416101336383](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416101336.png)
 
 
 
@@ -690,9 +690,9 @@ https://juejin.cn/post/6844903730190483470#heading-13
 
 
 # 享学-如何满足对稳定性要求极高的系统应用开发
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303152035221.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303152035221.png)
 
 ## 使用
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303152036408.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303152036408.png)
 
 

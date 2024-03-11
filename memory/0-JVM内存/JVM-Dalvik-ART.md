@@ -2,7 +2,7 @@
 
 JVM(Java Virtual Machine) 是一种软件实现，执行像物理机程序的机器（即电脑）
 
-![Java虚拟机结构](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210507192359.jpg)
+![Java虚拟机结构](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210507192359.jpg)
 
 # Dalvik
 
@@ -10,7 +10,7 @@ JVM(Java Virtual Machine) 是一种软件实现，执行像物理机程序的机
 - 它能够支持已转换为.dex（即Dalvik Executable）格式的Java应用程序的运行，.dex格式是专为Dalvik设计的一种压缩格式，适合内存和处理器速度有限的系统。（dx 是一套工具，能够将 Java .class 转换成 .dex 格式.安全
 - 一个dex档一般会有多个.class。因为dex有时必须进行最佳化，会使档案大小增长1-4倍，以ODEX结尾。）
 
-![DVM的运行机制](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210507192447.jpg)
+![DVM的运行机制](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210507192447.jpg)
 
 # Dalvik 和标准 Java 虚拟机(JVM)的首要差异
 
@@ -38,7 +38,7 @@ JVM(Java Virtual Machine) 是一种软件实现，执行像物理机程序的机
 
 
 
-![DVM和JVM](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210507192524.jpg)DVM和JVM
+![DVM和JVM](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210507192524.jpg)DVM和JVM
 
 
 

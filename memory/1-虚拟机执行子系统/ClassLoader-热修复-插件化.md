@@ -305,7 +305,7 @@ apk作为插件，就是我们重新打了一个新的apk包作为插件，打�
 
 从上面的`ClassLoader#loadClass`方法你就会知道，初始化的时候会进入`BaseDexClassLoader#findClass`方法中通过遍历`dexElements`进行查找`dex`文件，因为`dexElements`是一个数组，所以我们可以通过反射的形式，将需要热修复的`dex`文件插入到数组`首部`，这样遍历数组的时候就会优先读取你插入的`dex`，从而实现热修复。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809142747.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809142747.png)
 
 
 
@@ -350,7 +350,7 @@ apk作为插件，就是我们重新打了一个新的apk包作为插件，打�
 我当时首先想到的是通过`DexClassLoader`直接去`loadClass`来获得需要热修复的`Class`，但是通过`ClassLoader#loadClass`方法分析，可以知道加载查找`class`的第`1`步是调用`findLoadedClass`，这个方法主要作用是检查该类是否被加载过，如果加载过则直接返回，所以如果你想通过`DexClassLoader`直接去`loadClass`来获得你需要热修复的`Class`，是不可能完成替换的（热修复），因为你调用`DexClassLoader.loadClass`已经属于首次加载了，那么意味着下次加载就直接在`findLoadedClass`方法中返回`class`了，是不会再往下走，从而`MyClassLoader#loadClass`方法也不可能会被回调，也就无法实现修复。
  通过`BaseDexClassLoader#findClass`方法你就会知道，这个方法在父`ClassLoader`不能加载该类的时候才由自己去加载，我们可以通过这个方法来获得我们的`class`，因为你调用这个方法的话，是不会被缓存起来。也就不存在`ClassLoader#loadClass`中的第`1`步就查找到就被返回。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809142909.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809142909.png)
 
 
 

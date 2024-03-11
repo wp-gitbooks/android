@@ -4,7 +4,7 @@ https://github.com/cosen1024/Java-Interview/blob/main/JVM/JVM.md
 
 ## 1. 什么是JVM内存结构？
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215003.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215003.png)
 
 jvm将虚拟机分为5大区域，程序计数器、虚拟机栈、本地方法栈、java堆、方法区；
 
@@ -29,7 +29,7 @@ jvm将虚拟机分为5大区域，程序计数器、虚拟机栈、本地方法�
 
 怎么理解 happens-before 呢？如果按字面意思，比如第二个规则，线程（不管是不是同一个）的解锁动作发生在锁定之前？这明显不对。happens-before 也是为了保证可见性，比如那个解锁和加锁的动作，可以这样理解，线程1释放锁退出同步块，线程2加锁进入同步块，那么线程2就能看见线程1对共享对象修改的结果。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215027.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215027.png)
 
 Java 提供了几种语言结构，包括 _volatile_, _final_ 和 _synchronized_, 它们旨在帮助程序员向**编译器**描述程序的并发要求，其中：
 
@@ -136,11 +136,11 @@ JVM常量池主要分为**Class文件常量池、运行时常量池，全局字�
 
 java中有四种垃圾回收算法，分别是标记清除法、标记整理法、复制算法、分代收集算法； **标记清除法**： 第一步：利用可达性去遍历内存，把存活对象和垃圾对象进行标记； 第二步：在遍历一遍，将所有标记的对象回收掉； 特点：效率不行，标记和清除的效率都不高；标记和清除后会产生大量的不连续的空间分片，可能会导致之后程序运行的时候需分配大对象而找不到连续分片而不得不触发一次GC；
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215056.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215056.png)
 
 **标记整理法**： 第一步：利用可达性去遍历内存，把存活对象和垃圾对象进行标记； 第二步：将所有的存活的对象向一段移动，将端边界以外的对象都回收掉； 特点：适用于存活对象多，垃圾少的情况；需要整理的过程，无空间碎片产生；
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215113.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215113.png)
 
 **复制算法**： 将内存按照容量大小分为大小相等的两块，每次只使用一块，当一块使用完了，就将还存活的对象移到另一块上，然后在把使用过的内存空间移除； 特点：不会产生空间碎片；内存使用率极低；
 
@@ -148,7 +148,7 @@ java中有四种垃圾回收算法，分别是标记清除法、标记整理法�
 
 **对比**
 
-![image-20210329224002527](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215130.png)
+![image-20210329224002527](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215130.png)
 
 ## 11. 有哪几种垃圾回收器，各自的优缺点是什么？
 
@@ -171,11 +171,11 @@ java中有四种垃圾回收算法，分别是标记清除法、标记整理法�
 
 **垃圾回收器间的配合使用图：**
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215201.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215201.png)
 
 **各个垃圾回收器对比**：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215640.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215640.png)
 
 
 
@@ -241,7 +241,7 @@ G1（Garbage First）回收器采用面向局部收集的设计思路和基于Re
 
 老年代的垃圾回收（又称Major GC）通常使用“标记-清理”或“标记-整理”算法。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215523.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215523.png)
 
 再描述它们之间转化流程：
 
@@ -287,7 +287,7 @@ Full GC: 收集整个堆，包括 新生代，老年代，永久代(在 JDK 1.8�
 
 通过下图来了解空间分配担保原则：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215454.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215454.png)
 
 ## 17. 什么是类加载？类加载的过程？
 
@@ -295,7 +295,7 @@ Full GC: 收集整个堆，包括 新生代，老年代，永久代(在 JDK 1.8�
 
 类的整个生命周期包括：加载（Loading）、验证（Verification）、准备(Preparation)、解析(Resolution)、初始化(Initialization)、使用(Using)和卸载(Unloading)7个阶段。其中准备、验证、解析3个部分统称为连接（Linking）。如图所示：
 
-![image-20210329231258940](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215426.png)
+![image-20210329231258940](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215426.png)
 
 加载、验证、准备、初始化和卸载这5个阶段的顺序是确定的，类的加载过程必须按照这种顺序按部就班地开始，而解析阶段则不一定：它在某些情况下可以在初始化阶段之后再开始，这是为了支持Java语言的运行时绑定（也称为动态绑定或晚期绑定）
 
@@ -325,7 +325,7 @@ Full GC: 收集整个堆，包括 新生代，老年代，永久代(在 JDK 1.8�
 -   自定义类加载器：由java语言实现，继承自ClassLoader；
   
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215400.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215400.png)
 
 ## 19. 什么是双亲委派模型？为什么需要双亲委派模型？
 
@@ -351,7 +351,7 @@ Full GC: 收集整个堆，包括 新生代，老年代，永久代(在 JDK 1.8�
     
     tomcat类加载器如下图：
     
-    ![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803215301.png)
+    ![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803215301.png)
     
 -   OSGi，实现模块化热部署，为每个模块都自定义了类加载器，需要更换模块时，模块与类加载器一起更换。其类加载的过程中，有平级的类加载器加载行为。打破的原因是为了实现模块热替换。
   

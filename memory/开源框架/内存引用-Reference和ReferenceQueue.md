@@ -2,7 +2,7 @@
 
 ## 结构
 
-![img-0](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510095609.png)
+![img-0](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510095609.png)
 
 # 引用类型
 
@@ -207,7 +207,7 @@ null
 
 #### ThreadLocal
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510095714.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510095714.png)
 
 #### WeakHashMap [[WeakHashMap]]
 
@@ -381,7 +381,7 @@ https://www.zhihu.com/question/49760047/answer/123486092
 
 #### 堆外内存
 
-![![][img-3]](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510095828.png)
+![![][img-3]](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510095828.png)
 
 
 
@@ -393,11 +393,11 @@ https://www.zhihu.com/question/49760047/answer/123486092
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510094747.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510094747.png)
 
 
 
-![image-20210510094814286](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510094837.png)
+![image-20210510094814286](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510094837.png)
 
 
 
@@ -451,7 +451,7 @@ private static Reference<Object> pending = null;
 
 先用一张图来对Reference有个整体的概念：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210414095519.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210414095519.png)
 
 referent就是Reference实际引用的对象。
 
@@ -465,7 +465,7 @@ referent就是Reference实际引用的对象。
 
 在讲这三个Queue/List之前，我们先讲一下Reference的四个状态：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210414095536.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210414095536.png)
 
 从上面的图中，我们可以看到一个Reference可以有四个状态。
 

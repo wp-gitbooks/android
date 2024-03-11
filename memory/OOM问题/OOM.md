@@ -1,14 +1,14 @@
-![image-20210510143229084](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510143516.png)
+![image-20210510143229084](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510143516.png)
 
 
 
 
 
-![image-20210510143257024](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510143257.png)
+![image-20210510143257024](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510143257.png)
 
 
 
-![image-20210510143308625](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510143308.png)
+![image-20210510143308625](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510143308.png)
 
 
 
@@ -144,11 +144,11 @@ public class MemoryTestService extends ServiceHandler<TestMemoryRequest, TestMem
 $JAVA_OPTS -Xms200m -Xmx200m
 ```
 
-[![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525103722.png)](https://xiaolong.li/images/exception/2019-09-28-oom-startup.png)
+[![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525103722.png)](https://xiaolong.li/images/exception/2019-09-28-oom-startup.png)
 
 程序启动后，并发调用一段时间后出现OOM现象。
 
-[![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525103728.png)](https://xiaolong.li/images/exception/2019-09-28-oom-error.png)
+[![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525103728.png)](https://xiaolong.li/images/exception/2019-09-28-oom-error.png)
 
 ### dump堆栈信息
 
@@ -160,7 +160,7 @@ ps -ef | grep xiaolong-test-service
 jmap -dump:format=b,file=heap.hprof 6196
 ```
 
-[![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525103732.png)](https://xiaolong.li/images/exception/2019-09-28-oom-jmap-dump.png)
+[![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525103732.png)](https://xiaolong.li/images/exception/2019-09-28-oom-jmap-dump.png)
 
 这里可以在程序中配置启动参数，在内存溢出时，自动输出dump文件。
 
@@ -176,11 +176,11 @@ VM options:
 
 启动MAT打开dump的文件heap.hprof进行分析。
 
-[![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525103736.png)](https://xiaolong.li/images/exception/2019-09-28-oom-mat-index.png)
+[![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525103736.png)](https://xiaolong.li/images/exception/2019-09-28-oom-mat-index.png)
 
 Unreachable指的是可以被垃圾回收器回收的对象，但是由于没有GC发生，所以没有释放，这时抓的内存使用中的Unreachable就是这些对象。
 
-![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525104000.png)
+![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525104000.png)
 
 > Shallow Heap（浅堆） 表示该对象自身占用的堆内存，不包括它引用的对象。
 > 针对非数组类型的对象，它的大小就是对象与它所有的成员变量大小的总和。
@@ -191,11 +191,11 @@ Unreachable指的是可以被垃圾回收器回收的对象，但是由于没有
 
 还能看到一些堆栈分析概述，系统信息，以及类直方图。
 
-![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525104114.png)
+![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525104114.png)
 
-[![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525103750.png)](https://xiaolong.li/images/exception/2019-09-28-oom-mat-system-properties.png)
+[![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525103750.png)](https://xiaolong.li/images/exception/2019-09-28-oom-mat-system-properties.png)
 
-[![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210525103755.png)](https://xiaolong.li/images/exception/2019-09-28-oom-mat-class-histogram.png)
+[![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210525103755.png)](https://xiaolong.li/images/exception/2019-09-28-oom-mat-class-histogram.png)
 
 根据上图可知，OOMObject对象可能是造成内存泄漏的原因。
 

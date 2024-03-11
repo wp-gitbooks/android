@@ -60,7 +60,7 @@ Cow策略：一开始的时候（未复制Zygote进程的地址空间的时候�
 6. 如果上一步内存分配还是失败，这时候就得出狠招了。再次调用函数gcForMalloc来执行GC。参数true表示要回收软引用对象引用的对象。
 7. GC执行完毕，再次调用函数dvmHeapSourceAllocAndGrow进行内存分配。这是最后一次努力了，成功与事都到此为止。 示例图如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191101127.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191101127.jpeg)
 
 通过这个流程可以看到，在对象的分配中会导致GC，第一次分配对象失败我们会触发GC但是不回收Soft的引用，如果再次分配还是失败我们就会将Soft的内存也给回收，前者触发的GC是GC_FOR_MALLOC类型的GC，后者是GC_BEFORE_OOM类型的GC。而当内存分配成功后，我们会判断当前的内存占用是否是达到了GC_CONCURRENT的阀值，如果达到了那么又会触发GC_CONCURRENT。 那么这个阀值又是如何来的呢，上面我们说到的一个目标利用率，GC后我们会记录一个目标值，这个值理论上需要再上述的范围之内，如果不在我们会选取边界值做为目标值。虚拟机会记录这个目标值，当做当前允许总的可以分配到的内存。同时根据目标值减去固定值（200~500K), 当做触发GC_CONCURRENT事件的阈值。
 
@@ -68,7 +68,7 @@ Cow策略：一开始的时候（未复制Zygote进程的地址空间的时候�
 
 主流的大部分Davik采取的都是标注与清理（Mark and Sweep）回收算法，也有实现了拷贝GC的，这一点和HotSpot是不一样的，具体使用什么算法是在编译期决定的，无法在运行的时候动态更换。如果在编译dalvik虚拟机的命令中指明了"WITH_COPYING_GC"选项，则编译"/dalvik/vm/alloc/Copying.cpp"源码 – 此是Android中拷贝GC算法的实现，否则编译"/dalvik/vm/alloc/HeapSource.cpp" – 其实现了标注与清理GC算法。 由于Mark and Sweep算法的缺点，容易导致内存碎片，所以在这个算法下，当我们有大量不连续小内存的时候，再分配一个较大对象时，还是会非常容易导致GC，比如我们在该手机上decode图片，具体情况如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191101129.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191101129.jpeg)
 
 所以对于Dalvik虚拟机的手机来说，我们首先要尽量避免掉频繁生成很多临时小变量（比如说：getView, onDraw等函数中new对象），另一个又要尽量去避免产生很多长生命周期的大对象。
 
@@ -78,7 +78,7 @@ Cow策略：一开始的时候（未复制Zygote进程的地址空间的时候�
 
 ART运行时内部使用的Java堆的主要组成包括Image Space、Zygote Space、Allocation Space和Large Object Space四个Space，Image Space用来存在一些预加载的类， Zygote Space和Allocation Space与Dalvik虚拟机垃圾收集机制中的Zygote堆和Active堆的作用是一样的， Large Object Space就是一些离散地址的集合，用来分配一些大对象从而提高了GC的管理效率和整体性能，类似如下图：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191101130.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191101130.jpeg)
 
 在下文的GC Log中，我们也能看到在ART的GC Log中包含了LOS的信息，方便我们查看大内存的情况。
 
@@ -90,7 +90,7 @@ kGcCauseForAlloc: 当要分配内存的时候发现内存不够的情况下引�
 
 由于ART下内存分配和Dalvik下基本没有任何区别，我直接贴图带过了。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191101131.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191101131.jpeg)
 
 #### 3.4. 并发和非并发GC
 
@@ -116,11 +116,11 @@ ART在GC上不像Dalvik仅有一种回收算法，ART在不同的情况下会选
 
   所以不论是并发还是非并发，都会引起Stop World的情况出现，并发的情况下单次Stop World的时间会更短，基本区别和Dalvik类似。3.5. ART并发和Dalvik并发GC的差异 首先可以通过如下2张图来对比下。 Dalvik GC：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191101132.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191101132.jpeg)
 
 ART GC:
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191101133.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191101133.jpeg)
 
 ART的并发GC和Dalvik的并发GC有什么区别呢，初看好像2者差不多，虽然没有一直挂起线程，但是也会有暂停线程去执行标记对象的流程。通过阅读相关文档可以了解到ART并发GC对于Dalvik来说主要有三个优势点：
 

@@ -1,5 +1,5 @@
 # 线索
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303201434519.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303201434519.png)
 
 内存管理?  （虚拟机如何使用内存？）
 
@@ -25,7 +25,7 @@ OSGI 模块化
 
 
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720110122)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720110122)
 
 
 
@@ -45,7 +45,7 @@ JVM 内存结构是指：Java 虚拟机定义了若干种程序运行期间会�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321184548.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321184548.jpg)
 
 
 
@@ -63,13 +63,13 @@ OutOfMemoryError：java虚拟机栈、本地方法栈、方法区、堆
 
 
 
-![image-20210321190505559](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321190505.png)
+![image-20210321190505559](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321190505.png)
 
 
 
-![image-20210321190542752](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321190727.png)
+![image-20210321190542752](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321190727.png)
 
-![image-20210321190659436](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321190659.png)
+![image-20210321190659436](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321190659.png)
 
 
 
@@ -79,13 +79,13 @@ OutOfMemoryError：java虚拟机栈、本地方法栈、方法区、堆
 
 下一步：同类和对象加载过程联系起来，同内存分配和垃圾回收关联起来
 
-![image-20210508105249157](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210508105315.png)
+![image-20210508105249157](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210508105315.png)
 
 
 
 ## JVM内存布局和相应控制
 
-![image-20210321184909055](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321184909.png)
+![image-20210321184909055](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321184909.png)
 
 ## 线程共享
 
@@ -95,7 +95,7 @@ OutOfMemoryError：java虚拟机栈、本地方法栈、方法区、堆
 
 Java 堆是所有线程共享的一块内存区域，它在虚拟机启动时 就会被创建，并且单个 JVM 进程有且仅有一个 Java 堆。Java 堆是用来存放对象实例及数组，也就是说我们代码中通过 new 关键字 new 出来的对象都存放在这里
 
-![Java 堆内存结构](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321185249.png)
+![Java 堆内存结构](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321185249.png)
 
 ### 方法区（Method Area）
 
@@ -172,7 +172,7 @@ NIO：DirectByteBuffer直接操作，避免Java堆和Native堆来回赋值数据
 ## 常见面试题
 https://www.bilibili.com/video/BV1Kp4y1z7L8?p=2
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210731215311.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210731215311.png)
 
 
 ## 运行时数据区域分区，哪些线程私有，哪些线程共享。栈帧的数据结构。方法区存放哪些数据。

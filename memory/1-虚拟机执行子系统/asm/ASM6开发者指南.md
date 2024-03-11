@@ -50,7 +50,7 @@ https://www.yuque.com/mikaelzero/asm/smhpen
 
 `ASM` 由以下几个包结构构成。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303042036540.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303042036540.png)
 
 
 - `org.objectweb.asm` 是核心包，包中定义了 `ASM` 中的 `Visitor API`以及提供了用于读写 `class` 文件的 `ClassReader` 和 `ClassWriter` 对象。该包不依赖其它任何包，并且可以单独存在；
@@ -69,7 +69,7 @@ https://www.yuque.com/mikaelzero/asm/smhpen
 
 核心包总共包含类和接口共 `28` 个，除了 `Opcodes` 接口、 `5` 个抽象 `visitor` 类（`AnnotationVisitor`、 `ClassVisitor`、 `FieldVisitor`、 `MethodVisitor` 和 `ModuleVisitor`）和 `6` 个工具类（`ConstantDynamic`、 `Constants`、 `Handle`、 `Type`、 `TypePath` 和 `TypeReference`）之外，还剩下 `16` 个类。如下所示：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303042036363.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303042036363.png)
 
 
 已编译的类文件，即 `.class` 文件通过 `ClassReader` 转换为 `ASM` 的 `Event` 事件访问。生成 `.class` 二进制文件由其他围绕 `ClassWriter`的 `14` 个类完成：
@@ -169,7 +169,7 @@ https://www.yuque.com/mikaelzero/asm/smhpen
 
 - 同样，控制流图（见第3.5节）数据结构嵌入到图形节点本身，即标签对象中。
 
-  ![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303042037898.png)
+  ![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303042037898.png)
 
 
   由于 `Label` 对象必须同时存在多个数据结构中，因此它们有几个不同的字段来表示这些数据结构。

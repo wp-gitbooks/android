@@ -27,11 +27,11 @@ JAVA的JVM的内存可分为3个区：堆(heap)、栈(stack)和方法区(method)
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512162113.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512162113.jpg)
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512162134.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512162134.jpg)
 
 
 
@@ -93,7 +93,7 @@ JAVA的JVM的内存可分为3个区：堆(heap)、栈(stack)和方法区(method)
 
   
 
-  ![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master@master/img/20210512173446.png)
+  ![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee@master/img/20210512173446.png)
 
   
 
@@ -107,7 +107,7 @@ JAVA的JVM的内存可分为3个区：堆(heap)、栈(stack)和方法区(method)
 	int c = a+b;	
 ```
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512173454.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512173454.png)
 
 从图中可以得出：操作数栈其实就是个临时数据存储区域，它是通过入栈和出栈来进行操作的。
 
@@ -142,7 +142,7 @@ JAVA的JVM的内存可分为3个区：堆(heap)、栈(stack)和方法区(method)
 
   
 
-  ![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512173510.png)
+  ![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512173510.png)
 
   
 

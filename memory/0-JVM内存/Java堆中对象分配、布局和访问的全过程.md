@@ -16,7 +16,7 @@ JVM是Java的根基，理解灵魂与根基是如何融合的，对于理解Java
 
 JVM中对象的创建过程，分为如下5步，如图：
 
-![image-20210510113200422](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510113220.png)
+![image-20210510113200422](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510113220.png)
 
 
 
@@ -54,7 +54,7 @@ Java堆中内存**不规整**，即垃圾收集器**无压缩整理功能**时�
 
 两者具像化呈现如图：
 
-![image-20210510113259250](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210510113319.png)
+![image-20210510113259250](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210510113319.png)
 
 
 
@@ -143,13 +143,13 @@ CAS 是**乐观锁**的一种实现方式。
 
 Java 堆中将会**划分出一块内存来作为句柄池**，reference 中存储的就是对象的句柄地址，而句柄中包含了对象**实例数据与类型数据**各自的具体地址信息，如图：
 
-[![image-20210508181954450](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304061100032.jpeg)](https://tva1.sinaimg.cn/large/008i3skNly1gqb6v0r4zej31660qcgor.jpg)
+[![image-20210508181954450](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304061100032.jpeg)](https://tva1.sinaimg.cn/large/008i3skNly1gqb6v0r4zej31660qcgor.jpg)
 
 ## 直接指针
 
 如果使用直接指针访问，那么 Java 堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，而 reference 中存储的直接就是对象的地址。
 
-![image-20210508181849041](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304061100033.jpeg)
+![image-20210508181849041](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304061100033.jpeg)
 
 ## 二者对比
 

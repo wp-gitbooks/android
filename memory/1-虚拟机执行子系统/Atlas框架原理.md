@@ -1,6 +1,6 @@
 # 容器框架
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809145513.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809145513.png)
 
 
 如上图所示，atlas主要分为以下几个层级：
@@ -29,7 +29,7 @@ http://www.mianquan.net/tutorial/atlas-zh/atlas-docs-code_read-atlas_bundle_load
 https://alibaba.github.io/atlas/code_read/atlas_bundle_load/atlas_bundle_load.html
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809145558.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809145558.png)
 
 Atlas里面通常会创建了两种classLoader,第一个是DelegateClassLoader，他作为类查找的一个路由器而存在，本身并不负责真正类的加载；DelegateClassLoader启动时被atlas注入LoadedApk中，替换原有的PathClassLoader；第二个是BundleClassLoader，参考OSGI的实现，每个bundle resolve时会分配一个BundleClassLoader，负责该bundle的类加载。关系如下图所示： **DelegateClassLoader以PathClassLoader为parent，同时在路由过程中能够找到所有bundle的classloader；**
 
@@ -50,7 +50,7 @@ Atlas里面通常会创建了两种classLoader,第一个是DelegateClassLoader�
 3. 由于class在bundle里面，所以pathclassloader内查找失败，接着delegateclassloader根据bundleinfo信息查找到classloader在bundle中（假设为bundleA）；
 4. 从bundleA中加载class，并且创建class；
 5. 后面在Activity起来后，如果bundleA对bundleB有依赖关系，那么如果用到了bundleB的class，又会根据bundlA的bundleClassloader的dependency去获取bundleB的classloader去加载；
-6.  ![MacDown Screenshot](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809145729.png)
+6.  ![MacDown Screenshot](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809145729.png)
 
 
 
@@ -58,7 +58,7 @@ Atlas里面通常会创建了两种classLoader,第一个是DelegateClassLoader�
 
 ## 资源加载机制
 
-![MacDown Screenshot](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809145851.png)
+![MacDown Screenshot](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809145851.png)
 
 类似ClassLoader，LoadedApk中的Resources被替换成Atlas内部的DelegateResources,同时在每个Bundle安装的过程中，每个bundle的assetspath会被更新到DelegateResources的AssetsManager中；每个bundle的资源特征如图可知：
 

@@ -3,17 +3,17 @@
 
 首先我们得先了解一个概念，现在java的虚拟机默认使用的都是 oracle公司的hotsport虚拟机，在控制台输入 ：java -version 就会打印出java版本以及虚拟机的信息
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304061104219.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304061104219.png)
 
 不可否认，大部分的对象创建时都是分配到堆内存里面的，但是呢也有特例，以**hotsport虚拟机为例，hotspot虚拟机在创建对象的时候会先判断你这个创建的对象符不符合栈上分配的条件，如果符合，那么这个对象就会分配到栈上；否则就分配到堆上**；
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304061104220.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304061104220.png)
 
 # 分配到栈内存的条件
 
 那分配到堆还是栈的这个条件是什么呢？其实就是满不满足逃逸分析的条件了，童鞋们就更懵了：“脑师，啥叫逃逸分析啊？”，刚刚我们说了，创建对象默认都是分配到堆内存里面的，如果分配到栈内存的话，这是一种比较**极端的方式**，一般情况下不这么干，只有极端情况下才会分配到栈内存，这也是hotspot的一种优化技术，所以啊，满足逃逸分析的条件之后，创建的对象就会分配到栈内存了
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304061104221.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304061104221.png)
 
 
 # 逃逸分析
@@ -25,7 +25,7 @@
 
 满足了以上2个条件了之后，创建出的对象才会分配到栈内存，否则就会分配到堆内存；
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304061104222.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304061104222.png)
 
 # 演示
 

@@ -5,22 +5,22 @@
 
 
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303192252766.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303192252766.png)
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303192252926.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303192252926.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071458361.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071458361.png)
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720110122)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720110122)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210803213908.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210803213908.jpg)
 
 
 # 一、Java内存布局
 
 ## 1、Java内部布局全貌
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725104916)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725104916)
 
 JVM包含两个子系统和两个组件：
 
@@ -42,23 +42,23 @@ JVM包含两个子系统和两个组件：
 - 接下来类加载器又将这些.class文件加载到JVM中
 - 将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个 java.lang.Class对象，用来封装类在方法区内的数据结构。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725104925)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725104925)
 
 ## 3、JVM 运行时数据区  [[JVM内存与结构]]
-![image-20210321190505559](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321190505.png)
+![image-20210321190505559](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321190505.png)
 
 Java 虚拟机在执行 Java 程序的过程中会把它管理的内存划分成若干个不同的数据区域。JDK. 1.8 和之前的版本略有不同，下面会介绍到。
 
 
 **JDK 1.8 之前：**
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725104934)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725104934)
 
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303192251893.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303192251893.png)
 **JDK 1.8 ：**
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725104942)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725104942)
 
 不同虚拟机的运行时数据区可能略微有所不同，但都会遵从 Java 虚拟机规范， Java 虚拟机规范规定的区域分为以下 5 个部分，**其中线程私有程序计数器、虚拟机栈、本地方法栈；线程共享堆、方法区、直接内存。**
 
@@ -145,7 +145,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 下图便是 Java 对象的创建过程，图后会详细说明每一步的作用：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105014)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105014)
 
 ### （1）类加载检查
 
@@ -159,7 +159,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 **分配方式有 “指针碰撞” 和 “空闲列表” 两种，选择那种分配方式由 Java 堆是否规整决定，而 Java 堆是否规整又由所采用的垃圾收集器是否带有压缩整理功能决定。**
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105039)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105039)
 
 #### 2）内存分配并发问题
 
@@ -168,7 +168,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 - 对分配内存空间的动作进行同步处理（采用 CAS + 失败重试来保障更新操作的原子性）；
 - 把内存分配的动作按照线程划分在不同的空间之中进行，即每个线程在 Java 堆中预先分配一小块内存，称为本地线程分配缓冲（Thread Local Allocation Buffer, TLAB）。哪个线程要分配内存，就在哪个线程的 TLAB 上分配。只有 TLAB 用完并分配新的 TLAB 时，才需要同步锁。通过-XX:+/-UserTLAB参数来设定虚拟机是否使用TLAB。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105045)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105045)
 
 ### （3）初始化零值
 
@@ -186,7 +186,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 在 Hotspot 虚拟机中，对象在内存中的布局可以分为 3 块区域：**对象头**、**实例数据**和**对齐填充**。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105140)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105140)
 
 - **对象头：**对象头分为`Mark Word`和`Class Metadata Addresss`两个部分， `Mark Word`存储对象的hashCode、锁信息或者分代年龄GC等标志等信息。`Class Metadata Addresss`存放指向类元数据的指针，JVM通过这个指针确定该对象是那个类的实列。
 - **实例数据：**存放类的属性数据信息，包括父类的属性信息，如果是数组的实例部分还包括数组的长度，这部分内存按4字节对齐
@@ -196,7 +196,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 这部分主要用来存储对象自身的运行时数据，如hashCode、GC分代年龄等。`mark word`的位长度为JVM的一个Word大小，也就是说32位JVM的`Mark word`为32位，64位JVM为64位。为了让一个字大小存储更多的信息，JVM将字的最低两个位设置为标记位，不同标记位下的Mark Word示意如下：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105146)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105146)
 
 ```
 |-------------------------------------------------------|--------------------|
@@ -265,7 +265,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 `Java`堆中划分出一块内存来作为**句柄池**，引用中存储对象的**句柄地址**，而句柄中包含了**对象实例数据**与**对象类型数据**各自的**具体地址**信息，具体构造如下图所示：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105209)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105209)
 
 **优势**：引用中存储的是**稳定**的句柄地址，在对象被移动（垃圾收集时移动对象是非常普遍的行为）时只会改变**句柄中**的**实例数据指针**，而**引用**本身不需要修改。
 
@@ -273,7 +273,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 如果使用**直接指针**访问，**引用** 中存储的直接就是**对象地址**，那么`Java`堆对象内部的布局中就必须考虑如何放置访问**类型数据**的相关信息。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105218)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105218)
 
 **优势**：速度更**快**，节省了**一次指针定位**的时间开销。由于对象的访问在`Java`中非常频繁，因此这类开销积少成多后也是非常可观的执行成本。HotSpot 中采用的就是这种方式。
 
@@ -281,7 +281,7 @@ Java 虚拟机所管理的内存中最大的一块，线程共享，**此内存�
 
 垃圾回收主要就是防止JVM溢出而存在的一套JVM自动回收垃圾机制，主要需要弄明白下面几个问题：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105332)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105332)
 
 ## 1、内存如何分配和回收的
 
@@ -293,11 +293,11 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 **堆空间的基本结构：**
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105340)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105340)
 
 ### （2）Java堆内存分配策略
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105350)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105350)
 
 - 在堆中，如果待分配的对象所需内存大于eden区大小，那么将直接送入老年代。
 
@@ -328,15 +328,15 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 - 刚刚新建的对象在Eden中，一旦Eden满了，触发一次Minor GC，Eden中的存活对象就会被移动到Survivor区。这样继续循环下去，下一次Eden满了的时候，问题来了，此时进行Minor GC，Eden和Survivor各有一些存活对象，如果此时把Eden区的存活对象硬放到Survivor区，很明显这两部分对象所占有的内存是不连续的，也就导致了内存碎片化。
 - 碎片化带来的风险是极大的，严重影响JAVA程序的性能。堆空间被散布的对象占据不连续的内存，最直接的结果就是，堆中没有足够大的连续内存空间，接下去如果程序需要给一个内存需求很大的对象分配内存，就会造成很可怕的结果。下面用图简单说明一下只有一个Survivor会出现什么样的情况
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105404)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105404)
 
 - 第一次GC发生之前，Survivor区为空， GC过后， Eden清空， Survivor填上
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105409)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105409)
 
 - 第二次GC的时候，Survivor区域中有部分被标记清除，Eden又加入了一些新的元素， 那么继续清空如下，可以看到此轮GC过后，Survivor区因为此轮也清楚了两个红点，所以产生了两个碎片，而Eden区新加入的四个绿点紧跟着之前的Survivor加入
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105416)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105416)
 
 - 第三次GC的时候，同样的Eden区域和Survivor区域都产生了要回收的对象，看看这会出现了什么样的情况
 
@@ -346,11 +346,11 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 咱们再来看看，用两个Survivor会出现什么样的情况。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105423)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105423)
 
 - 首先第一次GC，将Eden区红色全部干掉，绿色全部扔到from里面区
 
-  ![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105429)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105429)
 
 - 这里简单看一下第二次GC是怎么进行操作的，首先Eden区和from区这个时候又出现了许多红点（带清理的对象），这次JVM的操作就不是直接再Survivor区域上将对象干掉，这次他会收先将from区域里面的红点全部干点，然后剩余的绿点顺位进入to区域，eden区域同样按这个原理清空， 放入to区域之后，再将from区域和to区域交换，始终保证to区域是空闲的状态，这样就可以非常完美的解决碎片化问题。
 
@@ -358,7 +358,7 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 堆中几乎放着所有的对象实例，对堆垃圾回收前的第一步就是要判断那些对象已经死亡（即不能再被任何途径使用的对象）。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105438)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105438)
 
 ### （1）怎么判断对象已死亡
 
@@ -374,7 +374,7 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 这个算法的基本思想就是通过一系列的称为 **“GC Roots”** 的对象作为起点，从这些节点开始向下搜索，节点所走过的路径称为引用链，当一个对象到 GC Roots 没有任何引用链相连的话，则证明此对象是不可用的。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808110252)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808110252)
 
 ### （2）四种引用是怎么进行垃圾回收的
 
@@ -452,7 +452,7 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 
 ### （1）垃圾收集算法
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105634)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105634)
 
 #### 1）标记清除算法
 
@@ -461,19 +461,19 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 - **效率问题**
 - **空间问题（标记清除后会产生大量不连续的碎片）**
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105653)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105653)
 
 #### 2）复制算法
 
 为了解决效率问题，“复制”收集算法出现了。它可以将内存分为大小相同的两块，每次使用其中的一块。当这一块的内存使用完后，就将还存活的对象复制到另一块去，然后再把使用的空间一次清理掉。这样就使每次的内存回收都是对内存区间的一半进行回收。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105701)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105701)
 
 #### 3）标记整理算法
 
 根据老年代的特点提出的一种标记算法，标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象回收，而是让所有存活的对象向一端移动，然后直接清理掉端边界以外的内存。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105707)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105707)
 
 #### 4）分代收集算法
 
@@ -484,25 +484,25 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 
 ### （2）垃圾收集器
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105734)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105734)
 
 **如果说收集算法是内存回收的方法论，那么垃圾收集器就是内存回收的具体实现。**
 
 下图展示了7种作用于不同分代的收集器，其中用于回收新生代的收集器包括Serial、PraNew、Parallel Scavenge，回收老年代的收集器包括Serial Old、Parallel Old、CMS，还有用于回收整个Java堆的G1收集器。不同收集器之间的连线表示它们可以搭配使用。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105816)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105816)
 
 - Serial收集器（复制算法): 新生代单线程收集器，标记和清理都是单线程，优点是简单高效；
 
-  ![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105822)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105822)
 
 - ParNew收集器 (复制算法): 新生代收并行集器，实际上是Serial收集器的多线程版本，在多核CPU环境下有着比Serial更好的表现；
 
-  ![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105826)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105826)
 
 - Parallel Scavenge收集器 (复制算法): 新生代并行收集器，追求高吞吐量，高效利用 CPU。吞吐量 = 用户线程时间/(用户线程时间+GC线程时间)，高吞吐量可以高效率的利用CPU时间，尽快完成程序的运算任务，适合后台应用等对交互相应要求不高的场景；
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105831)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105831)
 
 - Serial Old收集器 (标记-整理算法): 老年代单线程收集器，Serial收集器的老年代版本；
 - Parallel Old收集器 (标记-整理算法)：老年代并行收集器，吞吐量优先，Parallel Scavenge收集器的老年代版本；
@@ -527,7 +527,7 @@ JDK1.2 以后，Java 对引用的概念进行了扩充，将引用分为强引�
 
 - **并发清除：** 开启用户线程，同时 GC 线程开始对未标记的区域做清扫。
 
-  ![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105842)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105842)
 
 从它的名字就可以看出它是一款优秀的垃圾收集器，主要优点：**并发收集、低停顿**。但是它有下面三个明显的缺点：
 
@@ -563,7 +563,7 @@ G1 收集器的运作大致分为以下几个步骤：
 
 一个类的完整生命周期如下：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105855)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105855)
 
 Class 文件需要加载到虚拟机中之后才能运行和使用，那么虚拟机是如何加载这些 Class 文件呢？
 
@@ -583,7 +583,7 @@ Class 文件需要加载到虚拟机中之后才能运行和使用，那么虚�
 
 ## 3、验证阶段
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105905)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105905)
 
 验证阶段主要就是对文件格式，元数据，字节码以及符号应用的一些验证，个人感觉跟编译检查一样的工作
 
@@ -674,7 +674,7 @@ JVM 中内置了三个重要的 ClassLoader，除了 BootstrapClassLoader 其他
 
 - 当父类加载器无法处理时，才由自己来处理。当父类加载器为null时，会使用启动类加载器 `BootstrapClassLoader` 作为父类加载器。
 
-  ![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210725105930)
+  ![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210725105930)
 
 **概括的说，双亲委派模型就是如果一个类加载器收到了类加载的请求，它首先不会自己去加载这个类，而是把这个请求委派给父类加载器去完成，每一层的类加载器都是如此，这样所有的加载请求都会被传送到顶层的启动类加载器中，只有当父加载无法完成加载请求（它的搜索范围中没找到所需的类）时，子加载器才会尝试去加载类。**
 

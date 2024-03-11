@@ -3,10 +3,10 @@
 1. 初始化流程
 2. 检测流程
 
-![image-20210416100120875](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100120.png)
+![image-20210416100120875](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100120.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303181651029.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303181651029.png)
 
 ## 原理
 
@@ -20,23 +20,23 @@ https://square.github.io/leakcanary/fundamentals-how-leakcanary-works/
 
 ### 核心原理
 
-![image-20210416100120875](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100120.png)
+![image-20210416100120875](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100120.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303181651029.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303181651029.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303181656480.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303181656480.png)
 
 
 ### Reference和ReferenceQueue
 [[内存引用-Reference和ReferenceQueue]]
 
-![image-20210416100507414](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100507.png)
+![image-20210416100507414](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100507.png)
 
 
 
-![image-20210416100524676](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100524.png)
+![image-20210416100524676](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100524.png)
 
 
 ### 详细的发现保留对象
@@ -57,12 +57,12 @@ class RefWatcher {
 ```
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100548.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100548.png)
 
 
 ### gc方式
 
-![image-20210416100829216](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210416100829.png)
+![image-20210416100829216](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210416100829.png)
 
 ```java
 public interface GcTrigger {

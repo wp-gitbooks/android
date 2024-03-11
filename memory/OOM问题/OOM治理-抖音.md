@@ -7,7 +7,7 @@
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140340.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140340.png)
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628145257.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628145257.png)
 
 
 
@@ -96,7 +96,7 @@
 
 ## Liko 整体架构
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140502.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140502.png)
 
 
 
@@ -142,7 +142,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 ## Liko 流程图
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628145320.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628145320.png)
 
 
 
@@ -172,7 +172,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 在 fork 子进程之前先 `Suspend` 获取主进程中的线程拷贝，通过 fork 系统调用创建子进程让子进程拥有父进程的拷贝，然后 fork 出的子进程中调用 Hprof 的 `DumpHeap` 函数即可完成把耗时的 dump 操作在放在子进程。由于 `suspend` 和 `resume` 是系统函数，我们这里通过自研的 native hook 工具对 `libart.so` hook 获取系统调用。由于写入是在子进程完成的，我们通过 Android 提供的 fileObsever 文件写入进行监控获取 dump 完成时机。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140622.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140622.png)
 
 
 
@@ -194,7 +194,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 端上分析引擎的性能很重要，这里我们主要对比了 LeakCanary 的分析引擎 Shark 和 Haha 库的 MAT。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140649.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140649.png)
 
 
 
@@ -208,7 +208,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 ### 内存泄漏
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628145344.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628145344.png)
 
 
 
@@ -222,7 +222,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 #### 大对象
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140708.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140708.png)
 
 
 
@@ -236,7 +236,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 #### 小对象
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140719.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140719.png)
 
 
 
@@ -250,7 +250,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 #### 图片
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140727.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140727.png)
 
 
 
@@ -260,7 +260,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 图片我们过滤了图片库等无效引用且对 Android 8.0 以下的大图在线下进行了还原。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140740.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140740.png)
 
 ### 回传分析
 
@@ -270,7 +270,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 #### 裁剪过程
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140848.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140848.png)
 
 
 
@@ -303,7 +303,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 根据上传聚合的引用链我们发现在 Android 6.0 以下有一个 HandlerThread 作为 GCROOT 持有大量 Activity 导致内存泄漏，根据引用发现这些泄漏的 Activity 都被一个 Runnable（这里是 Runnable 是一个系统事件 `SendViewStateChangedAccessibilityEvent`）持有，这些 Runnable 被添加到一个 RunQueuel 中，这个队列本身被 TheadLocal 持有。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140907.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140907.png)
 
 
 
@@ -315,7 +315,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140917.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140917.png)
 
 
 
@@ -323,7 +323,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140928.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140928.png)
 
 
 
@@ -331,7 +331,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140934.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140934.png)
 
 
 
@@ -353,7 +353,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140950.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140950.png)
 
 
 
@@ -365,7 +365,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622140959.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622140959.png)
 
 
 
@@ -387,7 +387,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 - 系统大对象：系统大对象如 PreloadDrawable、JarFile 我们通过源码分析确定主动释放并不干扰原有逻辑，在启动完成或在内存触顶时主动反射释放。
 - 动画：用原生动画代替了内存占用较大的帧动画，并对 Lottie 动画泄漏做了手动释放。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141011.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141011.png)
 
 
 
@@ -401,7 +401,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141019.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141019.png)
 
 
 
@@ -433,7 +433,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 上面提到的视频 Model，抖音最早使用 Manager 来管理通用的视频实例。Manager 使用 HashMap 存储了所有的视频对象，最初的方案里面没有对内存大小进行限制且没有清除逻辑，随着使用时间的增加而不断膨胀，最终出现 OOM 异常。为了解决视频 Model 无限膨胀的问题设计了一套缓存框架主要流程如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141031.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141031.png)
 
 
 
@@ -486,7 +486,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141043.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141043.png)
 
 
 
@@ -500,7 +500,7 @@ Server 端根据线上回传的大数据完成链路聚合、还原、分配，�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141053.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141053.png)
 
 
 
@@ -520,7 +520,7 @@ Kenzo 采用 JVMTI 完成对内存监控工作，JVMTI（JVM Tool Interface）�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141121.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141121.png)
 
 
 
@@ -562,7 +562,7 @@ Kenzo 整体分为两个部分：
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141137.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141137.png)
 
 
 
@@ -580,7 +580,7 @@ Kenzo 整体分为两个部分：
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141148.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141148.png)
 
 
 
@@ -588,7 +588,7 @@ Kenzo 整体分为两个部分：
 
 ## 可视化展示
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141200.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141200.png)
 
 
 
@@ -600,7 +600,7 @@ Kenzo 整体分为两个部分：
 
 基于动态内存监控我们对最为核心的启动场景的内存分配进行了归因分析，优化了一些头部的内存节点分配:
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141237.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141237.png)
 
 
 

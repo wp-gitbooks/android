@@ -28,7 +28,7 @@
 # JVM调优案例
 像京东、淘宝、唯品会这些比较大的电商平台，都属于亿级流量电商，什么是亿级流量电商呢，就是用户在网站上每日的点击是上亿的。这些电商网站后台现在基本都是使用微服务架构搭建的，我们这里就交易系统来分析一下。
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191433726.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191433726.png)
 
 
 对象在内存中的组成，有对象头，实例数据以及对齐填充，其中主要的大小时实例数据占用的，一个对象有很多字段，一个字段占几个字节，一个对象撑死几百个字段，我们这里假设一个订单对象大小1KB，就是1024个字节，这已经算比较大的，一般对象不会超过这么大，
@@ -41,12 +41,12 @@
 
 我们这里假设机器是4核8G，那么一般可能会给我们虚拟机分配个四五G的内存，就会给堆分配个3G的内存，那么方法区分配256M，单个栈内存分配1M。
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191434175.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191434175.png)
 
 
 那么这么分配有什么问题呢？如果是一个并发量不大的系统，基本上也不会有什么问题，因为本身也没有多少对象在堆里生成。但是如果是我们上面说的亿级流量系统，就不能简简单单这么设置了，我们来分析一下：
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191434186.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191434186.png)
 
 
 根据之前我们讲的jvm内存分配，我们可以得知各个区域的所占内存，每秒有60M对象产生进去Eden区，那么13秒就会占满Eden区域，发生minor gc，这些订单对象其中90%其实已经是垃圾对象了，为什么说90%，因为在gc的那一刻，这些对象肯定还有一部分的业务操作还没有完成，所以他们不会被回收，我们这里假设每次minor gc都有60M对象还不会被回收。
@@ -61,12 +61,12 @@ jvm调优是为了调优gc，主要就是两个点，一个是减少Full gc的�
 
 我们完全可以把年轻代设置的大一些，我们现在来对jvm参数进行一些更改。
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191434318.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191434318.png)
 
 
 年轻代如果不设置，堆中各个区域默认占比是2：1(8：1：1)， 现在我们设置了之后，那么堆中各区域占比就会发生变化
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303191434937.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303191434937.png)
 
 
 当我们进行参数修改之后，你再来按上面的分析来分析这个过程，你会发现一个奇迹效果。

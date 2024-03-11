@@ -14,7 +14,7 @@
 
 ## ClassLoader的体系架构
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210806221346.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210806221346.png)
 
 
 
@@ -55,7 +55,7 @@
 
 # 自定义ClassLoader-自定义加载器
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210806221452.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210806221452.png)
 
 
 
@@ -166,7 +166,7 @@ public class ClassLoaderTest {
 
 打印结果：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210806221649.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210806221649.png)
 
 
 # Android中ClassLoader
@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
 
 和Java中的ClassLoader一样，虽然系统所提供的类加载器有3种类型，但是系统提供的ClassLoader相关类却不只3个。ClassLoader的继承关系如下图所示
 
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210807215404.awebp) 
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210807215404.awebp) 
  【processon 图Android ClassLoader的继承关系 (2)】
 
 可以看到上面一共有8个ClassLoader相关类，其中有一些和Java中的ClassLoader相关类十分类似，下面简单对它们进行介绍：

@@ -22,7 +22,7 @@ OSGI 模块化
 
 # Java内存
 
-![image-20210322122535902](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210322122536.png)
+![image-20210322122535902](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210322122536.png)
 
 ## 结构
 
@@ -30,7 +30,7 @@ JVM 内存结构是指：Java 虚拟机定义了若干种程序运行期间会�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321184548.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321184548.jpg)
 
 
 
@@ -48,13 +48,13 @@ OutOfMemoryError：java虚拟机栈、本地方法栈、方法区、堆
 
 
 
-![image-20210321190505559](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321190505.png)
+![image-20210321190505559](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321190505.png)
 
 
 
-![image-20210321190542752](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321190727.png)
+![image-20210321190542752](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321190727.png)
 
-![image-20210321190659436](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321190659.png)
+![image-20210321190659436](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321190659.png)
 
 
 
@@ -62,7 +62,7 @@ OutOfMemoryError：java虚拟机栈、本地方法栈、方法区、堆
 
 ### JVM内存布局和相应控制
 
-![image-20210321184909055](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321184909.png)
+![image-20210321184909055](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321184909.png)
 
 ### 线程共享
 
@@ -70,7 +70,7 @@ OutOfMemoryError：java虚拟机栈、本地方法栈、方法区、堆
 
 Java 堆是所有线程共享的一块内存区域，它在虚拟机启动时 就会被创建，并且单个 JVM 进程有且仅有一个 Java 堆。Java 堆是用来存放对象实例及数组，也就是说我们代码中通过 new 关键字 new 出来的对象都存放在这里
 
-![Java 堆内存结构](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321185249.png)
+![Java 堆内存结构](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321185249.png)
 
 #### 方法区（Method Area）
 
@@ -144,7 +144,7 @@ NIO：DirectByteBuffer直接操作，避免Java堆和Native堆来回赋值数据
 
 ##对象访问
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210322123207.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210322123207.png)
 
 
 
@@ -174,7 +174,7 @@ Java堆划分一块内存作为句柄池，reference中存储就是对象的句�
 >
 > ​    （2）、这个对象类型数据地址；  
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321193827.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321193827.png)
 
 
 
@@ -188,7 +188,7 @@ reference中存储就是在堆中分配的对象实例数据的地址；
 
 ​    而对象实例数据中需要有这个对象类型数据的相关信息（前面文章讨论了HotSpot使用对象头来存储对象类型数据地址）
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321193914.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321193914.png)
 
 
 
@@ -226,7 +226,7 @@ String m = new String("jack");
 
 先创建一个字符串，这时候"jack"有一个引用，就是 m。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321223155.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321223155.png)
 
 然后将 m 设置为 null，这时候"jack"的引用次数就等于 0 了，在引用计数算法中，意味着这块内容就需要被回收了。
 
@@ -234,7 +234,7 @@ String m = new String("jack");
 m = null;
 ```
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321223253.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321223253.png)
 
 
 
@@ -262,7 +262,7 @@ public static void testGC(){
 
 ```
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321223408.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321223408.png)
 
 
 
@@ -270,13 +270,13 @@ public static void testGC(){
 
 可达性分析算法（Reachability Analysis）的基本思路是，通过一些被称为引用链（GC Roots）的对象作为起点，从这些节点开始向下搜索，搜索走过的路径被称为（Reference Chain)，当一个对象到 GC Roots 没有任何引用链相连时（即从 GC Roots 节点到该节点不可达），则证明该对象是不可用的。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321223454.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321223454.png)
 
 
 
 ###### GC ROOT
 
-![image-20191207143050101](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321230756)
+![image-20191207143050101](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321230756)
 
 GC Root 的对象包括以下 4 种：
 
@@ -344,7 +344,7 @@ public static void testGC(){
 
 * **本地方法栈中引用的对象**
 
-  ![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321224107.png)
+  ![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321224107.png)
 
 
 
@@ -366,7 +366,7 @@ https://juejin.cn/post/6844904057602064391#heading-5
 
 
 
-![image-20191204225410181](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321230628)
+![image-20191204225410181](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321230628)
 
 #### 方法区
 
@@ -392,7 +392,7 @@ https://juejin.cn/post/6844904057602064391#heading-24
 
 #### 概述
 
-![image-20191207142817822](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321232044)
+![image-20191207142817822](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321232044)
 
 #### 标记-清除算法
 
@@ -402,7 +402,7 @@ https://juejin.cn/post/6844904057602064391#heading-24
 
 - 清除阶段：标记完成后，统一回收所有被标记的对象；
 
-  ![image-20210321233522306](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321233522.png)
+  ![image-20210321233522306](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321233522.png)
 
 ##### 优点
 
@@ -420,7 +420,7 @@ https://juejin.cn/post/6844904057602064391#heading-24
 - 将可用内存分为容量大小相等的两块，每次只使用其中一块；
 - 当一块用完，就将存活着的对象复制到另一块，然后将这块全部内存清理掉；
 
-![image-20210321233630316](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321233630.png)
+![image-20210321233630316](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321233630.png)
 
 
 
@@ -444,13 +444,13 @@ https://juejin.cn/post/6844904057602064391#heading-24
 
 **第一次Young GC**
 
-![image-20210321233712650](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321233712.png)
+![image-20210321233712650](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321233712.png)
 
 当Eden区满的时候，触发第一次Young GC，把存活对象拷贝到Survivor的from区，清空Eden区。
 
 **第二次Young GC**
 
-![image-20210321233731385](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321233731.png)
+![image-20210321233731385](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321233731.png)
 
 再次触发Young GC，扫描Eden区和from区，把存活的对象复制到To区，清空Eden区和from区。如果此时Survivor区的空间不够了，就会提前把对象放入老年代。
 
@@ -462,11 +462,11 @@ https://juejin.cn/post/6844904057602064391#heading-24
 
 **JDK8 之前**
 
-![image-20210321233755902](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321233755.png)
+![image-20210321233755902](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321233755.png)
 
 **JDK8**
 
-![image-20210321233809645](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321233809.png)
+![image-20210321233809645](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321233809.png)
 
 如上图，JDK8的方法区实现变成了元空间，元空间在本地内存中。
 
@@ -483,7 +483,7 @@ https://juejin.cn/post/6844904057602064391#heading-24
 - 标记过程与标记-清楚算法一样；
 - 标记完成后，将存活对象向一端移动，然后直接清理掉边界以外的内存。
 
-![image-20210321233855297](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210321233855.png)
+![image-20210321233855297](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210321233855.png)
 
 ##### 优点
 
@@ -515,15 +515,15 @@ https://juejin.cn/post/6844904057602064391#heading-24
 
 #### 结构
 
-![image-20210322103752009](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210322103752.png)
+![image-20210322103752009](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210322103752.png)
 
 
 
-![image-20210322122818036](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210322122818.png)
+![image-20210322122818036](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210322122818.png)
 
 
 
-![image-20210322122913072](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210322122913.png)
+![image-20210322122913072](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210322122913.png)
 
 
 

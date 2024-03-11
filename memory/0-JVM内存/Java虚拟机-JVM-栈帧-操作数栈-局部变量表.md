@@ -22,15 +22,15 @@ https://mp.weixin.qq.com/s/uUpR454JQ2jvMfe5zH_f1A
 
 # 线索
 
-![image-20210708153515988](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708153516.png)
+![image-20210708153515988](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708153516.png)
 
 
 
-![image-20210708153551617](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708153551.png)
+![image-20210708153551617](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708153551.png)
 
 
 
-![image-20210708153609876](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708153609.png)
+![image-20210708153609876](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708153609.png)
 
 
 
@@ -62,11 +62,11 @@ public class MathExample {
 
 该java程序执行全过程如下图所示：
 
-![java程序执行全过程](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708144521.jpg)
+![java程序执行全过程](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708144521.jpg)
 
 ## Java从编译到执行
 
-![c385e3518007ed81a7a67f59c5b30b17.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210707174602.webp)
+![c385e3518007ed81a7a67f59c5b30b17.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210707174602.webp)
 
 
 
@@ -74,13 +74,13 @@ public class MathExample {
 
 ## JVM的跨平台性与语言无关性
 
-![047f66a8b693ab9f59a703d9058d4baa.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210707174638.webp)
+![047f66a8b693ab9f59a703d9058d4baa.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210707174638.webp)
 
 
 
 ## JVM的内存区域
 
-![3f98d9e04d8d049bbf1cad71747d13f9.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210707174830.webp)
+![3f98d9e04d8d049bbf1cad71747d13f9.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210707174830.webp)
 
 
 
@@ -124,7 +124,7 @@ public class MouthedOrStack {
 }
 ```
 
-代码的执行过程：如下图所示，执行main()方法的时候入栈，执行A()方法的时候入栈.... 当C()方法执行完了，C()方法出栈，接着B方法运行完了出栈，A方法运行完了出栈，最后main方法执行完了出栈。这个就是Java方法运行对虚拟机栈的一个影响。虚拟机栈就是用来存储线程运行方法中的数据的，每一个方法对应一个栈帧![1f3e4acd10625caaa53a69c59bd35498.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114152.webp):::tips 虚拟机栈是基于线程的，哪怕只有一个main()方法，也是以线程的方式运行的，在线程的生命周期中，参与计算的数据会频繁地入栈和出栈，栈的生命周期和线程一样的 :::
+代码的执行过程：如下图所示，执行main()方法的时候入栈，执行A()方法的时候入栈.... 当C()方法执行完了，C()方法出栈，接着B方法运行完了出栈，A方法运行完了出栈，最后main方法执行完了出栈。这个就是Java方法运行对虚拟机栈的一个影响。虚拟机栈就是用来存储线程运行方法中的数据的，每一个方法对应一个栈帧![1f3e4acd10625caaa53a69c59bd35498.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114152.webp):::tips 虚拟机栈是基于线程的，哪怕只有一个main()方法，也是以线程的方式运行的，在线程的生命周期中，参与计算的数据会频繁地入栈和出栈，栈的生命周期和线程一样的 :::
 
 栈的大小限制：`-Xss` 设置线程堆栈大小,不同的操作系统，不同的位数虚拟机栈的大小是不同的。查看jvm的设置
 
@@ -171,7 +171,7 @@ public class StackError {
 
 **虚拟机栈存储的主要是栈帧**
 
-**什么是栈帧 (\**\*\*重点\*\**\*)**:::tips 在每个Java方法被调用的时候，都会创建一个栈帧，并入栈。一旦方法完成响应的调用，则出栈 :::**如下图：**![fa1ff847d78125a73a749546b2d188ef.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114203.webp)根据上述的讲解，我们都知道虚拟机栈主要是**存储当前线程运行Java方法中的指令、数据、返回地址**如上图所示，那么每一个方法都是一个栈帧，而栈帧中存储着方法中的变量数据、指令、返回等 栈帧主要包括：局部变量表、操作数栈、动态链接、返回地址。根据如下的代码，来模拟一个方法调用后再栈帧中的处理过程
+**什么是栈帧 (\**\*\*重点\*\**\*)**:::tips 在每个Java方法被调用的时候，都会创建一个栈帧，并入栈。一旦方法完成响应的调用，则出栈 :::**如下图：**![fa1ff847d78125a73a749546b2d188ef.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114203.webp)根据上述的讲解，我们都知道虚拟机栈主要是**存储当前线程运行Java方法中的指令、数据、返回地址**如上图所示，那么每一个方法都是一个栈帧，而栈帧中存储着方法中的变量数据、指令、返回等 栈帧主要包括：局部变量表、操作数栈、动态链接、返回地址。根据如下的代码，来模拟一个方法调用后再栈帧中的处理过程
 
 ```
 public class OperandStack {
@@ -189,7 +189,7 @@ public class OperandStack {
 }
 ```
 
-下面我们来模拟一下上述代码中的test方法是如何在虚拟机栈中运行的。如下图是一个，默认状态的虚拟机栈，假设test()在线程1中执行,可以看到局部变量表中有一个this这个是默认的指向的当前的对象。首先，我们需要有一个正确的认知，既然JVM是Java的一个虚拟机，那么JVM就具备一个操作系统所具备的核心功能：CPU + 主内存 + 缓存，那么JVM是一个模拟版的操作系统，JVM执行引擎(CPU) + 栈、堆等(主内存) + 操作数栈(缓存)，首先要知道一个操作系统是如何执行的，比如执行1+1计算，那么这个计算是在CPU中执行，直接结果放到缓存中的，那么JVM也是同样的原理，JVM是通过**执行引擎**计算，将计算结果存入**操作数栈**中。理解这个原理我们就可以很轻松的理解虚拟机栈的运行过程。![1068bf931447d65432675b137aa6c092.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114210.webp)我们都知道JVM是处理class文件中的指令，那么我们需要把上述的Java源代码，编译成class文件，然后通过`javap -c`指令反汇编，来查看class文件中的指令 如下代码就是编译后的class字节码文件
+下面我们来模拟一下上述代码中的test方法是如何在虚拟机栈中运行的。如下图是一个，默认状态的虚拟机栈，假设test()在线程1中执行,可以看到局部变量表中有一个this这个是默认的指向的当前的对象。首先，我们需要有一个正确的认知，既然JVM是Java的一个虚拟机，那么JVM就具备一个操作系统所具备的核心功能：CPU + 主内存 + 缓存，那么JVM是一个模拟版的操作系统，JVM执行引擎(CPU) + 栈、堆等(主内存) + 操作数栈(缓存)，首先要知道一个操作系统是如何执行的，比如执行1+1计算，那么这个计算是在CPU中执行，直接结果放到缓存中的，那么JVM也是同样的原理，JVM是通过**执行引擎**计算，将计算结果存入**操作数栈**中。理解这个原理我们就可以很轻松的理解虚拟机栈的运行过程。![1068bf931447d65432675b137aa6c092.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114210.webp)我们都知道JVM是处理class文件中的指令，那么我们需要把上述的Java源代码，编译成class文件，然后通过`javap -c`指令反汇编，来查看class文件中的指令 如下代码就是编译后的class字节码文件
 
 ```
 public class course01.OperandStack {
@@ -227,7 +227,7 @@ public class course01.OperandStack {
 }
 ```
 
-这里面涉及到了一些指令，这些指令不需要死记硬背，而是需要去理解，可以根据我提供的链接，直接查找这个指令的意思即可。`首先执行：int a = 0;`在字节码的指令中首先看到的是：`iconst_0` 这个指令是什么意思呢？直接从上述我提供的链接中查找， 意思就是将一个常量0加载到操作数栈，哦原来这个意思就是将int a = 0的常量值放到操作数栈中，这时候线程1中的虚拟机栈就变成了如下：操作数栈中多了一个常量0![916521896a28fb02572306af72db8553.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114219.webp)我们继续往下走，一般指令都是按照顺序执行的，指令是不会跳跃执行，所以我们继续顺着指令，下一个指令执行的是：`istore_1` 查找istore指令是什么意思：讲一个数值从操作数栈存储到局部变量表中，哦原来是这个意思，就是从操作数栈的栈顶取值然后放到局部变量表中，不知道大家有没有注意一个问题`istore_1` 为什么是1而不是0呢？这是因为局部变量表中在0的位置默认有一个this指向当前的对象。(理解每一个步骤及参数的意义是很重要的) 这是JVM执行`istore_1`这个指令，此时虚拟机栈中的情况：局部变量表的1的位置多了一个数值0的常量，此时操作数栈是没有数据的。因为操作数栈的数据出栈存入到局部变量表中了。![5892325c35e11711d2d2f9243892d002.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114226.webp)那么剩下的两个指令执行，我相信就不用在细说了吧  `2: iconst_1` 将常量1存入操作数栈中`3: istore_2` 将操作数栈的数据存入到局部变量表中 此时，虚拟机栈中的情况: 局部变量表中存储着：this、0、1，操作数栈是空的，我们需要理解操作数栈其实就是缓存，主要用来临时存储计算结果的我们不可能在缓存中长久保存数据。（如果还不理解建议学习一下操作系统的基础）![bdf57838d741431856915a9688c44a34.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114232.webp)OK，继续执行指令：iload指令,这个指令是将一个局部变量加载到操作数栈`iload_1` ：将局部变量表中1的位置存储的数据，加载到操作数栈中`iload_2` ：将局部变量表中2的位置存储的数据，加载到操作数栈中 思考：为什么又要加载到操作数栈呢？例如CPU要计算数据，需要从缓存中拿取数据计算，然后将计算结果存入到缓存中。JVM的操作也是同样的原理 此时，虚拟机栈中的运行情况：![d4e421617dc0f65cddcaca0fc141efbe.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114243.webp)继续执行指令：`iadd` : 算法指令 用于对两个操作数栈上的数值进行某种特定的运算，并把结果重新存入到操作数栈顶 此时虚拟机栈的运行情况：首先从操作数栈取出两个数据，由执行引擎进行计算：`(a + b)` 得到的结果1存入到操作数栈的栈顶![d5540fd9eaff6f60c2aa4f55ed95e9b9.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114251.webp)继续执行指令：`bipush     10` ：把一个数值推送到操作数栈栈顶，这里其实执行的代码就相当于：`(a+b)*10` bipush指令直接将数值10推送到操作数栈的栈顶中。![4190028f6c6b8a0e8a1ab836e687bfc8.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114300.webp)然后执行指令：`imul` ：运算指令，对操作数栈中的两个数据进行乘法运算 那么，此时虚拟机栈中的运行情况：10和1进行乘法运算，得到结果10存入到操作数栈中![fe7d45d8ce348935c06b8d00a532858a.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114319.webp)继续执行指令：`istore_3` 将操作数栈存储到局部变量表中，此时虚拟机栈的运行情况如下：![38fd924c137eed7f27f8b985be6ae097.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114325.webp)继续执行指令：`iload_3` ：将局部变量表3的数据，加载到操作数栈中`ireturn` ：将操作数栈中的数据取出，然后压人调用者的栈帧的操作数栈中 此时test()方法执行完毕，会从线程1 的虚拟机栈中出栈，释放 那么此时虚拟机栈的运行情况：此时虚拟机栈中，只剩下main栈帧，而test()方法已经执行完毕了出栈了，需要注意的是main栈帧的操作数栈中有一个常量10这个常量10就是test栈帧执行`ireturn` 指令，压入到main栈帧的操作数栈中的。![c15f306036e971d365f97216e1b60ad0.webp](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114337.webp)main方法执行完毕从虚拟机栈中出栈，OK那么此时，我们的整个代码就执行结束了。其实整个过程就是虚拟机栈的执行的过程，相信大家都理解了虚拟机栈的作用以及运行过程了，嗯....可以吊打面试官了。
+这里面涉及到了一些指令，这些指令不需要死记硬背，而是需要去理解，可以根据我提供的链接，直接查找这个指令的意思即可。`首先执行：int a = 0;`在字节码的指令中首先看到的是：`iconst_0` 这个指令是什么意思呢？直接从上述我提供的链接中查找， 意思就是将一个常量0加载到操作数栈，哦原来这个意思就是将int a = 0的常量值放到操作数栈中，这时候线程1中的虚拟机栈就变成了如下：操作数栈中多了一个常量0![916521896a28fb02572306af72db8553.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114219.webp)我们继续往下走，一般指令都是按照顺序执行的，指令是不会跳跃执行，所以我们继续顺着指令，下一个指令执行的是：`istore_1` 查找istore指令是什么意思：讲一个数值从操作数栈存储到局部变量表中，哦原来是这个意思，就是从操作数栈的栈顶取值然后放到局部变量表中，不知道大家有没有注意一个问题`istore_1` 为什么是1而不是0呢？这是因为局部变量表中在0的位置默认有一个this指向当前的对象。(理解每一个步骤及参数的意义是很重要的) 这是JVM执行`istore_1`这个指令，此时虚拟机栈中的情况：局部变量表的1的位置多了一个数值0的常量，此时操作数栈是没有数据的。因为操作数栈的数据出栈存入到局部变量表中了。![5892325c35e11711d2d2f9243892d002.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114226.webp)那么剩下的两个指令执行，我相信就不用在细说了吧  `2: iconst_1` 将常量1存入操作数栈中`3: istore_2` 将操作数栈的数据存入到局部变量表中 此时，虚拟机栈中的情况: 局部变量表中存储着：this、0、1，操作数栈是空的，我们需要理解操作数栈其实就是缓存，主要用来临时存储计算结果的我们不可能在缓存中长久保存数据。（如果还不理解建议学习一下操作系统的基础）![bdf57838d741431856915a9688c44a34.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114232.webp)OK，继续执行指令：iload指令,这个指令是将一个局部变量加载到操作数栈`iload_1` ：将局部变量表中1的位置存储的数据，加载到操作数栈中`iload_2` ：将局部变量表中2的位置存储的数据，加载到操作数栈中 思考：为什么又要加载到操作数栈呢？例如CPU要计算数据，需要从缓存中拿取数据计算，然后将计算结果存入到缓存中。JVM的操作也是同样的原理 此时，虚拟机栈中的运行情况：![d4e421617dc0f65cddcaca0fc141efbe.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114243.webp)继续执行指令：`iadd` : 算法指令 用于对两个操作数栈上的数值进行某种特定的运算，并把结果重新存入到操作数栈顶 此时虚拟机栈的运行情况：首先从操作数栈取出两个数据，由执行引擎进行计算：`(a + b)` 得到的结果1存入到操作数栈的栈顶![d5540fd9eaff6f60c2aa4f55ed95e9b9.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114251.webp)继续执行指令：`bipush     10` ：把一个数值推送到操作数栈栈顶，这里其实执行的代码就相当于：`(a+b)*10` bipush指令直接将数值10推送到操作数栈的栈顶中。![4190028f6c6b8a0e8a1ab836e687bfc8.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114300.webp)然后执行指令：`imul` ：运算指令，对操作数栈中的两个数据进行乘法运算 那么，此时虚拟机栈中的运行情况：10和1进行乘法运算，得到结果10存入到操作数栈中![fe7d45d8ce348935c06b8d00a532858a.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114319.webp)继续执行指令：`istore_3` 将操作数栈存储到局部变量表中，此时虚拟机栈的运行情况如下：![38fd924c137eed7f27f8b985be6ae097.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114325.webp)继续执行指令：`iload_3` ：将局部变量表3的数据，加载到操作数栈中`ireturn` ：将操作数栈中的数据取出，然后压人调用者的栈帧的操作数栈中 此时test()方法执行完毕，会从线程1 的虚拟机栈中出栈，释放 那么此时虚拟机栈的运行情况：此时虚拟机栈中，只剩下main栈帧，而test()方法已经执行完毕了出栈了，需要注意的是main栈帧的操作数栈中有一个常量10这个常量10就是test栈帧执行`ireturn` 指令，压入到main栈帧的操作数栈中的。![c15f306036e971d365f97216e1b60ad0.webp](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114337.webp)main方法执行完毕从虚拟机栈中出栈，OK那么此时，我们的整个代码就执行结束了。其实整个过程就是虚拟机栈的执行的过程，相信大家都理解了虚拟机栈的作用以及运行过程了，嗯....可以吊打面试官了。
 
 - 局部变量表：变量和引用变量 :::tips 局部变量表，用于存放局部变量就是方法中的变量，首先它是一个32位的长度，主要存放Java的八大基础数据类型，如果是64位的就使用高低位占用两个也可以存放下，如果是局部的一些对象，只需要存放它的一个引用地址即可。默认会有一个this当前类的对象的引用 :::
 - 操作数栈
@@ -263,19 +263,19 @@ Java语言的特性多态，具体的会在后面的章节中单独讲解。
 
 Hotspot JVM 是一个基于栈的虚拟机，每个线程都有一个虚拟机栈用来存储栈帧，每次方法调用都伴随着栈帧的创建、销毁。Java 虚拟机栈的释义如图所示
 
-![image-20210708145349990](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145350.png)
+![image-20210708145349990](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145350.png)
 
 当线程请求分配的栈容量超过 Java 虚拟机栈允许的最大容量时，Java 虚拟机将会抛出 StackOverflowError 异常，可以用 JVM 命令行参数 -Xss 来指定线程栈的大小，比如 -Xss:256k 用于将栈的大小设置为 256KB。
 
 每个线程都拥有自己的 Java 虚拟机栈，一个多线程的应用会拥有多个 Java 虚拟机栈，每个栈拥有自己的栈帧。
 
-![image-20210708145429474](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145429.png)
+![image-20210708145429474](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145429.png)
 
 
 
 栈帧是用于支持虚拟机进行方法调用和方法执行的数据结构，随着方法调用而创建，随着方法结束而销毁。栈帧的存储空间分配在 Java 虚拟机栈中，每个栈帧拥有自己的局部变量表（LocalVariable）、操作数栈（Operand Stack）和指向常量池的引用，如图所示。
 
-![image-20210708145501261](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145501.png)
+![image-20210708145501261](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145501.png)
 
 
 
@@ -334,13 +334,13 @@ public com.example.demo.test.T();
 
 
 
-![image-20210708145535168](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145539.png)
+![image-20210708145535168](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145539.png)
 
 
 
 整个 JVM 指令执行的过程就是局部变量表与操作数栈之间不断加载、存储的过程，如图所示。
 
-![image-20210708145602760](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145602.png)
+![image-20210708145602760](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145602.png)
 
 
 
@@ -415,7 +415,7 @@ public void demo();
 
 ❏ 若 n 在其他范围内，则使用 ldc 的方式，这个范围的整数值被放在常量池中，比如 n 值为 40000 时，40000 被存储到常量池中，加载的指令为 ldc # i, i 为常量池的索引值。完整的加载存储指令见表所示。
 
-![image-20210708145637672](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145637.png)
+![image-20210708145637672](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145637.png)
 
 
 
@@ -455,13 +455,13 @@ demo 方法对应的字节码如下所示
 
 swap 用于交换栈顶的两个元素，如图所示。
 
-![image-20210708145752024](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145752.png)
+![image-20210708145752024](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145752.png)
 
 
 
 还有几个稍微复杂一点的栈操作指令：dup_x1、dup2_x1 和 dup2_x2。下面以 dup_x1 为例来讲解。dup_x1 是复制操作数栈栈顶的值，并插入栈顶以下 2 个值，看起来很绕，把它拆开来看其实分为了五步，如图所示。
 
-![image-20210708145812824](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145812.png)
+![image-20210708145812824](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145812.png)
 
 
 
@@ -504,7 +504,7 @@ Code:
 
 假如 id 的初始值为 42，调用 incAndGetId 方法执行过程中操作数栈的变化如图所示。
 
-![image-20210708145833783](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145833.png)
+![image-20210708145833783](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145833.png)
 
 
 
@@ -522,7 +522,7 @@ Code:
 
 第 8 行：putfield #2 将栈顶的两个元素 this 和 43 出栈，现在栈中元素只剩下栈顶的 [43]，最后的 ireturn 指令将栈顶的 43 出栈返回。完整的操作数栈指令介绍如表所示。
 
-![image-20210708145859204](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145859.png)
+![image-20210708145859204](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145859.png)
 
 
 
@@ -530,13 +530,13 @@ Code:
 
 Java 中有加减乘除等相关的语法，针对字节码也有对应的运算指令，如表所示。
 
-![image-20210708145917431](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145917.png)
+![image-20210708145917431](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145917.png)
 
 
 
 ### 控制转移指令
 
-![image-20210708145938901](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708145938.png)
+![image-20210708145938901](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708145938.png)
 
 
 
@@ -1238,7 +1238,7 @@ void spin() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114636.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114636.png)
 
 iinc用于实现局部变量的自增操作。在所有字节码指令中，只有该指令可直接用于操作局部变量。
 
@@ -1259,7 +1259,7 @@ void dspin() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114636.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114636.png)
 
 其中，double类型占用局部变量的2个Slot，局部变量索引号从0开始，因此dstore_1对应的局部变量索引为1和2。
 
@@ -1284,7 +1284,7 @@ void sspin() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114636.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114636.png)
 
 short类型同样需要通过多条指令来实现i++操作，对应于索引号为5至9的指令。首先，使用iadd实现2个int类型数值相加，再使用i2s指令将int类型结果强制转换为short类型，最后使用istore_1指令将结果存回局部变量i。
 
@@ -1310,7 +1310,7 @@ int align2agrain(int i, int grain) {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115022)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115022)
 
 以上指令，并没有出现取反的指令操作。因为JVM并没有提供取反指令，而是使用异或指令来实现取反。
 
@@ -1344,7 +1344,7 @@ void useManyNumeric() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115029)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115029)
 
 ldc、ldc_w：将int、float或String类型常量值从常量池中推送至栈顶。
 
@@ -1374,7 +1374,7 @@ void whileInt() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115036.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115036.png)
 
 iinc用于实现局部变量的自增操作。在所有字节码指令中，只有该指令可直接用于操作局部变量。
 
@@ -1403,7 +1403,7 @@ void whileDouble() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115043.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115043.png)
 
 由于iinc只针对int类型的局部变量进行自增操作，JVM并没有提供相应的指令来操作double类型。因此，需要借助dadd来实现double类型的自增操作。
 
@@ -1429,7 +1429,7 @@ int lessThan100(double d) {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115049)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115049)
 
 ### if实例2
 
@@ -1445,7 +1445,7 @@ int greaterThan100(double d) {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115054.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115054.png)
 
 if实例2与if实例1的差别仅在于比较符号由小于号改为大于号，因此ifge指令也相应的变成ifle指令。
 
@@ -1475,7 +1475,7 @@ NaN（Not a Number，非数）是计算机科学中数值数据类型的一类�
 
 返回NaN的运算有如下三种：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708114930.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708114930.png)
 
 
 
@@ -1511,7 +1511,7 @@ static int addTwoStatic(int i, int j) {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115216)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115216)
 
 ## 方法调用
 
@@ -1539,11 +1539,11 @@ int add12and13() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115409)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115409)
 
 具体执行流程如下：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115417)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115417)
 
 ### 常量池
 
@@ -1551,7 +1551,7 @@ invokevirtual的参数为常量池索引值16，对应于常量池的Methodref�
 
 方法的符号引用最终解析结果为：jvm/specification/se8/chapter3/MethodInvoke.addTwo:(II)I，格式为：类全限定名.方法名:方法描述符。
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115425.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115425.png)
 
 ### 调用类方法代码
 
@@ -1563,7 +1563,7 @@ int add12and13() {
 
 #### 字节码指令序列
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708115433)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708115433)
 
 调用类方法与调用实例方法相比，指令序列主要有两点差异：
 

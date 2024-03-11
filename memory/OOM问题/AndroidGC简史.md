@@ -75,29 +75,29 @@ Dalvik 虚拟机随着 Android 一起诞生，一直到 Android 4.4。
 
 HTC G1 是第一款 Android 设备，内存为192MB，应用程序可用的堆内存仅为30MB左右，Dalvik 就是在这样的环境下诞生的。它的设计原则中，节省空间 (尽量让程序跑起来) 是第一优先级。
 
-![HTC G1](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160105.image)
+![HTC G1](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160105.image)
 
 #### 内存分配
 
 分配内存时，Dalvik 使用的算法是 `dlmalloc` (以 `java.util.concurrent` 作者 *Doug Lea* 命名的算法)，使用了单独的进程来分配内存，内存的分配效率较低。
 
-- 在整个堆中寻找适合分配的内存 ![在整个堆中寻找适合分配的内存](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160117.image)
+- 在整个堆中寻找适合分配的内存 ![在整个堆中寻找适合分配的内存](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160117.image)
 
-- 找到了适合分配的内存 ![找到了适合分配的内存](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160130.image)
+- 找到了适合分配的内存 ![找到了适合分配的内存](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160130.image)
 
-- 内存分配成功 ![内存分配成功](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160135.image)
+- 内存分配成功 ![内存分配成功](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160135.image)
 
 - 上面的图中给出了顺利分配内存的流程，如果当前堆中没有合适分配的内存，就会触发一个 `GC_FOR_ALLOC` 进入GC流程。
 
-  ![没有合适分配的内存，就会触发一个  GC_FOR_ALLOC 进入GC流程](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160139.image)
+  ![没有合适分配的内存，就会触发一个  GC_FOR_ALLOC 进入GC流程](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160139.image)
 
 #### 回收流程
-- 标记GC Root 集合，这一步会导致应用暂停 ![标记GC Root 集合，这一步会导致应用暂停](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160145.image)
-- 标记可触达对象1 ![标记可触达对象1](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160158.image)
-- 标记可触达对象2，这一步会导致应用暂停 ![标记可触达对象2，这一步会导致应用暂停](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160205.image)
+- 标记GC Root 集合，这一步会导致应用暂停 ![标记GC Root 集合，这一步会导致应用暂停](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160145.image)
+- 标记可触达对象1 ![标记可触达对象1](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160158.image)
+- 标记可触达对象2，这一步会导致应用暂停 ![标记可触达对象2，这一步会导致应用暂停](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160205.image)
 - 清理对象
 
-![清理对象](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160210.image)
+![清理对象](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160210.image)
 
 在 Dalvik 的一次回收过程中，有两个步骤会导致应用暂停(所有线程挂起)共10ms左右，这个时间还是比较长的，在一帧16.6ms的绘制时间里如果发生一次 GC， 很可能导致丢帧。
 
@@ -106,13 +106,13 @@ HTC G1 是第一款 Android 设备，内存为192MB，应用程序可用的堆�
 - 增大堆体积
 - (堆体积已经最大) 抛出 OutOfMemoryError
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160221.image)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160221.image)
 
 **Dalvik 的问题：碎片化** 前面已经提到过，Dalvik 使用 `dlmalloc` 作为分配内存的算法，作者 *Doug Lea* 先生自己的文章 [A Memory Allocator](http://gee.cs.oswego.edu/dl/html/malloc.html) 中也提到了避免碎片化的问题，但Dalvik的内存碎片化问题依然严重。
 
 - 比如Google I/O 中的例子：有 200MB 剩余空间 (200个 1MB 的内存碎片)，尝试分配 2MB 空间抛出了 OOM 错误。
 
-![有 200MB 剩余空间 (200个 1MB 的内存碎片)，尝试分配 2MB 空间抛出了OOM错误。](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160228.image)
+![有 200MB 剩余空间 (200个 1MB 的内存碎片)，尝试分配 2MB 空间抛出了OOM错误。](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160228.image)
 
 时代滚滚向前，Dalvik 在 Android 4.4之后被 ART取代，我们就把 Dalvik 的岁月称作史前时代吧~
 
@@ -147,7 +147,7 @@ Android 5.0 ~ 7.0 (Nougat)， ART做了很多更新，但从 GC 的角度来看�
 相比于 Android 4.4 的 Dalvik，Android 5.0 内存分配的性能提升到 4 - 5x，在Android 7.0 提升到了10x左右。
 
 ##### 内存回收
-与 Dalvik 类似，Android 5.0 ~ 7.0 的内存回收也分为4个阶段(如下图)，其中第一个阶段(标记 GC Root 集合) 改为并发处理，使整个过程只需要暂停应用(挂起所有线程) 3ms 左右，提升明显。 ![ART 5.0~7.0 内存回收过程](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160246.image)
+与 Dalvik 类似，Android 5.0 ~ 7.0 的内存回收也分为4个阶段(如下图)，其中第一个阶段(标记 GC Root 集合) 改为并发处理，使整个过程只需要暂停应用(挂起所有线程) 3ms 左右，提升明显。 ![ART 5.0~7.0 内存回收过程](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160246.image)
 
 ##### 整理内存
 
@@ -155,9 +155,9 @@ Android 5.0 ~ 7.0 (Nougat)， ART做了很多更新，但从 GC 的角度来看�
 
 当然，当应用在前台时，内存整理也可能被触发；比如应用 GC 后仍然没有足够的连续内存。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160300.image)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160300.image)
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160409.image)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160409.image)
 
 #### Android 8.0 ~ 9.0
 
@@ -178,14 +178,14 @@ Android 8.0 开始，ART 引入了 Concurrent Copying (CC) GC，将整理内存�
 
 在 Concurrent Copying (CC) GC 中，GC时会遍历每个region，根据当前的对象状态来决定是否进行 copy 操作，具体过程如下：
 
-- 找到 GC Root 并标记 GC Root 引用的对象 ![找到 GC Root 并标记 GC Root 引用的对象](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160321.image)
-- 标记出未被 GC Root 引用的对象(垃圾对象) ![标记出未被 GC Root 引用的对象(垃圾对象)](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160420.image)
-- 对region进行分析，决定每一个region是否进行copy ![对region进行分析，决定每一个region是否进行copy](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160443.image)
+- 找到 GC Root 并标记 GC Root 引用的对象 ![找到 GC Root 并标记 GC Root 引用的对象](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160321.image)
+- 标记出未被 GC Root 引用的对象(垃圾对象) ![标记出未被 GC Root 引用的对象(垃圾对象)](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160420.image)
+- 对region进行分析，决定每一个region是否进行copy ![对region进行分析，决定每一个region是否进行copy](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160443.image)
 
 > 经过分析，垃圾对象较多的区域会被搬移， 而垃圾对象较少的区域不会被搬移，原因这个区域大部分对象后面还会用到，copy操作是有成本的，全量copy不划算
 
-- copy 对象到新的 region ![copy 对象到新的 region](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160426.image)
-- 清空搬移后的region，完成回收 ![清空搬移后的region，完成回收](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160456.image)
+- copy 对象到新的 region ![copy 对象到新的 region](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160426.image)
+- 清空搬移后的region，完成回收 ![清空搬移后的region，完成回收](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160456.image)
 
 #### Android 10 及以后
 
@@ -195,16 +195,16 @@ Android 8.0 开始，ART 引入了 Concurrent Copying (CC) GC，将整理内存�
 
 ##### CC Minor GC
 
-- 根据 GC Root，标记新生代 region 的对象 ![标记新生代 region 的对象](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160504.image)
-- Minor GC 不会导致追踪(trace)老年代region中的对象，但如果新生代region中的对象被老年代region引用，还是要在copy后更新对应的引用，这里用到了一个Remember Set的机制，将这一操作的开销讲到最小。 ![Minor GC 不会导致追踪(trace)老年代region中的对象](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160512.image)
-- 新生代对象 copy 到新的 region 中，原region被回收，Minor GC 完成 ![新生代对象 copy 到新的 region 中，原region被回收，Minor GC 完成](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160518.image)
+- 根据 GC Root，标记新生代 region 的对象 ![标记新生代 region 的对象](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160504.image)
+- Minor GC 不会导致追踪(trace)老年代region中的对象，但如果新生代region中的对象被老年代region引用，还是要在copy后更新对应的引用，这里用到了一个Remember Set的机制，将这一操作的开销讲到最小。 ![Minor GC 不会导致追踪(trace)老年代region中的对象](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160512.image)
+- 新生代对象 copy 到新的 region 中，原region被回收，Minor GC 完成 ![新生代对象 copy 到新的 region 中，原region被回收，Minor GC 完成](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160518.image)
 
 ##### CC Major GC:
 
-- 追踪所有的region，(根据规则)标记要回收的 region ![追踪所有的region，(根据规则)标记要回收的 region](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160526.image)
+- 追踪所有的region，(根据规则)标记要回收的 region ![追踪所有的region，(根据规则)标记要回收的 region](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160526.image)
 - 将需要回收的 region 中的对象 copy 到新的 region 中，回收原来的 region
 
-![将需要回收的 region 中的对象 copy 到新的 region 中，回收原来的 region](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160534.image)
+![将需要回收的 region 中的对象 copy 到新的 region 中，回收原来的 region](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160534.image)
 
 根据上面的流程，我们可以看到在未加入分代回收之前，Concurrent Copying GC 中每一次GC，都是一次 Major GC，这样回收性能得到提升，尤其是对于生命周期较短的对象。
 
@@ -277,7 +277,7 @@ low memory killer, kswapd处理后内存依然不够用的话，就会触发 lmk
 
 在回收的各个阶段，应用可以实现 `onTrimMemory(level)` 方法收到回调，可以根据对应 `level` 主动释放一些缓存数据，进程的优先级可以查看下面这张图:
 
-![5851621951536_.pic_hd.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160602.image)
+![5851621951536_.pic_hd.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160602.image)
 
 这里只是简单讲述逻辑，关于 kwapd 和 lmk 的更多细节可以参考[官方文档](https://developer.android.com/topic/performance/memory-management)
 
@@ -289,7 +289,7 @@ low memory killer, kswapd处理后内存依然不够用的话，就会触发 lmk
 
 “内存抖动”可能是被面试官带火的一个词，实际的原理是比较简单的：
 
-如果高频地申请较大尺寸的内存，则可能导致短时间内频繁触发 GC，造成内存的频繁申请和释放，使用Profiler查看内存使用时，看起来就是一个抖动的曲线。 ![看，内存“抖动”起来了~](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160609.image)
+如果高频地申请较大尺寸的内存，则可能导致短时间内频繁触发 GC，造成内存的频繁申请和释放，使用Profiler查看内存使用时，看起来就是一个抖动的曲线。 ![看，内存“抖动”起来了~](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160609.image)
 
 在 ART 之后，单次 GC 导致应用暂停时间不会很长，但如果连续触发多次 GC 就可能导致一帧 UI 绘制的延迟，造成丢帧。大家都知道不要在 `onDraw()` 里创建对象；我从来没有在 `onDraw()` 里创建大的对象，事实上在编码的时候如果有关注性能，写出“内存抖动”的代码是不容易的；但为了验证这个问题，我测试了各个Android “内存抖动”场景的表现，具体参数就请查看[针对「内存抖动」的一次测试](https://www.jianshu.com/p/6239672cf0d5)
 
@@ -301,7 +301,7 @@ low memory killer, kswapd处理后内存依然不够用的话，就会触发 lmk
 
 **作为应用层开发者，我真的需要关心GC吗？**
 
-写这篇文章的时间是2021年，随着时间的推移，Dalvik 设备的占比已经很小了，小到10亿日活的微信也不再支持。 ![微信不再支持Lollipop以下的版本](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808160622.image)
+写这篇文章的时间是2021年，随着时间的推移，Dalvik 设备的占比已经很小了，小到10亿日活的微信也不再支持。 ![微信不再支持Lollipop以下的版本](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808160622.image)
 
 伴随着 ART 的推出和迭代，它变得很好了，我们能对 GC 做的优化越来越少了，我们不需要格外关心GC，关心业务，关心应用的性能表现就足够了。
 

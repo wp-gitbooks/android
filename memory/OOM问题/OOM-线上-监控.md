@@ -39,7 +39,7 @@ https://tech.meituan.com/2019/11/14/crash-oom-probe-practice.html
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141916.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141916.png)
 
 
 
@@ -55,7 +55,7 @@ Android 快照 dump 是在 native 层完成的，dump 过程中每个 Record 都
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210622141858.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210622141858.png)
 
 
 
