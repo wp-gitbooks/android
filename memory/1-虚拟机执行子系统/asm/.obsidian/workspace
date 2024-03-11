@@ -1,0 +1,110 @@
+{
+  "main": {
+    "id": "a5ea9a364cd9f800",
+    "type": "split",
+    "children": [
+      {
+        "id": "a51ec77ffd12b0dc",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "访问者模式和 ASM.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "056df520494e9bb0",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f46b8399e8c1ab5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69ed6d24ba98941b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "619c65994a148949",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1b651f26031d6caa",
+    "type": "split",
+    "children": [
+      {
+        "id": "3eb32f3adc4833c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "694269cc63e0c941",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "访问者模式和 ASM.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "297b68aa8c848174",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "访问者模式和 ASM.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "访问者模式和 ASM.md",
+    "理解 JVM 中的类加载机制.md",
+    "虚拟机字节码执行引擎.md",
+    "AOP的利器：ASM 3.0 介绍.md",
+    "class文件的字节码结构.md",
+    "Transform API.md",
+    "AOP 利器 ASM 基础入门.md",
+    "Apk 打包流程梳理.md",
+    "ASM.md",
+    "ASM 6 开发者指南.md"
+  ]
+}
