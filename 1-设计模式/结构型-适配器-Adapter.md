@@ -12,7 +12,7 @@ Adapter模式的宗旨：**保留现有类所提供的服务，向客户提供�
 
 ## 1.2 问题
 在现实生活中，经常出现两个对象因接口不兼容而不能在一起工作的实例，这时需要第三者进行适配。
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205301852143.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205301852143.png)
 
 
 在软件设计中也可能出现：**需要开发的具有某种业务功能的组件在现有的组件库中已经存在，但它们与当前系统的接口规范不兼容，如果重新开发这些组件成本又很高，这时用适配器模式能很好地解决这些问题。**
@@ -27,9 +27,9 @@ Adapter模式的宗旨：**保留现有类所提供的服务，向客户提供�
 
 ### 1.3.2 方式2-类适配器
 #### 1.3.2.1 结构
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202210271643720.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202210271643720.png)
 
-![Adapter_classModel.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210401092419.jpg)
+![Adapter_classModel.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210401092419.jpg)
 
 #### 1.3.2.2 目标（Target）接口
 即图中的欧式三叉
@@ -126,9 +126,9 @@ public class Client {
 
 ### 1.3.3 方式1-对象适配器
 #### 1.3.3.1 结构
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202210271643745.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202210271643745.png)
 
-![dapter.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210401092355.jpg)
+![dapter.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210401092355.jpg)
 
 #### 1.3.3.2 目标（Target）接口
 即图中的欧式三叉

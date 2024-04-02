@@ -22,7 +22,7 @@ number headings: auto, first-level 1, max 6, 1.1
 #设计模式/扩展性
 面向对象技术可以很好地解决一些灵活性或可**扩展性**问题，但在很多情况下需要在系统中增加类和对象的个数。当对象数量太多时，将导致运行代价过高，带来性能下降等问题。享元模式正是为解决这一类问题而诞生的。享元模式通过共享技术实现相同或相似对象的重用，示意图如下(我们可以共用一个 Hello world 对象，其中字符串 “Hello world” 为内部状态，可共享；字体颜色为外部状态，不可共享，由客户端设定)：
 
-![image-20210624143226567](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210624143226.png)
+![image-20210624143226567](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210624143226.png)
 
 在享元模式中可以共享的相同内容称为 **内部状态**(Intrinsic State)，而那些需要外部环境来设置的不能共享的内容称为 **外部状态**(Extrinsic State)，其中外部状态和内部状态是相互独立的，外部状态的变化不会引起内部状态的变化。由于区分了内部状态和外部状态，因此可以通过设置不同的外部状态使得相同的对象可以具有一些不同的特征，而相同的内部状态是可以共享的。也就是说，享元模式的本质是分离与共享 ： 分离变与不变，并且共享不变。把一个对象的状态分成内部状态和外部状态，内部状态即是不变的，外部状态是变化的；然后通过共享不变的部分，达到减少对象数量并节约内存的目的。
 
@@ -37,7 +37,7 @@ number headings: auto, first-level 1, max 6, 1.1
 
 #### 1.3.2.1 组成-解决方案
 
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210624142042.png)
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210624142042.png)
 
 - Flyweight:享元对象抽象类或接口。
 - ConcreteFlyweight：具体的享元对象
@@ -113,7 +113,7 @@ public class Client {
 ```
 
 输出：
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210624142225.png)
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210624142225.png)
 
 
 

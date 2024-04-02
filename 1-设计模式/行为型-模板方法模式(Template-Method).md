@@ -10,5 +10,5 @@ https://www.cnblogs.com/java-my-life/archive/2012/05/14/2495235.html
 
 > 模板方法模式：定义一个操作中算法的框架，而将一些步骤延迟到子类中。模板方法模式使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505205758.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505205758.png)
 

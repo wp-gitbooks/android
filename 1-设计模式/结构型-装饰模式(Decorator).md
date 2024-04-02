@@ -3,9 +3,9 @@
 ## 名称
 #设计模式/扩展性 
 装饰模式(Decorator Pattern) ：**动态地给一个对象增加一些额外的职责**(Responsibility)，就增加对象功能来说，**装饰模式比生成子类**实现更为灵活。
-![装饰模式示例](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210623152823.png)
+![装饰模式示例](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210623152823.png)
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210623154619.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210623154619.png)
 
 ## 问题
 装饰器主要解决的是**直接继承**下因功能的不断横向扩展导致⼦类膨胀的问题，⽽是⽤装饰器模式后就会 ⽐直接继承显得更加灵活同时这样也就不再需要考虑⼦类的维护。
@@ -22,14 +22,14 @@
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210623152911)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210623152911)
 
 
 
-![image-20210623153332908](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210623153333.png)
+![image-20210623153332908](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210623153333.png)
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210401094211.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210401094211.png)
 
 ### 创建抽象组件
 
@@ -133,7 +133,7 @@
 
 ### Android使用场景
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210623154126)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210623154126)
 
 ### 优缺点
 

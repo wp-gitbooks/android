@@ -130,11 +130,11 @@ SRP很容易被大家从字面意思无界，并不是每个模块只做一个�
 
 在书中给出了第一个解决方法：
 
-![image-20210505213919142](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505213939.png)
+![image-20210505213919142](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505213939.png)
 
 设计出三个类，每个类都只与一个行为者相关。这种问题的坏处是，程序员需要在程序里处理三个类，这里还介绍了使用门面模式的方法，让我们只需要在我们使用的地方使用一个类即可:
 
-![image-20210505213934535](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505213946.png)
+![image-20210505213934535](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505213946.png)
 
 这样的话我们就不需要关心其他三个类，直接调用门面模式的方法即可。
 
@@ -171,17 +171,17 @@ SRP的好处:
 
 这里我用吃饭的例子来列举:
 
-![image-20210505214044951](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505214142.png)
+![image-20210505214044951](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505214142.png)
 
 每个人一天都会吃三餐，早餐，午餐，晚餐，但是随着时代的进步，又出现了下午茶，宵夜等，现在一天就不止三餐，那么其实我们就需要在这个类中去添加喝下午茶方法，吃宵夜方法，这样就导致我们没增加一个餐的种类就需要添加一个方法，在将SRP的时候我们有个例子，在同一个类中修改方法的时候容易修改其他业务逻辑，在我们这个例子中我们也会出现这个问题。怎么解决呢？那么我们就可以将变化的部分抽象出来:
 
-![image-20210505214103640](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505214136.png)
+![image-20210505214103640](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505214136.png)
 
 ，后续如果还需要增加吃的方法那么只需要实现这个接口即可。
 
 但是在这本书中，并没有去强调将变化的部分抽象出来，其认为修改是不可避免的，所以我们需要把控好修改的影响，所以提出了高层组件的修改不会影响底层组件，组件层次越低越稳定。对于J2EE的开发者来说，三层开发肯定并不陌生，controller,service,dao:
 
-![image-20210505214116222](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505214130.png)
+![image-20210505214116222](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505214130.png)
 
 如果我们修改controller那么service其实是无感知的，不会受影响，如果我们修改service，dao是不会受影响的，但是我们的controller是会受影响。所以越底层的组件那么其实应该越稳定。通过这种方式我们可以控制修改范围的影响。总结起来就是通过将系统划分为一系列组件，并且将这些组件间的依赖关系按层次结构进行组织，使得高阶组件不会因低阶组件被修改而受到影响。
 
@@ -374,7 +374,7 @@ public class OrderService {
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505212856)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505212856)
 
 
 

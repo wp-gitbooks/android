@@ -4,7 +4,7 @@
 - View：视图层，用户界面渲染逻辑
 - Controller：控制器，数据模型和视图之间通信的桥梁
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210823114612.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210823114612.jpg)
 
 
 
@@ -55,7 +55,7 @@ MVP 是 Model View Presenter 的缩写，可以说是 MVC 模式的改良，相�
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210823114703.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210823114703.jpg)
 
 
 
@@ -107,7 +107,7 @@ Model-View-ViewModel，是对MVP的一个优化模式，采用了双向绑定：
 
 MVVM 可以写成 MV-VM，是 Model View - ViewModel 的缩写，可以算是 MVP 模式的变种，View 和 Model 职责和 MVP 相同，但 ViewModel 主要靠 DataBinding 把 View 和 Model 做了自动关联，框架替应用开发者实现数据变化后的视图更新，相当于简化了 Presenter 的部分功能
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210823115232.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210823115232.jpg)
 
 
 

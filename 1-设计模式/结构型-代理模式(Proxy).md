@@ -14,7 +14,7 @@ number headings: auto, first-level 1, max 6, 1.1
 
 > 为其他对象提供一种代理以控制对这个对象的访问。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202210281122008.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202210281122008.png)
 
 ### 1.1.1 类比-例子
 我们可以理解为生活中常见的中介或者明星经纪人，我们买房一般都会通过中介，但是最后卖房的却是开发商，可以认为中介就是开发商的代理。
@@ -31,8 +31,8 @@ number headings: auto, first-level 1, max 6, 1.1
 ## 1.3 解决方案
 ### 1.3.1 静态代理
 #### 1.3.1.1 结构
-![Proxy](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210401093138.jpg)
-![image-20210718111906998](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210718111907.png)
+![Proxy](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210401093138.jpg)
+![image-20210718111906998](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210718111907.png)
 
 #### 1.3.1.2 静态代理使用
 ##### 1.3.1.2.1 静态代理需实现的方法
@@ -179,7 +179,7 @@ ProxySubject isProxy end 这里可处理原方法调用后的逻辑处理
 
 
 ### 1.3.2 动态代理
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210718111925)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210718111925)
 
 #### 1.3.2.1 什么是动态代理？
 动态代理利用了[JDK API](https://link.segmentfault.com/?url=http%3A%2F%2Ftool.oschina.net%2Fuploads%2Fapidocs%2Fjdk-zh%2F)，动态地在内存中构建代理对象，从而实现对目标对象的代理功能。动态代理又被称为JDK代理或接口代理。
@@ -372,16 +372,16 @@ after Method invoke  这里可处理原方法调用后的逻辑处理
 
 图解：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210718112736)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210718112736)
 
 
 
 图解二：
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210718112751)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210718112751)
 
 类加载详细流程：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210718112802)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210718112802)
 
 
 
@@ -392,26 +392,26 @@ after Method invoke  这里可处理原方法调用后的逻辑处理
 ### 1.4.1 应用场景
 #### 1.4.1.1 远程代理(AIDL)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720200458.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720200458.png)
 
 
 #### 1.4.1.2 保护代理(权限控制)
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720200540.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720200540.png)
 
 
 
 #### 1.4.1.3 虚代理(图片占位)
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720201131.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720201131.png)
 
 
 
 #### 1.4.1.4 协作开发(Mock Class)
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720201234.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720201234.png)
 
 
 #### 1.4.1.5 AOP-给生活加点料(记日志)
 [[字节码增强]]
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720201346.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720201346.png)
 
 
 

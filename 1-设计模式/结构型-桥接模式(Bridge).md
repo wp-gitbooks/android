@@ -21,9 +21,9 @@ number headings: auto, first-level 1, max 6, 1.1
 
 ## 1.3 解决方案
 ### 1.3.1 结构
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202210281717117.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202210281717117.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202210281715282.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202210281715282.png)
 ##### 1.3.1.1.1 角色介绍
 -   **Abstraction**: 抽象部分。  
     该类保持一个对实现部分对象的引用，抽象部分中的方法需要调用实现部分的对象来实现，该类一般为抽象类。
@@ -39,7 +39,7 @@ number headings: auto, first-level 1, max 6, 1.1
 ### 1.3.2 例子1
 我们有一个作为桥接实现的 _DrawAPI_ 接口和实现了 _DrawAPI_ 接口的实体类 _RedCircle_、_GreenCircle_。_Shape_ 是一个抽象类，将使用 _DrawAPI_ 的对象。_BridgePatternDemo_ 类使用 _Shape_ 类来画出不同颜色的圆。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202210281734073.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202210281734073.png)
 
 #### 1.3.2.1 步骤1-创建桥接实现接口
 ```java
@@ -124,14 +124,14 @@ Drawing Circle[  color: green, radius: 10, x: 100, 100]
 
 ### 1.3.3 例子2
 
-![Bridge](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210623155645.png)
+![Bridge](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210623155645.png)
 
 
 
 汽车可按品牌分（本例中只考虑BMT，BenZ，Land Rover），也可按手动档、自动档、手自一体来分。如果对于每一种车都实现一个具体类，则一共要实现3 * 3=9个类。
 
 使用继承方式的类图如下
-[![Bridge](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210623155627.png)
+[![Bridge](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210623155627.png)
 
 从上图可以看到，对于每种组合都需要创建一个具体类，如果有N个维度，每个维度有M种变化，则需要$M^N$个具体类，类非常多，并且非常多的重复功能。
 
@@ -389,12 +389,12 @@ View obtainView(int position, boolean[] isScrap) {
 
 这些以后，我们来画一个简易的UML图来看下:
 
-![image-20210624143704439](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210624143704.png)
+![image-20210624143704439](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210624143704.png)
 
 以上就是Android源码中的桥接模式实现
 
 ##### 1.4.1.1.2 View与Canvas
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202210281711185.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202210281711185.png)
 
 
 ### 1.4.2 优缺点

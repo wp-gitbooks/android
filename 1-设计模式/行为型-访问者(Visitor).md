@@ -1,8 +1,8 @@
 # 1 线索
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808170624.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808170624.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205201818453.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205201818453.png)
 
 # 2 定义
 **数据操作与数据结构分离**。封装一些作用于某种数据结构中的**各元素的操作**，它可以在不改变这个数据结构的前提下定义作用于这些元素的新的操作。
@@ -23,9 +23,9 @@
 
 
 # 5 结构
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205201828856.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205201828856.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210808170624.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210808170624.png)
 
 抽象访问者：
 	具体访问者
@@ -72,7 +72,7 @@
 
 访问者模式类图如下:
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210801214141)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210801214141)
 
 
 # 9 管理者-公司
@@ -419,7 +419,7 @@ public class Client {
 
 举例的类图如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210801214218)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210801214218)
 
 
 ## 10.1 Visitor 抽象访问者

@@ -40,25 +40,25 @@ http://www.woshipm.com/data-analysis/4420955.html
 
 ### 3.4.1 生命线(lifeline)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260828337.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260828337.jpg)
 
 时序图由这些生命线构成,它们应该水平排列的,两个生命线批次不应该重叠. 它们代表了系统中产生交互的对象或部件.
 
 A lifeline notation with an actor element symbol is used when the particular sequence diagram is owned by a use case.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260828164.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260828164.jpg)
 
 带有实体(Entity)元素的生命线表示系统数据. 作为例子,在顾客服务应用中,顾客实体将管理所有与顾客相关的数据
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260828510.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260828510.png)
 
 带有边界(boundary)元素的生命线表示一个系统的边界,或者系统中的一个软件元素. 作为例子,与用户交互的接口界面,数据库网关,或者菜单,就是边界.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260828356.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260828356.png)
 
 带有控制(Control)元素的生命线表示以一个控制实体或管理者. 它组织和调度在边界(boundary)和实体(entities)间的交互,并作为两者之间的中介者.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260829980.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260829980.png)
 
 ### 3.4.2 激活条(Activation Bars)
 
@@ -66,7 +66,7 @@ A lifeline notation with an actor element symbol is used when the particular seq
 
 在时序图中,两个对象间的交互发生在其中给一个发送消息给另一个时. 发送消息的对象和接受消息的对象的生命线上的激活条,表明两者在传递消息期间处于激活(或实例化)状态.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260829183.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260829183.jpg)
 
 ### 3.4.3 消息箭头(Message Arrows)
 
@@ -82,13 +82,13 @@ attribute = message_name (arguments): return_type
 
 如果发送方(在继续下一个消息前)等待接受方去处理消息并返回,称为同步消息. 其用于指明消息的类型的箭头是实心的,像下面这样:
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260829701.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260829701.jpg)
 
 -   异步消息
 
 如果消息的传送是异步的,使用下面这种箭头:
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260829387.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260829387.jpg)
 
 -   返回消息(return message)
 
@@ -96,34 +96,34 @@ attribute = message_name (arguments): return_type
 
 提示: 为了避免弄乱你的时序图,你可以减少使用返回消息,因为返回消息可以被在发送方的消息箭头上描述.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260829203.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260829203.jpg)
 
 -   创建消息(creation message)
 
 一个对象并不一定在整个时序图的持续期间都存活,所以不必在一开始就创建它们,而是可以在必要时(它们接受消息时)创建.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260830274.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260830274.jpg)
 
 -   销毁消息(destruction message)
 
 同样地,当一个对象不被需要时,也可以将它从时序图中删除.通过添加一个'X'在生命线末端表示删除一个对象.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260830811.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260830811.jpg)
 
 -   反身消息(Reflexive message)
 
 当一个对象发送消息给自身时,它发起了一个反身消息, 通过一个消息箭头从生命线发起和接收,来表示.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260830766.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260830766.jpg)
 
 ### 3.4.4 注释
 
 所有类型的UML图通常都允许评论注释. 评论符号是一个折角的矩形,像下面这样,可以用虚线连接到相关的对象.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260830999.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260830999.jpg)
 
 # 4 例子
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205260807215.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205260807215.png)
 
 
 # 5 使用

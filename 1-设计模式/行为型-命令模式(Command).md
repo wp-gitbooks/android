@@ -1,5 +1,5 @@
 
-![image-20210505211625266](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210505211643.png)
+![image-20210505211625266](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210505211643.png)
 
 http://blog.qiji.tech/archives/9628
 
@@ -19,6 +19,6 @@ https://github.com/simple-android-framework/android_design_patterns_analysis/tre
 
 
 
-![UML类图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210430174246.png)
+![UML类图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210430174246.png)
 
 

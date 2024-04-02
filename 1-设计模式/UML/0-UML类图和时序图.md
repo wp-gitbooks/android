@@ -10,7 +10,7 @@
 
 请看以下这个类图，类之间的关系是我们需要关注的：
 
-![_images/uml_class_struct.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105652.jpg)
+![_images/uml_class_struct.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105652.jpg)
 
 - 车的类图结构为<<abstract>>，表示车是一个抽象类；
 - 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示；
@@ -31,7 +31,7 @@
 
 eg：”车”为一个抽象概念，在现实中并无法直接用来定义对象；只有指明具体的子类(汽车还是自行车)，才 可以用来定义对象（”车”这个类在C++中用抽象类表示，在JAVA中有接口这个概念，更容易理解）
 
-![_images/uml_realize.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105619.jpg)
+![_images/uml_realize.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105619.jpg)
 
 注：最终代码中，实现关系表现为继承抽象类；
 
@@ -47,11 +47,11 @@ eg：自行车是车、猫是动物
 
 泛化关系用一条带空心箭头的直接表示；如下图表示（A继承自B）；
 
-![_images/uml_generalization.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105708.jpg)
+![_images/uml_generalization.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105708.jpg)
 
 eg：汽车在现实中有实现，可用汽车定义具体的对象；汽车与SUV之间为泛化关系；
 
-![_images/uml_generalize.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105628.jpg)
+![_images/uml_generalize.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105628.jpg)
 
 注：最终代码中，泛化关系表现为继承非抽象类；
 
@@ -61,7 +61,7 @@ eg：汽车在现实中有实现，可用汽车定义具体的对象；汽车与
 
 聚合关系用一条带空心菱形箭头的直线表示，如下图表示A聚合到B上，或者说B由A组成；
 
-![_images/uml_aggregation.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105716.jpg)
+![_images/uml_aggregation.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105716.jpg)
 
 聚合关系用于表示实体对象之间的关系，表示整体由部分构成的语义；例如一个部门由多个员工组成；
 
@@ -71,7 +71,7 @@ eg：汽车在现实中有实现，可用汽车定义具体的对象；汽车与
 
 组合关系用一条带实心菱形箭头直线表示，如下图表示A组成B，或者B由A组成；
 
-![_images/uml_composition.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105725.jpg)
+![_images/uml_composition.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105725.jpg)
 
 与聚合关系一样，组合关系同样表示整体由部分构成的语义；比如公司由多个部门组成；
 
@@ -85,7 +85,7 @@ eg：汽车在现实中有实现，可用汽车定义具体的对象；汽车与
 
 关联关系默认不强调方向，表示对象间相互知道；如果特别强调方向，如下图，表示A知道B，但 B不知道A；
 
-![_images/uml_association.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105741.jpg)
+![_images/uml_association.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105741.jpg)
 
 注：在最终代码中，关联对象通常是以成员变量的形式实现的；
 
@@ -93,7 +93,7 @@ eg：汽车在现实中有实现，可用汽车定义具体的对象；汽车与
 
 依赖关系是用一套带箭头的虚线表示的；如下图表示A依赖于B；他描述一个对象在运行期间会用到另一个对象的关系；
 
-![_images/uml_dependency.jpg](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628105757.jpg)
+![_images/uml_dependency.jpg](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628105757.jpg)
 
 与关联关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化； 依赖关系也可能发生变化；
 
