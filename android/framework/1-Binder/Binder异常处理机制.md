@@ -6,7 +6,7 @@
 
 两个进程之间若是要进行Binder通信，那么发起通信的一端我们就称它为Client进程。Client进程调用每一个代理对象的方法，本质上都是一次跨进程通信。如果这个方法是同步方法（非oneway修饰），那么此调用过程将会经历如下几个阶段。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210806101909.awebp)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210806101909.awebp)
 
 对应用工程师而言，他只会看到浮在海面的冰山一角，至于隐藏在海面下的系统调用和跨进程通信，是无需他感知的。但无需感知并不代表不存在。这些中间过程若是发生了异常，终归是需要被处理的。
 
@@ -19,7 +19,7 @@
 
 ### 1.1 Server端有什么影响？
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210806101924.awebp)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210806101924.awebp)
 
 AIDL工具生成的Stub抽象类主要用于方法派发。因此实体方法中如果报出异常的话，异常将首先会报给Stub类的onTransact方法。以如下`intMethod`方法为例，如果其内部发生异常，则该异常将会被onTransact方法感知。
 

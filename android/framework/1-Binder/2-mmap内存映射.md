@@ -12,7 +12,7 @@ mmap 是什么？（具体组成、特点）
 
 # 目录
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329094837)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329094837)
 
 
 
@@ -28,7 +28,7 @@ mmap 是什么？（具体组成、特点）
 
 ------
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210325161745.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210325161745.png)
 
 
 
@@ -44,7 +44,7 @@ mmap 是什么？（具体组成、特点）
 1. 假设进程1、2的虚拟内存区域同时映射到同1个共享对象；
 2. 当进程1对其虚拟内存区域进行写操作时，也会映射到进程2中的虚拟内存区域
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329094855)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329094855)
 
 
 
@@ -107,13 +107,13 @@ void *mmap(void *start, size_t length, int prot, int flags, int fd, off_t offset
 
 - 传统的`Linux`系统文件操作流程如下
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329094927)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329094927)
 
 示意图
 
 - 使用了内存映射的 文件读 / 写 操作
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329094944)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329094944)
 
 示意图
 
@@ -123,13 +123,13 @@ void *mmap(void *start, size_t length, int prot, int flags, int fd, off_t offset
 
 - 传统的跨进程通信
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329094959)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329094959)
 
 示意图
 
 - 使用了内存映射的 跨进程通信
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095016)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095016)
 
 示意图
 

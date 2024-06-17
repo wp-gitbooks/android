@@ -166,7 +166,7 @@ View,ViewGroup,Activity都能处理Touch事件, 它们之间处理的先后顺�
 
 
 
-![touch](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210305143804.jpg)
+![touch](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210305143804.jpg)
 
 1. `onInterceptTouchEvent`返回值true表示事件拦截， `onTouch/onTouchEvent` 返回值true表示事件消费。
 2. 触摸事件先交由`Activity.dispatchTouchEvent`。再一层层往下分发，当中间的ViewGroup都不拦截时，进入最底层的View后，开始由最底层的`OnTouchEvent`来处理，如果一直不消费，则最后返回到`Activity.OnTouchEvent`。
@@ -181,7 +181,7 @@ View,ViewGroup,Activity都能处理Touch事件, 它们之间处理的先后顺�
 
 # 4 事件分发机制（源码）
 
-![input_event_dispatcher](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210308152357.jpg)
+![input_event_dispatcher](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210308152357.jpg)
 
 ## 4.1 DecorView.dispatchTouchEvent
 
@@ -732,7 +732,7 @@ public boolean performClick() {
 
 onTouch() 方法的返回值决定了 onTouchEvent() 方法要不要执行，如果 onTouch() 返回 true，则 onTouchEvent() 不会再执行，返回 false ,则 onTouchEvent() 继续执行，而 onClick() 的回调是在 onTouchEvent() 方法中调用，onTouchEvent() 不执行则 onClick() 不执行。
 
-![image-20210530141357286](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210530141357.png)
+![image-20210530141357286](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210530141357.png)
 
 
 # 6 滑动冲突
@@ -745,15 +745,15 @@ https://www.jianshu.com/p/982a83271327
 
 第一种情况，滑动方向不同
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528161342)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528161342)
 
 第二种情况，滑动方向相同
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528161350)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528161350)
 
 第三种情况，上述两种情况的嵌套
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528161407.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528161407.png)
 
 在这里插入图片描述
 
@@ -1052,7 +1052,7 @@ public class ScrollConflictActivity extends BaseActivity {
 上面的代码我们使用了BadViewPager，初始化了BadViewPager里面的子View。
  initData(false);方法传false表示里面的子View是一个TextView，传true表示里面的子View是ListView。首先我们看BadViewPager里面子View是TextView是否可以滑动。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210626203305)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210626203305)
 
 
 
@@ -1070,7 +1070,7 @@ BadViewPager_bad_textview.gif
 
 我们将textview的Clickable设置成true，即让它来消费事件。大家再看看呢
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210626203326)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210626203326)
 
 BadViewPager_bad_textview_clickable.gif
 
@@ -1078,7 +1078,7 @@ BadViewPager_bad_textview_clickable.gif
 
 接下来稍稍修改一下代码 initData(true);传入true，即BadViewPager的子View使用ListView，显然ListView是可以滑动的，BadViewPager是不能滑动的。我们分别通过外部拦截和内部拦截方法来对BadViewPager进行修复。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210626203351)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210626203351)
 
 BadViewPager_bad_listview.gif
 
@@ -1169,7 +1169,7 @@ class ViewPager
 
 假如mActivePointerId不进行初始化，ViewPager会认为这个事件已经被子View给消费了，然后break掉，接下来的滑动操作也就不执行了。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210626203412)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210626203412)
 
 BadViewPager_fixed_listview.gif
 
@@ -1273,7 +1273,7 @@ ViewGroup1 | dispatchTouchEvent --> ACTION_DOWN
 ---->消费
 ```
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132241684.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132241684.png)
 
 
 在这种场景下ACTION_MOVE和ACTION_UP 将如何呢，看下面的打出来的日志
@@ -1293,7 +1293,7 @@ ViewGroup1 | dispatchTouchEvent --> ACTION_UP
 
   
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132241836.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132241836.png)
 
 
 **2、我们在ViewGroup2 的dispatchTouchEvent 返回true消费这次事件**
@@ -1320,7 +1320,7 @@ ViewGroup2 | dispatchTouchEvent --> ACTION_UP
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向
 
   
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132241802.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132241802.png)
 
 
 
@@ -1332,61 +1332,61 @@ ViewGroup2 | dispatchTouchEvent --> ACTION_UP
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132242287.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132242287.png)
 
 
 **5、我们在ViewGroup 2 的onTouchEvent 返回true消费这次事件**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132242435.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132242435.png)
   
 **6、我们在ViewGroup 1 的onTouchEvent 返回true消费这次事件**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132242225.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132242225.png)
 
 **7、我们在Activity 的onTouchEvent 返回true消费这次事件**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132243108.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132243108.png)
 
 
 **8、我们在View的dispatchTouchEvent 返回false并且Activity 的onTouchEvent 返回true消费这次事件**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132243903.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132243903.png)
 
 
 **9、我们在View的dispatchTouchEvent 返回false并且ViewGroup 1 的onTouchEvent 返回true消费这次事件**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132243788.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132243788.png)
 
 
 **10、我们在View的dispatchTouchEvent 返回false并且在ViewGroup 2 的onTouchEvent 返回true消费这次事件**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132243101.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132243101.png)
 
 
 **11、我们在ViewGroup2的dispatchTouchEvent 返回false并且在ViewGroup1 的onTouchEvent返回true消费这次事件**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132243190.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132243190.png)
 
 
 **12、我们在ViewGroup2的onInterceptTouchEvent 返回true拦截此次事件并且在ViewGroup 1 的onTouchEvent返回true消费这次事件。**  
 红色的箭头代表ACTION_DOWN 事件的流向  
 蓝色的箭头代表ACTION_MOVE 和 ACTION_UP 事件的流向  
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304132244350.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304132244350.png)
 
 
 一下子画了好多图，还有好几种情况就不再画了，相信你也看出规律了，对于在onTouchEvent消费事件的情况：**在哪个View的onTouchEvent 返回true，那么ACTION_MOVE和ACTION_UP的事件从上往下传到这个View后就不再往下传递了，而直接传给自己的onTouchEvent 并结束本次事件传递过程。**

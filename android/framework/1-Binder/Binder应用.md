@@ -120,7 +120,7 @@ public interface IInterface
 - `Client`进程 使用 某个 `service`前（此处是 **相加函数**），须 通过`Binder`驱动 向 `ServiceManager`进程 获取相应的`Service`信息
 - 具体代码实现过程如下：
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329103931.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329103931.png)
 
 
 
@@ -220,11 +220,11 @@ Client进程 将参数（整数a和b）发送到Server进程 Server进程 根据
 
 ## 原理和步骤图
 
-![原理图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329104404.png)
+![原理图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329104404.png)
 
 
 
-![流程图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329104420.png)
+![流程图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329104420.png)
 
 
 
@@ -247,7 +247,7 @@ http://gityuan.com/2015/11/23/binder-aidl/
 - **Binder** : Java 层的 Binder 类，代表的其实就是 Binder 本地对象。BinderProxy 类是 Binder 类的一个内部类，它代表远程进程的 Binder 对象的本地代理；这两个类都继承自 IBinder, 因而都具有跨进程传输的能力；实际上，在跨越进程的时候，Binder 驱动会自动完成这两个对象的转换。
 - **Stub** : AIDL 的时候，编译工具会给我们生成一个名为 Stub 的静态内部类；这个类继承了 Binder, 说明它是一个 Binder 本地对象，它实现了 IInterface 接口，表明它具有 Server 承诺给 Client 的能力；Stub 是一个抽象类，具体的 IInterface 的相关实现需要开发者自己实现
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407141047.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407141047.png)
 
 
 

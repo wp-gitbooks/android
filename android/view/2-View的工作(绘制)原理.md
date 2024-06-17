@@ -4,9 +4,9 @@ number headings: auto, first-level 1, max 6, 1.1
 
 # 1 线索
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303150954468.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303150954468.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303061051329.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303061051329.png)
 
 
 
@@ -25,11 +25,11 @@ https://www.cnblogs.com/huansky/p/11911549.html
 
 ## 3.1 流程图
 
-![image-20210311152838265](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210311152838.png)
+![image-20210311152838265](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210311152838.png)
 
 ## 3.2 函数调用链
 
-![image-20210311153306195](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210311153306.png)
+![image-20210311153306195](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210311153306.png)
 
 
 # 4 步骤
@@ -37,7 +37,7 @@ https://www.cnblogs.com/huansky/p/11911549.html
 ## 4.1 measure和layout
 https://developer.android.com/guide/topics/ui/how-android-draws?hl=zh-cn#layout
 
-![image-20210311153657526](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210311153657.png)
+![image-20210311153657526](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210311153657.png)
 
 ## 4.2 measure概述
 了解`measure`过程前，需要先了解传递尺寸（宽 / 高测量值）的2个类：
@@ -57,20 +57,20 @@ https://developer.android.com/guide/topics/ui/how-android-draws?hl=zh-cn#layout
 
 指定视图View 的高度（height） 和 宽度（width）等布局参数。
 
-![image-20210324141347826](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324141348.png)
+![image-20210324141347826](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324141348.png)
 
 
 ## 4.3 MeasureSpec
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324141427.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324141427.png)
 
 ### 4.3.1 组成
 
 测量规格`（MeasureSpec）` = 测量模式`（mode）` + 测量大小`（size）`
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324141616.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324141616.png)
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324141656.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324141656.png)
 
 
 ### 4.3.2 具体使用
@@ -171,7 +171,7 @@ https://developer.android.com/guide/topics/ui/how-android-draws?hl=zh-cn#layout
 
 子View的`MeasureSpec`值根据**子View的布局参数（LayoutParams）和父容器的MeasureSpec值**计算得来的，具体计算逻辑封装在`getChildMeasureSpec()`里
 
-![对于普通View](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324143028.png)
+![对于普通View](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324143028.png)
 
 #### 4.3.5.1 getChildMeasureSpec()的源码
 
@@ -268,12 +268,12 @@ https://developer.android.com/guide/topics/ui/how-android-draws?hl=zh-cn#layout
 
 
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324144122.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324144122.png)
 
 
 - 区别于顶级`View`（即`DecorView`）的测量规格`MeasureSpec`计算逻辑：取决于 **自身布局参数 & 窗口尺寸**
 
-![对于顶级View](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324144206.png)
+![对于顶级View](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324144206.png)
 
 
 
@@ -291,30 +291,30 @@ measure过程分为两类
 
 > 实际作用的方法：`getDefaultSize()` = 计算View的宽/高值、`setMeasuredDimension（）` = 存储测量后的View宽 / 高
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324145652.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324145652.png)
 
 `getDefaultSize()`计算View的宽/高值的逻辑
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324145614.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324145614.png)
 
 
 
 ### 4.4.2 ViewGroup的measure过程
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324145955.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324145955.png)
 
 原理
 
 1. 遍历 测量所有子`View`的尺寸
 2. 合并将所有子`View`的尺寸进行，最终得到`ViewGroup`父视图的测量值
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324145854.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324145854.png)
 
 
 
 - 流程
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324145922.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324145922.png)
 
 
 
@@ -336,14 +336,14 @@ https://www.jianshu.com/p/1f99da8396b6
 https://kknews.cc/code/gzoy48.html
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071442667.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071442667.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071521323.png)
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071526881.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071521323.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071526881.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071530795.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071530795.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071530554.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071530554.png)
 
 
 
@@ -351,7 +351,7 @@ https://kknews.cc/code/gzoy48.html
 
 ## 5.1 概述
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324163158)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324163158)
 
 ## 5.2 问题
 
@@ -391,7 +391,7 @@ DecorView是我们窗口的顶级View，意味着我们使用Hierarchy Viewer查
 # 6 问题
 
 ## 6.1 面试题
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071517835.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071517835.png)
 
 ## 6.2 View的绘制流程是从Activity的哪个生命周期方法开始执行的
 
@@ -689,7 +689,7 @@ Android的核心进程zygote进程fork出我们的app，app启动的最终会走
 
 ### 6.14.2 UI线程的工作机制
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324161345)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324161345)
 
 
 
@@ -1256,7 +1256,7 @@ MeasureSpec通过将SpecMode和SpecSize打包成一个int值来避免过多的�
 ## 8.3 子View创建MeasureSpec创建规则是什么
 根据父容器的MeasureSpec和子View的LayoutParams等信息计算子View的MeasureSpec
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304171130991.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304171130991.png)
 
 
 ## 8.4 自定义View的wrap_content不起作用的原因
@@ -1282,7 +1282,7 @@ public static int getDefaultSize(int size, int measureSpec) {
 ```
 
 2.View的MeasureSpec值是根据子View的布局参数(LayoutParams)和父容器的MeasureSpec值计算得来， 具体计算逻辑封装在getChildMeasureSpec()。 当子View wrap_content或match_parent情况下，子View MeasureSpec的specSize被设置成parenSize = 父容器当前剩余空间大小
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304171131318.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304171131318.png)
 
 3.所以当给一个View/ViewGroup设置宽高为具体数值或者match_parent，它都能正确的显示，但是如果你设置 的是wrap_content->AT_MOST，则默认显示出来是其父容器的大小。如果你想要它正常的显示为wrap_content，所 以需要自己重写onMeasure()来自己计算它的宽高度并设置。此时，可以在wrap_content的情况下(对应 MeasureSpec.AT_MOST)指定内部宽/高(mWidth和mHeight)。
 

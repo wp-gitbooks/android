@@ -27,7 +27,7 @@ kernel/drivers/staging/android/binder.c
 
 
 
-![image-20210512141713128](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512141713.png)
+![image-20210512141713128](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512141713.png)
 
 
 
@@ -35,7 +35,7 @@ kernel/drivers/staging/android/binder.c
 
 
 
-![binder_thread_create](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210404224753.jpg)
+![binder_thread_create](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210404224753.jpg)
 
 # 面试题
 
@@ -180,7 +180,7 @@ static int binder_mmap(struct file *filp, struct vm_area_struct *vma)
 
 ### 问题：一次Binder通信最大可以传输多大的数据？
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512143052)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512143052)
 
 
 

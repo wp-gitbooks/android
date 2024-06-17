@@ -12,11 +12,11 @@ http://gityuan.com/2017/04/02/android-application/
 
 
 
-![start_activity_process](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310220039.jpg)
+![start_activity_process](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310220039.jpg)
 
 
 
-![start_activity](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310220109.jpg)
+![start_activity](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310220109.jpg)
 
 
 
@@ -28,7 +28,7 @@ http://gityuan.com/2017/04/02/android-application/
 
 http://gityuan.com/2016/03/06/start-service/
 
-![start_service](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310220427.png)
+![start_service](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310220427.png)
 
 
 
@@ -445,7 +445,7 @@ http://gityuan.com/2016/03/18/start-activity-cycle/
 
 ### Fragment生命周期
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master@master/img/20210319141506.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee@master/img/20210319141506.png)
 
 
 

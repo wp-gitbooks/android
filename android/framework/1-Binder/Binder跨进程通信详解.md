@@ -2,7 +2,7 @@
 
 
 
-![ServiceManager](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210314220702.jpg)
+![ServiceManager](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210314220702.jpg)
 
 
 
@@ -20,7 +20,7 @@ Binder IPC 正是基于内存映射（mmap）来实现的，但是 mmap() 通常
 2. 接着在内核空间开辟一块内核缓存区，建立**内核缓存区**和**内核中数据接收缓存区**之间的映射关系，以及**内核中数据接收缓存区**和**接收进程用户空间地址**的映射关系；
 3. 发送方进程通过系统调用 copy_from_user() 将数据 copy 到内核中的**内核缓存区**，由于内核缓存区和接收进程的用户空间存在内存映射，因此也就相当于把数据发送到了接收进程的用户空间，这样便完成了一次进程间的通信
 
-![Binder IPC 原理](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407134121.png)
+![Binder IPC 原理](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407134121.png)
 
 
 
@@ -34,7 +34,7 @@ http://gityuan.com/2016/09/04/binder-start-service/
 
 Client进程通过RPC(Remote Procedure Call Protocol)与Server通信，可以简单地划分为三层，驱动层、IPC层、业务层。`demo()`便是Client端和Server共同协商好的统一方法；handle、RPC数据、代码、协议这4项组成了IPC层的数据，通过IPC层进行数据传输；而真正在Client和Server两端建立通信的基础设施便是Binder Driver。
 
-![binder_ipc](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309222830.jpg)
+![binder_ipc](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309222830.jpg)
 
 ### 通信模型
 
@@ -50,7 +50,7 @@ Client进程通过RPC(Remote Procedure Call Protocol)与Server通信，可以简
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407134322.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407134322.png)
 
 
 
@@ -58,13 +58,13 @@ Client进程通过RPC(Remote Procedure Call Protocol)与Server通信，可以简
 2. 各个Server向SM注册(完善通信录)；每个Server端进程启动之后，向SM报告，我是zhangsan, 要找我请返回0x1234(这个地址没有实际意义，类比)；其他Server进程依次如此；这样SM就建立了一张表，对应着各个Server的名字和地址；就好比B与A见面了，说存个我的号码吧，以后找我拨打10086；
 3. Client想要与Server通信，首先询问SM；请告诉我如何联系zhangsan，SM收到后给他一个号码0x1234；Client收到之后，开心滴用这个号码拨通了Server的电话，于是就开始通信了
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407142917.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407142917.png)
 
 Client、Server、ServiceManager、Binder 驱动这几个组件在通信过程中扮演的角色就如同互联网中服务器（Server）、客户端（Client）、DNS域名服务器（ServiceManager）以及路由器（Binder 驱动）之前的关系。
 
 通常我们访问一个网页的步骤是这样的：首先在浏览器输入一个地址，如 [www.google.com](http://www.google.com/) 然后按下回车键。但是并没有办法通过域名地址直接找到我们要访问的服务器，因此需要首先访问 DNS 域名服务器，域名服务器中保存了 [www.google.com](http://www.google.com/) 对应的 ip 地址 10.249.23.13，然后通过这个 ip 地址才能访问到 [www.google.com](http://www.google.com/) 对应的服务器。
 
-![互联网通信模型](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407134403.png)
+![互联网通信模型](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407134403.png)
 
 
 
@@ -88,7 +88,7 @@ Client、Server、ServiceManager、Binder 驱动这几个组件在通信过程�
 
 我们看到整个通信过程都需要 Binder 驱动的接入。下图能更加直观的展现整个通信过程(为了进一步抽象通信过程以及呈现上的方便，下图我们忽略了 Binder 实体及其引用的概念)：
 
-![Binder 通信模型](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407134554.png)
+![Binder 通信模型](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407134554.png)
 
 
 
@@ -100,7 +100,7 @@ Client、Server、ServiceManager、Binder 驱动这几个组件在通信过程�
 
 当 Binder 驱动接收到 A 进程的消息后，发现这是个 objectProxy 就去查询自己维护的表单，一查发现这是 B 进程 object 的代理对象。于是就会去通知 B 进程调用 object 的方法，并要求 B 进程把返回结果发给自己。当驱动拿到 B 进程的返回结果后就会转发给 A 进程，一次通信就完成了
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407134705.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407134705.png)
 
 首先，Server进程要向SM注册；告诉自己是谁，自己有什么能力；在这个场景就是Server告诉SM，它叫`zhangsan`，它有一个`object`对象，可以执行`add` 操作；于是SM建立了一张表：`zhangsan`这个名字对应进程Server;
 
@@ -118,11 +118,11 @@ Client、Server、ServiceManager、Binder 驱动这几个组件在通信过程�
 
 ### 模型原理图
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095146.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095146.png)
 
 
 
-![Alt text](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329170821.png)
+![Alt text](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329170821.png)
 
 
 
@@ -130,22 +130,22 @@ Client、Server、ServiceManager、Binder 驱动这几个组件在通信过程�
 
 ### 模型组成角色说明
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095215.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095215.png)
 
 
 ### `Binder`驱动的作用 & 原理
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095258.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095258.png)
 
 
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095320.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095320.png)
 
 
 
 ### 模型原理步骤说明
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095413.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095413.png)
 
 
 
@@ -164,17 +164,17 @@ Client、Server、ServiceManager、Binder 驱动这几个组件在通信过程�
 
 > 虚线表示并非直接交互
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095718.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095718.png)
 
 
 
 #### 说明2： `Binder`驱动 & `Service Manager`进程 属于 `Android`基础架构（即系统已经实现好了）；而`Client` 进程 和 `Server` 进程 属于`Android`应用层（需要开发者自己实现）
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329095746.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329095746.png)
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329170322)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329170322)
 
 
 

@@ -44,4 +44,4 @@ okhttp中涉及的oom问题
 
 <http://www.huahuaxie.com/android-thread-task-analysis/>
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202205241051785.jpg)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202205241051785.jpg)

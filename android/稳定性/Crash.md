@@ -61,7 +61,7 @@ public class RuntimeInit {
 
 当进程抛出未捕获异常时，则系统会处理该异常并进入crash处理流程。
 
-![app_crash](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427155609.jpg)
+![app_crash](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427155609.jpg)
 
 其中最为核心的工作图中红色部分`AMS.handleAppCrashLocked`的主要功能：
 
@@ -104,7 +104,7 @@ AMS.handleAppCrashLocked
 
 当crash进程执行kill操作后，进程被杀。此时需要掌握binder 死亡通知原理，由于Crash进程中拥有一个Binder服务端`ApplicationThread`，而应用进程在创建过程调用attachApplicationLocked()，从而attach到system_server进程，在system_server进程内有一个`ApplicationThreadProxy`，这是相对应的Binder客户端。当Binder服务端`ApplicationThread`所在进程(即Crash进程)挂掉后，则Binder客户端能收到相应的死亡通知，从而进入binderDied流程。更多关于bInder原理，这里就不细说，博客中有关于binder系列的专题。
 
-![binder_died](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427155643.jpg)
+![binder_died](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427155643.jpg)
 
 # 3 应用
 

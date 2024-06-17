@@ -4,7 +4,7 @@
 
 > 文中示例代码均可在[demo](https://link.zhihu.com/?target=https%3A//github.com/xfhy/AllInOne/blob/master/app/src/main/java/com/xfhy/allinone/ipc/aidl/AidlActivity.kt)中找到
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210730111414.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210730111414.jpg)
 
 
 

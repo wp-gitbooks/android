@@ -7,7 +7,7 @@
 - View类是Android中各种组件的基类，如View是ViewGroup基类（Android中的UI组件都由View、ViewGroup组成）
 - View表现为显示在屏幕上的各种视图
 
-![image-20210324092119178](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324092119.png)
+![image-20210324092119178](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324092119.png)
 
 ### view的构造函数
 
@@ -68,7 +68,7 @@ https://www.cnblogs.com/angeldevil/p/3479431.html#three
 
 ## View视图结构
 
-![View树结构](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324093046.png)
+![View树结构](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324093046.png)
 
 
 
@@ -82,15 +82,15 @@ Android的坐标系定义为：
 
 具体如下图：
 
-![屏幕坐标系](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324093215.png)
+![屏幕坐标系](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324093215.png)
 
-![两者坐标系的区别](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324093232.png)
+![两者坐标系的区别](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324093232.png)
 
 
 
 ### View位置（坐标）描述
 
-![View的顶点](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324093304.png)
+![View的顶点](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324093304.png)
 
 4个顶点的位置描述分别由4个值决定：
 （请记住：View的位置是相对于父控件而言的）
@@ -99,7 +99,7 @@ Top：子View上边界到父view上边界的距离
 Left：子View左边界到父view左边界的距离
 Bottom：子View下边距到父View上边界的距离
 Right：子View右边界到父view左边界的距离
-![View的位置描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324093329.png)
+![View的位置描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324093329.png)
 
 
 
@@ -132,7 +132,7 @@ public final int getTop() {
    event.getRawY();
 ```
 
-  ![get() 和 getRaw() 的区别](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324093507.png)
+  ![get() 和 getRaw() 的区别](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324093507.png)
 
 ### Android的角度(angle)与弧度(radian)
 
@@ -180,13 +180,13 @@ Activity
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210308152839)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210308152839)
 
 # ViewRoot、DecorView、Window之间关系
 
 ## ViewRoot
 
-![image-20210419152233189](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210419152233.png)
+![image-20210419152233189](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210419152233.png)
 
 
 
@@ -211,7 +211,7 @@ root.setView(view,wparams,panelParentView)
 
 ### 组成
 
-![在这里插入图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210308220929.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210308220929.png)
 
 ```
 // 在代码中可通过content得到对应加载的布局
@@ -227,19 +227,19 @@ ViewGroup rootView = (ViewGroup) content.getChildAt(0);
 
 ## Window
 
-![在这里插入图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210308221252.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210308221252.png)
 
 ## Activity
 
-![在这里插入图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210308221316.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210308221316.png)
 
 ### 关系
 
-![在这里插入图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210308221353.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210308221353.png)
 
 
 
-![在这里插入图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210308221414.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210308221414.png)
 # 问题
 
 ## 简述Activity与Window关系
@@ -277,11 +277,11 @@ http://gityuan.com/2017/04/16/activity-with-window/
 
 **参考回答：** 有下面一个视图，DecorView为整个Window界面的最顶层View，它只有一个子元素LinearLayout。代表整个Window界面，包含通知栏、标题栏、内容显示栏三块区域。其中LinearLayout中有两个FrameLayout子元素。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210302104514)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210302104514)
 
 
 
-![image-20210302104444687](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210302104444.png)
+![image-20210302104444687](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210302104444.png)
 
 
 

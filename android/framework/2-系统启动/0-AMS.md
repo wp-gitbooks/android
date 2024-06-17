@@ -34,7 +34,7 @@ http://gityuan.com/2016/03/26/app-process-create/
 
 ## AMS面试题
 
-![image-20210413103420340](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210413103420.png)
+![image-20210413103420340](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210413103420.png)
 
 
 

@@ -292,7 +292,7 @@ synchronized (cpr) {
 
 我们接着看ActivityThread的main函数，顺便寻找我们上面那个问题的答案；这个分析实际上就是Android App的启动过程，更详细的过程可以参阅老罗的文章 [Android应用程序启动过程源代码分析](http://blog.csdn.net/luoshengyang/article/details/6689748)，这里只给出简要调用流程：
 
-[![App启动简要流程](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720205214.png)](http://weishu.dimensionalzone.com/201605/1468313182087.png)
+[![App启动简要流程](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720205214.png)](http://weishu.dimensionalzone.com/201605/1468313182087.png)
 
 [*App启动简要流程*](http://weishu.dimensionalzone.com/201605/1468313182087.png)
 

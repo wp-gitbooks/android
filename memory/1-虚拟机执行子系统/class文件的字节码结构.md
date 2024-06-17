@@ -5,7 +5,7 @@ https://www.jianshu.com/p/905be2a9a700
  经过这么多年的发展，可以以 JVM 虚拟机为平台运行的语言，不止 Java 语言，包括 Kotlin、Groovy、Scala 等语言现在都是运行在 JVM 虚拟机上的语言，而且这些语言都是通过编译之后生成 .class 文件之后，再运行在 JVM 虚拟机上的，比起 .java、.groovy 等文件，.class 文件对于 JVM 虚拟机更加重要。如果足够牛逼，写一个编译器将 .c 文件编译成 .class 文件，运行在 JVM 虚拟机上也是可以的。其实这也就是所谓的 Java 虚拟机的 “语言无关性”
  本篇文章将介绍 .class 文件的结构，通过一个简单的例子认识 .class 文件。
 
-![image-20201021152758001](https://gitee.com/wp335516852/typora-picgo-gitee/raw/master/img/20201021152758.png)
+![image-20201021152758001](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20201021152758.png)
 
 ### 一. 简介
 
@@ -185,7 +185,7 @@ cafe babe 0000 0034 0013 0a00 0400 0f09
 
 上面分析了 7 个常量，其余的常量也是类似的方法。根据第一个 u1 的标志位，就知道这个常量的类型和表结构，就可以知道这个常量的长度大小和代表的含义了。我们也可以通过 “javap -verbose” 命令查看 .class 文件的内容，如下图所示：
 
-![image-20201021152823971](https://gitee.com/wp335516852/typora-picgo-gitee/raw/master/img/20201021152824.png)
+![image-20201021152823971](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20201021152824.png)
 
 
 

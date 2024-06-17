@@ -19,12 +19,12 @@
 这里我们通过两张图来展示Handler在Java层和在Native层的逻辑：
 
 Java层：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721115052.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721115052.png)
 
 
 Native层：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721115133.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721115133.png)
 
 
 
@@ -55,17 +55,17 @@ MessageQueue的底层实现是利用管道和epoll机制来实现的。
 
 
 
-![pipe.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721125059)
+![pipe.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721125059)
 
  MessageQueue 在构造方法中，会调用 native 方法 nativeInit 方法，在NativeMessageQueue 的构造方法中，会构造一个 JNI 层的 Looper。Looper.loop()有个for死循环，它调用了MessageQueue下的next方法。
 
-![looper1.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721125108)
+![looper1.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721125108)
 
 
 
 
 
-![looper2.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721125114)
+![looper2.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721125114)
 
  如上图，nextPollTimeoutMillis这个变量，这个变量代表MessageQueue下次被唤醒的时间。MessageQueue里Message在加入队列的时候，会按照执行的时间顺序排列；每次消息入队列时，MessageQueue都会尽量计算出一个精确的时间。假如这个时间是计算出来是1000ms，如果消息队列中没有消息需要马上处理时，会判断用户是否设置了Idle Handler。如果有的话，则会尝试处理mIdleHandlers中所记录的所有Idle Handler。此时会逐个调用这些Idle Handler的queueIdle()成员函数，再次调用nativePollOnce()方法，线程阻塞住，不占用资源。当时间到了，会往管道流中写入字节流，唤醒线程，处理Message。 ####Looper队列的阻塞唤醒的功能是怎么实现的？ MessageQueue 是按照消息触发时间的先后顺序排列的，队列头部的消息是最早触发的。当有消息加入，会从队列头部开始遍历，插入到合适的位置，以保证所有消息的时间顺序。如果当前线程处于空闲等待状态，需要调用 nativeWake 来唤醒。
 
@@ -98,7 +98,7 @@ void Looper::wake() {
 
 当消息队列中没有消息处理时，线程会进入空闲等待状态，具体是通过 Looper 调用 epoll_wait。 附图，
 
-![wake.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721125123)
+![wake.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721125123)
 
 
 

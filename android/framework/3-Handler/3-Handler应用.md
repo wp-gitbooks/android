@@ -3,7 +3,7 @@ HandlerThread同Looper关联起来
 
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210330222412)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210330222412)
 
 ## 使用
 

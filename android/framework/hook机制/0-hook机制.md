@@ -139,7 +139,7 @@ public static void attachContext() throws Exception{
 
 好了，我们启动一个Activity测试一下，结果如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720203836.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720203836.png)
 
 
 ### 总结

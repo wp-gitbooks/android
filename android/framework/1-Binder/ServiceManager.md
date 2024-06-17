@@ -4,7 +4,7 @@ ServiceManager本身工作相对简单，其功能：查询和注册服务
 
 ServiceManager是由init进程启动
 
-![class_java_binder](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519142440.jpg)
+![class_java_binder](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519142440.jpg)
 
 
 -   **ServiceManager：** 通过getIServiceManager方法获取的是ServiceManagerProxy对象； ServiceManager的addService, getService实际工作都交由ServiceManagerProxy的相应方法来处理；
@@ -22,7 +22,7 @@ ServiceManager是由init进程启动
 
 ## 启动结构图
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528144043.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528144043.jpeg)
 
 1.  ServiceManager 分为 framework 层和 native 层，framework 层只是对 native 层进行了封装方便调用，图上展示的是 native 层的 ServiceManager 启动过程。
    
@@ -39,7 +39,7 @@ ServiceManager是由init进程启动
 3.  进入无限循环，处理client端发来的请求：binder_loop；
 
 
-![create_servicemanager](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309223430.jpg)
+![create_servicemanager](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309223430.jpg)
 
 ### 总结
 ServiceManger集中管理系统内的所有服务，通过权限控制进程是否有权注册服务,通过字符串名称来查找对应的Service; 由于ServiceManger进程建立跟所有向其注册服务的死亡通知, 那么当服务所在进程死亡后, 会只需告知ServiceManager. 每个Client通过查询ServiceManager可获取Server进程的情况，降低所有Client进程直接检测会导致负载过重。
@@ -86,7 +86,7 @@ ServiceManager最核心的两个功能为查询和注册服务：
 
 ### ServiceManager注册服务
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528144203.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528144203.jpeg)
 
 -   注册 MediaPlayerService 服务端，我们通过 ServiceManager 的 addService() 方法来注册服务。
     
@@ -97,7 +97,7 @@ ServiceManager最核心的两个功能为查询和注册服务：
 
 ### ServiceManager获取服务
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528144227.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528144227.jpeg)
 
 -   获取服务的过程与注册类似，相反的过程。通过 ServiceManager 的 getService() 方法来注册服务。
     
@@ -111,17 +111,17 @@ ServiceManager最核心的两个功能为查询和注册服务：
 
 ## 获取ServiceManager流程图
 
-![get_servicemanager](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309223810.jpg)
+![get_servicemanager](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309223810.jpg)
 
 ## 注册服务(addService)
 
 ### 类图
 
-![add_media_player_service](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309223942.png)
+![add_media_player_service](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309223942.png)
 
 ### 时序图
 
-![addService](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309224009.jpg)
+![addService](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309224009.jpg)
 
 ### ProcessState初始化
 
@@ -166,7 +166,7 @@ ProcessState采用单例模式，**保证每一个进程**都只打开一次Bind
 
 ### 类图
 
-![get_media_player_service](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309225017.png)
+![get_media_player_service](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309225017.png)
 
 
 

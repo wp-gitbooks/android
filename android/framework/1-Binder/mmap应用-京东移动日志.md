@@ -27,7 +27,7 @@
 
   
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095104)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095104)
 
 
 
@@ -76,7 +76,7 @@ EACCES：访问出错EAGAIN：文件已被锁定，或者太多的内存已被�
 
   
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095154.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095154.png)
 
 
 
@@ -121,20 +121,20 @@ EACCES：访问出错EAGAIN：文件已被锁定，或者太多的内存已被�
 
 **日志写入的流程**
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095231.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095231.png)
 
 
 
 ## 03 移动日志系统架构介绍
 客户端日志SDK为开发者提供日志的打印，主要是将在线上运行期间产生的日志写入文件中，根据开发者的需要捞取指定的日志，为开发者解决线上问题提供助力。我们设计了满足基本功能的系统，架构如下图所示：
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095304)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095304)
 
   
 
 ## 04 客户端日志SDK介绍
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095330)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095330)
 
 
 
@@ -154,7 +154,7 @@ EACCES：访问出错EAGAIN：文件已被锁定，或者太多的内存已被�
 
 
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095341)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095341)
 
   
 
@@ -168,7 +168,7 @@ EACCES：访问出错EAGAIN：文件已被锁定，或者太多的内存已被�
 性能测试中采用了在同一台小米Note3 Android 9系统版本手机，分别测试了已有的Java日志库、当前日志库、美团Logan、腾讯XLog日志库的写入性能。通过写入速度、GC频率、CPU占用率几个维度来衡量日志库的写入性能，测试的结果只限于衡量当前测试环境，并不代表Android平台整体平均水准。
 
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095358.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095358.png)
 
 
 
@@ -180,13 +180,13 @@ java日志库:
 
   
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095409.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095409.png)
 
 
 
 native日志库:
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095416.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095416.png)
 
 
 
@@ -196,13 +196,13 @@ native日志库:
 
 java日志库:
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095428.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095428.png)
 
   
 
 native日志库:
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095438.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095438.png)
 
   
 
@@ -216,7 +216,7 @@ native日志库:
 上边我们与java日志进行了对比，接下来我们将和其他使用mmap实现的日志库进行下对比。
 
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095449.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095449.png)
 
 
 
@@ -230,7 +230,7 @@ native日志库:
 
 
 
-![图片](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210727095459.png)
+![图片](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210727095459.png)
 
   
 

@@ -1,6 +1,6 @@
 # 线索
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628112717.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628112717.png)
 
 
 
@@ -167,7 +167,7 @@ static struct binder_buffer *binder_alloc_buf(struct binder_proc *proc,
 
 # 问题：一次Binder通信最大可以传输多大的数据？
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628112743.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628112743.png)
 
 [[Android使用intent传递数据时的大小限制]]
 

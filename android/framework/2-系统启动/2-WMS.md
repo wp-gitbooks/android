@@ -5,7 +5,7 @@ number headings: auto, first-level 1, max 6, 1.1
 # 1 线索
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303101140314.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303101140314.png)
 
 
 
@@ -13,19 +13,19 @@ Activity、Window、DecorView、View的绘制流程
 
 
 # 2 WMS&AMS
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071443202.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071443202.png)
 
 AMS 和 WMS 什么关系？
 都属于同一个进程system_server进程，都是在手机启动system_server的时候启动
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071517835.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071517835.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303082118038.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303082118038.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303082113686.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303082113686.png)
 
 application不能创建 window
 
@@ -43,30 +43,30 @@ https://juejin.cn/post/6844904192826425357vv
 
 问题5：是同一个
 https://www.bilibili.com/video/av256486209/?vd_source=f089cad7f2e400622e91946932061cb9
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303082127798.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303082127798.png)
 
 
 
 
 # 3 Framework之WMS解析
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303082005724.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303082005724.png)
 
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303082013371.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303082013371.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303082014207.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303082014207.png)
 
 问题一：
 textview.invalidate():会触发其他view 的绘制。主要原理会从下到上，计算受影响的view区域和标记，找到 ViewRootImpl，然后从上到下开始绘制受影响的view。
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303082034853.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303082034853.png)
 
 问题2：
 
 
 # 4 Window加载视图过程
 ## 4.1 整体视图关系
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081533261.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081533261.png)
 
 **Activity**: 本身不是窗口，也不是视图，它只是窗口的载体，一方面是key、touch事件的响应处理，一方面是对界面生命周期做统一调度
 
@@ -86,11 +86,11 @@ https://www.jianshu.com/p/bac61386d9bf
 **params** : 类型为WindowManager.LayoutParams，即表示该View要展示在窗口上的布局参数。有2个比较重要的参数:`flags`,`type`。
 
 **-flags:表示Window的属性:**
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081537860.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081537860.png)
 
 **-type: 表示窗口的类型（具体值太多了就不一一列举了，具体可以去WindowManager的LayoutParams看详细类型描述）:**
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081537184.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081537184.png)
 
 
 **这个type层级到底有什么作用：**  
@@ -104,7 +104,7 @@ Window是分层的，每个Window都有对应的z-ordered，（z轴，从1层层
 讲window的创建过程，那么肯定得了解activity的启动流程，但是在这里不详细说activitiy的启动流程了，因为后面会有计划单独拎出四大组件开篇章来讲解启动流程。
 
 那么简单的先上个图了解下activity的启动流程（借用辉辉的图）：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081538657.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081538657.png)
 
 
 对于window的创建，我们就从handleLaunchActivity开始，开始看源码吧：
@@ -182,7 +182,7 @@ Activity -> PhoneWindow:setWindowControllerCallback
 https://blog.csdn.net/weixin_38196407/article/details/106358950
 
 ## 4.3 window添加view过程
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081545463.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081545463.png)
 我们前面知道PhoneWindow对View来说更多是扮演容器的角色，而真正完成把一个 View，作为窗口添加到 WMS 的过程是由 WindowManager 来完成的。而且从上面创建过程我们知道了WindowManager 的具体实现是 WindowManagerImpl。
 
 那么我们继续来跟代码：
@@ -261,7 +261,7 @@ IWindowSession: 应用程序向WMS请求功能
 IWindow：WMS向客户端反馈它想确认的信息  
 实现类：W
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081544228.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081544228.png)
 
 
 
@@ -435,7 +435,7 @@ public int addToDisplay(IWindow window, int seq, WindowManager.LayoutParams attr
 
 
 WMS执行addWindow部分代码有点多，本篇就不铺开说了，不然篇幅就太长了，之后再说，看下如下的流程图：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081545047.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081545047.png)
 
 总结起来：WMS中 addWindow流程就几点：  
 1.通过type和 token对window进行分类和验证，确保其有效性。  
@@ -447,16 +447,16 @@ WMS执行addWindow部分代码有点多，本篇就不铺开说了，不然篇�
 
 五、总结  
 下面用一张图来总结下Activity、PhoneWindow、 DecorView 、WindowManagerGlobal 、ViewRootImpl 、Wms 以及WindowState之间的关系：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081546677.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081546677.png)
 
 Activity在attach的时候，创建了一个PhoneWindow对象，并且实现了Window的Callback接口，这样activity就和window绑定在了一起，通过setContentView，创建DecorView，并解析好视图树加载到DecorView的contentView部分，WindowManagerGlobal一个进程只有唯一一个，对当前进程内所有的视图进行统一管理，其中包括ViewRootImpl，它主要做两件事情，先触发view绘制流程，再通过IPC 把view添加到window上。
 
 另外这是添加视图的方法执行时序图：
 
 ### 4.3.5 时序图
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303110936914.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303110936914.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081546950.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081546950.png)
 
 
 
@@ -496,13 +496,13 @@ class WindowManagerService extends IWindowManager.Stub implements Watchdog.Monit
         }
 ```
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303110936685.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303110936685.png)
 
 
 至于Window的删除和更新过程，举一反三，也是使用WindowManagerGlobal对ViewRootImpl的操作，最终也是通过Session的IPC跨进程通信通知到WmS。整个过程的本质都是同出一辙的。下一节接着讲DecorView布局的加载流程。
 
 注意：IWindow 1.aidl、IWindowManager.aidl 等都是 aild 文件
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081706792.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081706792.png)
 
 
 
@@ -530,11 +530,11 @@ public class PhoneWindow extends Window implements MenuBuilder.Callback {
 先交代下PhoneWindow 与DecorView 以及mContentParent的关系：mDecor是窗口顶层视图，mContentParent是mDecor上content framelayout的父容器，用来装xml解析出来的view树。
 
 ## 5.2 setContentView流程
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081550913.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081550913.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303110949317.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303110949317.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303110951802.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303110951802.png)
 
 ### 5.2.1 setContentView
 
@@ -929,7 +929,7 @@ public void setView(View view, WindowManager.LayoutParams attrs, View panelParen
 
 ## 7.1 从requestLayout开始
 从requestLayout代码一层层往下追（具体源码不贴了，非常简单），最终确认view的绘制流程是从performTraversals开始。顺一下整个流程：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081552184.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081552184.png)
 
 ### 7.1.1 performTraversals
 
@@ -1014,7 +1014,7 @@ public static int getSize(int measureSpec) {
 getMode方法中ModeMask 为 0x3 << 30 转换成二进制为 0011 << 30 ，也就是向左移动30位 则 ModeMask高两位为1，低三十位为0，整形measureSpec 为32位， measureSpec & mode_mask 就是高2位的运算，getSize方法中 ~Mode_MASK 则是除了高两位为0 外剩下的低30位均为 1，那么和measure 进行 & 运算就是在求得低30为中存储的值。
 
 **SpecMode：测量模式**
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081552382.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081552382.png)
 
 
 **SpecSize：对应某种测量模式下的尺寸大小**
@@ -1035,7 +1035,7 @@ public static int getChildMeasureSpec(int spec, int padding, int childDimension)
 
 对普通View的MeasureSpec的创建规则进行总结：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081553883.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081553883.png)
 
 这个表怎么用呢？举个例子：  
 如果View在布局中使用wrap_content,那么它的specMode是AT_MOST,这种模式下，它的宽高为specSize, 而查表可得View的specSize是parentSize，而parentSize是当前父容器剩余空间大小，这种效果和在布局中使用match_parent完全一致，所以如果是对尺寸有具体要求的自定义控件需要指定specSize大小。
@@ -1048,7 +1048,7 @@ LayoutParams类是用于子视图向父视图传达自己尺寸意愿的一个�
 
 performTraversals里面执行了三个方法，分别是performMeasure()、performLayout()、performDraw()这三个方法，这三个方法分别完成DecorView的measure、layout、和draw这三大流程，其中performMeasure()中会调用measure()方法，在measure()方法中又会调用onMeasure()方法，在onMeasure()方法中会对所有子元素进行measure过程，这个时候measure流程就从父容器传递到子元素中了，这样就完成了一次measure过程。接着子元素会重复父容器的measure过程，如此反复就实现了从DecorView开始对整个View树的遍历测量，measure过程就这样完成了。同理，performLayout()和performDraw()也是类似的传递流程。针对performTraveals()的大致流程，可以用以下流程图来表示：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081553969.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081553969.png)
 
 以上的流程图只是一个为了便于理解而简化版的流程，真正的流程应该分为以下五个工作阶段：
 
@@ -1138,7 +1138,7 @@ measureHierarchy()方法最终也是调用了performMeasure()方法对View树进
 
 ### 7.2.3 测量过程(performMeasure（）)
 measure整体执行流程：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081555806.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081555806.png)
 
 WMS的布局结果已经确定了，不管是否满意都得开始终极布局过程了，下面介绍下measure:  
 measure是对View进程测量，确定各View的尺寸的过程,这个过程分View和ViewGroup两种情况来看，对于View，通过measure完成自身的测量就行了，而ViewGroup除了完成自身的测量外，还需要遍历去调用所有子view的measure方法，各个子view递归去执行这个过程。
@@ -1360,7 +1360,7 @@ public static int getChildMeasureSpec(int spec, int padding, int childDimension)
 
 ### 7.2.4 布局过程 (performLayout（）)
 layout的整体执行流程：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081556140.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081556140.png)
 
 
 Layout的作用是ViewGroup用来确定子view的位置，当ViewGroup的位置被确定之后，它在onLayout中会遍历所有子view并调用其layout方法，在layout方法中onLayout又被调用。
@@ -1499,7 +1499,7 @@ protected void onLayout(boolean changed, int l, int t, int r, int b) {
 
 ### 7.2.5 绘制过程 (performDraw（）)
 draw整体执行流程：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081556187.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081556187.png)
 
 
 Draw作用是将View绘制到屏幕上.过程相对比较简单。  
@@ -1699,7 +1699,7 @@ requestLayout: 当前view及其以上的viewGroup部分都重新走ViewRootImpl 
 
 最后一张图总结下invalidate/postInvalidate 和 requestLayout
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081557963.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081557963.png)
 
 
 ## 7.4 参考
@@ -1794,10 +1794,10 @@ mAttachInfo.mOutsets, mInputChannel);
 ```
 
 两张图总结下：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081558112.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081558112.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303081559624.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303081559624.png)
 
 总结：  
 Activity主要作用还是生命周期的管理，Window是一个视图容器，将Activity与View解耦，WindowManager统一管理View。

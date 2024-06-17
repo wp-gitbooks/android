@@ -1,22 +1,22 @@
 # 线索
 PMS 是什么、启动、安装、解析扫描
 
-![image-20210302220757211](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210302220757.png)
+![image-20210302220757211](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210302220757.png)
 
-![image-20210628151304180](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708155033.png)
-
-
+![image-20210628151304180](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708155033.png)
 
 
 
-![image-20210708155916472](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708155916.png)
 
 
-![image-20210708155934107](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708155934.png)
+![image-20210708155916472](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708155916.png)
+
+
+![image-20210708155934107](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708155934.png)
 
 
 # 概述
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131535911.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131535911.png)
 Android系统启动时，会启动(应用程序管理服务器PKMS)，此服务负责扫描系统中特定的目录，寻 找 里面的APK格式的文件，并对这些文件进行解析，然后得到应用程序相关信息，最后完成应用程序的 安 装
 
     PKMS在安装应用过程中, 会全面解析应用程序的AndroidManifest.xml文件, 来得到Activity, Service, BroadcastReceiver, ContextProvider 等信息, 在结合PKMS服务就可以在OS中正常的使 用应用程序了
@@ -43,9 +43,9 @@ PackageManagerService(简称PKMS)，是Android系统中核心服务之一，**�
 
 
 
-![package_manager_service](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427100730.jpg)
+![package_manager_service](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427100730.jpg)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131537758.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131537758.png)
 
 
 - Binder服务端：PackageManagerService继承于IPackageManager.Stub；
@@ -57,9 +57,9 @@ Android系统启动过程中，一路启动到[SystemServer](http://gityuan.com/
 
 `Zygote --> SystemServer --> PackageManagerService(PMS)`
 
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427103401.png)
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427103401.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131538217.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131538217.png)
 
 
 ## PackageManagerService 构造方法
@@ -89,7 +89,7 @@ PKMS初始化过程，分为5个阶段：
 
 ### 涉及模块
 
-![PMS 涉及到的模块](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427104556.png)
+![PMS 涉及到的模块](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427104556.png)
 
 
 
@@ -103,18 +103,18 @@ PKMS初始化过程，分为5个阶段：
 
 ### PMS权限管理(非重点)
 
-![PMS 权限管理](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427104646.png)
+![PMS 权限管理](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427104646.png)
 
 
 ### PMS 安装 Jar包 、apk(非重点)
 
-![PMS 安装 Jar包 、apk](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427104723.png)
+![PMS 安装 Jar包 、apk](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427104723.png)
 
 ## APK的扫描
 Android 10.0中，PKMS主要扫描以下
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131541471.png)
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131542325.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131541471.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131542325.png)
 第一步:扫描APK，解析AndroidManifest.xml文件，得到清单文件各个标签内容
 
 第二步:解析清单文件到的信息由 Package 保存。从该类的成员变量可看出，和 Android 四大组件相关 的信息分别由 activites、receivers、providers、services 保存，由于一个 APK 可声明多个组件， 因此activites 和 receivers等均声明为 ArrayList
@@ -124,16 +124,16 @@ Android 10.0中，PKMS主要扫描以下
 
 安装步骤二: 调用PackageInstaller.Session的commit方法, 把Apk的信息交给PKMS处理 安装步骤三: 进行Apk的Copy操作, 进行安装
 安装的三步走, 整体描述图:
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131544653.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131544653.png)
 用户点击 xxx.apk 文件进行安装, 从 开始安装 到 完成安装 流程如下:
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131545987.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131545987.png)
 
 APK的安装, 整体描述图:
 摘要：用户点击 xxx.apk 文件进行安装，从 开始安装 到 完成安装 流程如下：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131546012.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131546012.png)
 
 ### 总结:安装的原理
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131547295.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131547295.png)
 
 ## PMS之权限扫描
 此 “PMS之权限扫描” 学习的目标是: PackageManagerService中执行systemReady()后，需求对 /system/etc/permissions中的各种xml进行扫描，进行相应的权限存储，让以后可以使用，这就是本次 “PMS只权限扫描”学习的目的
@@ -145,7 +145,7 @@ PackageManagerService执行systemReady()时，通过SystemConfig的readPermissio
 feature主要工作:
 
 整体图:
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303131549485.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303131549485.png)
 总结:权限扫描，扫描/system/etc/permissions中的xml，存入相应的结构体中，供之后权限管理 使用
 
 
@@ -831,7 +831,7 @@ public class PackageInstallObserver {
 APK的信息交由PMS后，PMS通过向PackageHandler发送消息来驱动APK的复制和安装工作。
 先来查看PackageHandler处理安装消息的调用时序图。
 
-![VeClRJ.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141622.png)
+![VeClRJ.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141622.png)
 
 接着上一篇文章的代码逻辑来查看PMS的installStage方法。
 **frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java**
@@ -906,7 +906,7 @@ void installStage(String packageName, File stagedDir, String stagedCid,
 ```
 
 PackageHandler继承自Handler，它被定义在PMS中，doHandleMessage方法用于处理各个类型的消息，来查看对INIT_COPY类型消息的处理。注释1处的mBound用于标识是否绑定了DefaultContainerService，默认值为false。DefaultContainerService是用于检查和复制可移动文件的服务，这是一个比较耗时的操作，因此DefaultContainerService没有和PMS运行在同一进程中，它运行在com.android.defcontainer进程，通过IMediaContainerService和PMS进行IPC通信，如下图所示。
-![VeCQG4.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141638.png)
+![VeCQG4.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141638.png)
 
 注释2处的connectToService方法用来绑定DefaultContainerService，注释3处发送MCS_BOUND类型的消息，触发处理第一个安装请求。
 查看注释2处的connectToService方法：
@@ -1049,7 +1049,7 @@ case MCS_BOUND: {
 
 先来查看复制APK的时序图。
 
-![VeCuIU.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141657.png)
+![VeCuIU.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141657.png)
 
 HandlerParams是PMS中的抽象类，它的实现类为PMS的内部类InstallParams。HandlerParams的startCopy方法如下所示。
 **frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java#HandlerParams**
@@ -1140,7 +1140,7 @@ public void handleStartCopy() throws RemoteException {
 handleStartCopy方法的代码很多，这里截取关键的部分。
 注释1处通过IMediaContainerService跨进程调用DefaultContainerService的getMinimalPackageInfo方法，该方法轻量解析APK并得到APK的少量信息，轻量解析的原因是这里不需要得到APK的全部信息，APK的少量信息会封装到PackageInfoLite中。接着在注释2处确定APK的安装位置。注释3处创建了InstallArgs，InstallArgs 是一个抽象类，定义了APK的安装逻辑，比如复制和重命名APK等，它有3个子类，都被定义在PMS中，如下图所示。
 
-![VeCMiF.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141715.png)
+![VeCMiF.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141715.png)
 
 其中FileInstallArgs用于处理安装到非ASEC的存储空间的APK，也就是内部存储空间（Data分区），AsecInstallArgs用于处理安装到ASEC中（mnt/asec）即SD卡中的APK。MoveInstallArgs用于处理已安装APK的移动的逻辑。
 对APK进行检查后就会在注释4处调用InstallArgs的copyApk方法进行安装。
@@ -1175,7 +1175,7 @@ private int doCopyApk(IMediaContainerService imcs, boolean temp) throws RemoteEx
 
 照例先来查看安装APK的时序图。
 
-![VeCnaT.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141732.png)
+![VeCnaT.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141732.png)
 
 我们回到APK的复制调用链的头部方法：HandlerParams的startCopy方法，在注释4处会调用handleReturnCode方法，它的实现在InstallParams中，如下所示。
 **frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java**
@@ -1390,7 +1390,7 @@ installNewPackageLIF主要做了以下3件事：
 
 
 ## APK是如何被解析的
-![VeiNCD.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141933.png)
+![VeiNCD.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141933.png)
 
 ### 前言
 
@@ -1452,7 +1452,7 @@ public Package parsePackage(File packageFile, int flags, boolean useCaches)
 
 注释1处，如果要解析的packageFile是一个目录，说明是Mutiple APK，就需要调用parseClusterPackage方法来解析，如果是Single APK则调用parseMonolithicPackage方法来解析。这里以复杂的parseClusterPackage方法为例，了解了这个方法，parseMonolithicPackage方法自然也看的懂。
 
-![VeiU8e.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141907.png)
+![VeiU8e.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141907.png)
 
 **frameworks/base/core/java/android/content/pm/PackageParser.java**
 
@@ -1622,7 +1622,7 @@ parseBaseApplication方法有近500行代码，这里只截取了解析四大组
 PackageParser解析APK的代码逻辑非常庞大，基本了解本文所讲的就足够了，如果有兴趣可以自行看源码。
 parseBaseApk方法主要的解析结构可以理解为以下简图。
 
-![VeiNCD.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141933.png)
+![VeiNCD.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141933.png)
 
 
 
@@ -1654,7 +1654,7 @@ public final static class Package implements Parcelable {
 
 注释1处，activities列表中存储了类型为Activity的对象，需要注意的是这个Acticity并不是我们常用的那个Activity，而是PackageParser的静态内部类，Package中的其他列表也都是如此。Package的数据结构简图如下所示。
 
-![Veidvd.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427141951.png)
+![Veidvd.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427141951.png)
 
 从这个简图中可以发现Package的数据结构是如何设计的：
 
@@ -1784,7 +1784,7 @@ Android 为了确认 apk 开发者身份和防止内容的篡改，设计了一�
 
 ## 面试题相关
 
-![image-20210413102651345](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210413102651.png)
+![image-20210413102651345](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210413102651.png)
 
 
 # 参考

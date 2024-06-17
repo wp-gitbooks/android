@@ -18,12 +18,12 @@ Application.attachBaseContext(super before) -> Application.attachBaseContext(sup
 ## (一)system_server进程
 其application创建过程都创建对象有ActivityThread，Instrumentation, ContextImpl，LoadedApk，Application。 流程图如下：
 
-![system_application](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210425143712.jpg)
+![system_application](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210425143712.jpg)
 
 ## (二) app进程
 其application创建过程都创建对象有ActivityThread，ContextImpl，LoadedApk，Application。 流程图如下：
 
-![app_application](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210425143806.jpg)
+![app_application](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210425143806.jpg)
 App进程的Application创建过程，跟system进程的核心逻辑都差不多。只是app进程多了两次binder调用。
 
 

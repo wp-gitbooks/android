@@ -4,7 +4,7 @@ number headings: auto, first-level 1, max 6, 1.1
 
 # 1 线索
 
-![image-20210511171229164](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210511171229.png)
+![image-20210511171229164](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210511171229.png)
 
 
 异常是什么、异常组成、crash流程、怎么避免异常？
@@ -67,11 +67,11 @@ Java使用一些特殊的对象来代表异常状况，这样对象称为异常�
 
 ### 2.2.1 **异常的类型-异常的层次结构**
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427162223.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427162223.png)
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210611063000.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210611063000.png)
 
 
 橙色: unchecked; 蓝色: checked
@@ -80,7 +80,7 @@ Java使用一些特殊的对象来代表异常状况，这样对象称为异常�
 
 
 
-![1354439580_6933](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210611070811.png)
+![1354439580_6933](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210611070811.png)
 
 
 
@@ -177,7 +177,7 @@ try {
    第四：先Catch子类异常再Catch父类异常。
 用示意图表示如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427162345.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427162345.jpeg)
 
 #### 2.3.2.2 throw、throws关键字
 
@@ -192,7 +192,7 @@ public static void test() throws Exception
 
   throws关键字用于方法体外部的方法声明部分，用来声明方法可能会抛出某些异常。仅当抛出了检查异常，该方法的调用者才必须处理或者重新抛出该异常。当方法的调用者无力处理该异常的时候，应该继续抛出.
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427162347.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427162347.jpeg)
 
 ![img](http://img.blog.csdn.net/20160331171522522)
 
@@ -263,11 +263,11 @@ public void foo() throws ExceptionType1 , ExceptionType2 ,ExceptionTypeN
 
 printStackTrace
 
-![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210611070501.png)
+![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210611070501.png)
 
 
 
-![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210611070516.png)
+![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210611070516.png)
 
 
 ## 2.6 特殊情况异常处理
@@ -456,7 +456,7 @@ finally block i = 3
 
 其实你从它的字节码指令去看整个过程，而不要单单四记它的执行过程。
 
-![image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210615160539.png)
+![image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210615160539.png)
 
 你会发现程序最终会采用 finally 代码块中的 return 语句进行返回，而直接忽略 try 语句块中的 return 指令。
 

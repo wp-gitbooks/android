@@ -585,7 +585,7 @@ private void ensureGoneAsync(final long watchStartNanoTime, final KeyedWeakRefer
 
 如果有这种需求，想要在某个activity绘制完成去做一些事情，那这个时机是什么时候呢？有同学可能觉得onResume()是一个合适的机会，不是可是这个onResume() 真的是各种绘制都已经完成才回调的吗？No, too naive  ~~
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160504.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160504.png)
 
 
 
@@ -596,7 +596,7 @@ private void ensureGoneAsync(final long watchStartNanoTime, final KeyedWeakRefer
 
 我们知道app的进程其实是ActivityThread, 那么activity的生命周期自然是它来执行了，
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160524.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160524.png)
 
 
 performResumeActivity就是回调onResume了， 我们继续看wm.addView方法， 这个ViewManager是一个接口，其实现者是WindowManagerImpl
@@ -604,7 +604,7 @@ performResumeActivity就是回调onResume了， 我们继续看wm.addView方法�
 
 **2.WindowManagerImpl.java**
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160539.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160539.png)
 
 
 
@@ -614,7 +614,7 @@ performResumeActivity就是回调onResume了， 我们继续看wm.addView方法�
 
 **3.WindowManagerGlobal.java**
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160550.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160550.png)
 
 
 
@@ -624,33 +624,33 @@ performResumeActivity就是回调onResume了， 我们继续看wm.addView方法�
 
 **4.ViewRootImpl.java**
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160601.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160601.png)
 
 
 
 这个函数调用了关键方法requestLayout(), 我们继续跟踪，顺便说下，后面一连串的BadTokenException就是我们常常遇到的dialog相关抛出的，也有些特殊场景也会出这个异常，可以到这里查看线索。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160611.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160611.png)
 
 
 
  调用了scheduleTraversals， 从名字就能看出来了吧：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160621.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160621.png)
 
 
 
 它往Choreographer里面post了一个runnable， 这个Choreographer是android负责帧率刷新相关的东西，我们暂时可以不关注它，可以理解为往主线程post一个消息是一样的，顺便说下这个Choreographer可以做帧率检测相关的东西，，可以用于卡顿检测什么的···
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160632.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160632.png)
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160640.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160640.png)
 
 
 
  我们看这个runnable果然是去执行了那个巨长无比的函数performTraversals函数, 现在我们可以总结下流程了：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160651.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160651.jpg)
 
 
 
@@ -658,34 +658,34 @@ performResumeActivity就是回调onResume了， 我们继续看wm.addView方法�
 
 **结论：****所以如果我们想在界面绘制出来后做点什么，那么在onResume里面显然是不合适的，它先于measure等流程了**， **有人可能会说在onResume里面post一个runnable可以吗？还是不行，因为那样就会变成这个样子**
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160700.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160700.jpg)
 所以你的行为一样会在绘制之前执行，这个时候我们的主角IdleHandler就发挥作用了，我们前面说了，它是在looper里面message暂时执行完毕了就会回调，顾名思义嘛，Idle就是队列为空的意思，那么我们的onResume和measure, layout, draw都是一个个message的话，这个IdleHandler就提供了一个它们都执行完毕的回调了，大概就是这样
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160715.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160715.jpg)
 
 说了这么多，那么现在获取到这个时机有什么用呢？ look！！
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160725.gif)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160725.gif)
 
 
 
 这个是我们地图的公交详情页面， 进入之后产品要求左边的页卡需要展示，可以看到左边的页卡是一个非常复杂的布局，那么进入之后的效果可以明显看到头部的展示信息是先显示空白再100毫秒左右之后才展示出来的，原因就是这个页卡的内容比较复杂，用数据向它填充的时候花了较长时间，代码如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160754.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160754.png)
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160831.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160831.png)
 
 
 
 可以看到这个detailView就是这个侧滑的页卡了，填充里面的数据花了90ms，如果这个时间是用在了界面view绘制之前的话，就会出现以上的效果了，view先是白的，再出现，这样就体验不好了，如果我们把它放到IdleHandler里面呢？代码如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160440.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160440.png)
 
 
 
 效果是这样的：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160442.gif)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160442.gif)
 
 
 
@@ -697,19 +697,19 @@ performResumeActivity就是回调onResume了， 我们继续看wm.addView方法�
 
 我们先思考一个问题，如果有一个model数据管理模块，怎么设计？比如地图的收藏模块的model部分。就是下面这个图的小星星：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423161025.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423161025.jpg)
 
 
 
 它原来的model设计大概是这个样子的：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423161036.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423161036.png)
 
 
 
  由于这个model是单例的，而且是多线程可以访问的，所以它的增删改查都加上了锁，而且由于外部访问需要遍历有哪些收藏点，所以外部遍历列表也需要加锁，大概是这样的：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423161046.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423161046.png)
 
 
 
@@ -723,7 +723,7 @@ performResumeActivity就是回调onResume了， 我们继续看wm.addView方法�
 
 总之，多线程代码就是容易出错，而且真的出错的时候查起来太费劲了，目前收藏夹模块就有N多bug，所以我想用单线程来解决这个问题，由于model层的访问需要数据库和网络等，所以需要异步线程，那么单线程队列+异步线程，首先想到的就是HandlerThread, 大概架构如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423161101.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423161101.png)
 
 
 
@@ -733,7 +733,7 @@ performResumeActivity就是回调onResume了， 我们继续看wm.addView方法�
 
 Ok， 那么跟我们的主题IdleHandler有什么关系呢？思考这样一个问题，地图上的小星星需要实时更新，也就是model的任何变化都需要显示到地图上，那么收藏的小星星就应该作为model的观察者，以前的做法是向收藏model注册监听，在每一个增删改查操作后都对观察者回调，大概是这样：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423161113.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423161113.png)
 
 
 
@@ -743,7 +743,7 @@ Ok， 那么跟我们的主题IdleHandler有什么关系呢？思考这样一个
 
 那么现在改成单线程模型，我们又该如何处理这个问题呢？当然我们也能在每个post到异步线程的runnable里面去回调观察者，但这样未免不够优雅，所以这个时候IdleHandler不就又可以发挥作用了吗？它是在消息暂时处理完的时候回调的呀，不是很符合我们的时机么，对吧？
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423160933.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423160933.png)
 
 
 
@@ -793,7 +793,7 @@ Ok， 那么跟我们的主题IdleHandler有什么关系呢？思考这样一个
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423162259)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423162259)
 
 
 

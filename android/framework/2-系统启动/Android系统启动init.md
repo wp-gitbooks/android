@@ -6,30 +6,30 @@ number headings: auto, first-level 1, max 6, 1.1
 http://gityuan.com/android/
 
 # 2 线索
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051916688.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051916688.png)
 
 # 3 开机执行流程
 http://gityuan.com/android/
 
 ## 3.1 问题
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051639326.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051639326.png)
 ## 3.2 简图
 **Bootloader** ➪**Kernel** ➪**Init进程** ➪ **Zygote** ➪ **SystemServer** ➪ **ServiceManager** ➪ **Home Launcher**
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051916688.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051916688.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051502375.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051502375.png)
 
 Boot Loader 引导开机，然后依次进入 -> Kernel -> Native -> Framework -> App
 
 ## 3.3 详细图
 
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210425174235.png)
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210425174235.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051921044.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051921044.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051916688.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051916688.png)
 
 framework基本在用户空间（用户态）
 
@@ -45,16 +45,16 @@ zygote native:启动 jvm、art、jvm C/C++
 
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051509461.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051509461.png)
 
 
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309213347)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309213347)
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309213812)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309213812)
 
 ![img](https://upload-images.jianshu.io/upload_images/2929448-29279bde1a08d782.png?imageMogr2/auto-orient/strip|imageView2/2/w/916/format/webp)
 
@@ -108,7 +108,7 @@ Bootloader 引导程序一般分两个阶段执行：
 # 4 系统启动
 http://gityuan.com/android/
 
-![image-20210407190430603](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407190430.png)
+![image-20210407190430603](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407190430.png)
 
 ## 4.1 进程main方法
 | 进程              | 主方法                |
@@ -122,7 +122,7 @@ http://gityuan.com/android/
 # 5 init进程
 http://gityuan.com/2016/02/05/android-init/
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303052017453.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303052017453.png)
 
 
 ## 5.1 概述
@@ -133,7 +133,7 @@ init进程是Linux系统中用户空间的第一个进程，进程号固定为1�
 - 处理子进程的终止(signal方式)
 - 提供属性服务的功能
 
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210425174411.png)
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210425174411.png)
 
 
 
@@ -186,25 +186,25 @@ service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-sys
 
 
 ### 5.2.3 服务重启
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303060836866.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303060836866.png)
 
 
 
 
 ## 5.3 流程
 
-![zygote_init](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309093051.jpg)
+![zygote_init](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309093051.jpg)
 
 # 6 Zygote启动流程
 http://gityuan.com/2016/02/13/android-zygote/
 
 
-![zygote_process](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407172747.jpg)
+![zygote_process](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407172747.jpg)
 
 
 
 ## 6.1 主要工作
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303052014672.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303052014672.png)
 
 调用流程：
 ```java
@@ -233,7 +233,7 @@ ZygoteInit的主要工作如下：
 
 ## 6.2 流程图
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303202117472.png)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303202117472.png)
 
 
 1.  解析init.zygote.rc中的参数，创建AppRuntime并调用AppRuntime.start()方法；
@@ -244,7 +244,7 @@ ZygoteInit的主要工作如下：
 6.  zygote完毕大部分工作，接下来再通过**startSystemServer()**，fork得力帮手system_server进程，也是上层framework的运行载体。
 7.  zygote功成身退，调用**runSelectLoop()**，随时待命，当接收到请求创建新进程请求时立即唤醒并执行相应工作。
 
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309220708)
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309220708)
 ## 6.3 详细流程
 zygote是什么？
 
@@ -260,7 +260,7 @@ b、C/S
 LocalSocket
 
 了解了`Android`系统从按下开机键到桌面完整运行在用户眼前的整个流程，我们就可以针对系统的各个过程进行分析。由于是移动开发，平时最多打交道的是应用层，也是就上面的`App`层，跟我们打交道最多的就是`framework`层，我们主要关注`framework`层是如何启动并调度各应用进程协调工作的。从`ZygoteInit`的`main`方法开始，我们先看`framework`启动流程的时序图(省略了一些步骤)大体如下：
-![这里写图片描述](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708162915)
+![这里写图片描述](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708162915)
 
 ### 6.3.1 ZygoteInit.main
 ```java
@@ -725,8 +725,8 @@ LocalSocket
 可以看见启动了很多的系统服务，其中很多的服务目前也不是很了解，主要的是`ActivityMangerService`和`PackageManagerService`等主要管理系统的一些服务。自此，Android系统的`SystemServer`已经启动，并且其相关的各种系统服务已经启动，`Ams`等重要系统服务也均已开启。`Ams`是贯穿Android系统的核心服务，负责系统四大组件的启动、切换及其生命周期管理和调度等工作，各个应用程序App作为独立进程需要通过`Binder`与`Ams`进行通信，而`Ams`在`SystemServer`中通过`LocalSocket`与`Zygote`进行通信。不管是对于系统运行的原理，还是各组件的调度过程，理解`Ams`的工作原理十分重要，接下来将以此为主线，分别分析`Ams`、四大组件等的启动流程和生命周期的管理等。
 
 ## 6.4 面试题
-![image-20210413103331499](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210413103331.png)
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303101142266.png)
+![image-20210413103331499](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210413103331.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303101142266.png)
 
 
 # 7 SystemServer进程
@@ -734,15 +734,15 @@ http://gityuan.com/2016/02/14/android-system-server/
 
 http://gityuan.com/2016/02/20/android-system-server-2/
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303071449416.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303071449416.png)
 
 ## 7.1 流程
-![system_server_boot_process](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407181156.jpg)
+![system_server_boot_process](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407181156.jpg)
 
 
-![image-20210407181247452](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407181247.png)
+![image-20210407181247452](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407181247.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303101422633.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303101422633.png)
 
 SystemServer 的主要的作用是启动各种系统服务，比如 ActivityManagerService，PackageManagerService，WindowManagerService 以及硬件相关的 Service 等服务，我们平时熟知的各种系统服务其实都是在 SystemServer 进程中启动的，这些服务都运行在同一进程（即 SystemServer 进程）的不同线程中，而当我们的应用需要使用各种系统服务的时候其实也是通过与 SystemServer 进程通讯获取各种服务对象的句柄进而执行相应的操作的。在所有的服务启动完成后，会调用各服务的 service.systemReady(…) 来通知各对应的服务，系统已经就绪。
 
@@ -1007,7 +1007,7 @@ class ServiceManagerProxy implements IServiceManager {
 ```
 
 ## 8.1 面试题
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303101137773.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303101137773.png)
 
 # 9 Android系统服务的注册方式
 http://gityuan.com/2016/10/01/system_service_common/
@@ -1083,35 +1083,35 @@ Android系统中的Binder机制是一种高效的跨进程通讯机制，但是�
 ## 10.6 zygote面试题
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051518061.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051518061.png)
 
 
 
 
 setContentView在大厂面试中必问问题
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051605969.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051605969.png)
 
 PhoneWindow ----->LayoutInflater
 问题一：
 区分系统 view 和自定义
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051611953.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051611953.png)
 
 问题二：
 都不能删除
 
 问题三：
 抛异常、编译不通过
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051617819.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051617819.png)
 
 
 问题四：
 栈会溢出，出现 OOM，优化布局
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051623745.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051623745.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051630166.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051630166.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051630805.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051630805.png)
 
 
 
@@ -1124,17 +1124,17 @@ PhoneWindow ----->LayoutInflater
 
 
 C/C++代码：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051958562.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051958562.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303051959776.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303051959776.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303052001623.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303052001623.png)
 
 
 创建新进程：socket 消息，zygote 服务器等待（一个 while 的死循环等待 socket 消息）
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303052008922.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303052008922.png)
 
 
 
@@ -1154,9 +1154,9 @@ socket->效率低，socket通信，一个一个执行，不安全
 如果是 socket，zygote fork 之后每个进程都有socket
 
 binder：多线程、效率、安全
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303052028477.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303052028477.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303052033448.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303052033448.png)
 
 问题3：
 
@@ -1168,4 +1168,4 @@ binder：多线程、效率、安全
 
 
 问题6：
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303052050117.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303052050117.png)

@@ -1,7 +1,7 @@
 # 线索
 如何进行线索ANR监控？
 
-![image-20210429111425141](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210506183137.png)
+![image-20210429111425141](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210506183137.png)
 
 # 概述
 
@@ -9,7 +9,7 @@
 
 **ANR(Application Not responding)，是指应用程序未响应**，Android系统对于一些事件需要在一定的时间范围内完成，如果超过预定时间能未能得到有效响应或者响应时间过长，都会造成ANR。一般地，这时往往会弹出一个提示框，告知用户当前xxx未响应，用户可选择继续等待或者Force Close。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210429094000.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210429094000.png)
 
 
 
@@ -47,7 +47,7 @@ ContentProvider 在`10S`内没有处理完成发生ANR。 logcat日志关键字�
 
 ### 简单
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210429094305.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210429094305.png)
 
 ### 复杂
 
@@ -70,7 +70,7 @@ http://gityuan.com/2016/07/02/android-anr/
 http://gityuan.com/2016/12/02/app-not-response/
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210427173256.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210427173256.png)
 
 
 

@@ -35,7 +35,7 @@ public boolean isAsynchronous() {
 
 存到MessageQueue里的消息可能有三种：**同步消息，异步消息，屏障消息**
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210330221223.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210330221223.png)
 
 
 
@@ -78,7 +78,7 @@ private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMilli
 从代码层面上来讲，**同步屏障就是一个Message，一个target字段为空的Message**
 同步屏障可以通过MessageQueue.postSyncBarrier函数来设置
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423142533.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423142533.png)
 
 ### postSyncBarrier
 ```java
@@ -260,13 +260,13 @@ if (msg != null && msg.target == null) {
 
 ## 详细图解
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423143333.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423143333.png)
 
 当消息队列开启同步屏障的时候（即标识为`msg.target == null`），消息机制会通过循环遍历，优先处理**异步消息**。这样，同步屏障就起到了一种过滤和优先级的作用。
 
 下面用示意图简单说明：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423143354.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423143354.png)
 
  
 
@@ -350,7 +350,7 @@ private void postCallbackDelayedInternal(int callbackType,
 
 试想一下，怎么利用屏障消息的特性来达到**界面初始化和异步网络数据**的加载同时进行，而不影响界面渲染？先来看一个时序图：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423114345.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423114345.png)
 
 
 

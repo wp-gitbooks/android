@@ -8,7 +8,7 @@ https://duanqz.github.io/2017-12-25-Android-Context#11-%E9%9D%A2%E5%90%91%E5%BA%
 
 # 概述
 
-![context](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210426094805.jpg)
+![context](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210426094805.jpg)
 
 
 ```plantuml
@@ -20,7 +20,7 @@ class ContextWrapper extends Context {
 mBase 就是 ContextImpl
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303162243567.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303162243567.png)
 
 
 # Context创建过程
@@ -30,7 +30,7 @@ http://liuwangshu.cn/framework/context/2-activity-service.html
 
 
 
-![VejzTg.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210530134754.png)
+![VejzTg.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210530134754.png)
 
 
 

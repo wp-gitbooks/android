@@ -199,7 +199,7 @@ https://github.com/huanzhiyazi/articles/issues/27#ch1.3
 
 
 
-![image-20210404212324207](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210404212324.png)
+![image-20210404212324207](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210404212324.png)
 
 
 

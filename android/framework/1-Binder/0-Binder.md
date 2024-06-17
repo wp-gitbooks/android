@@ -1,13 +1,13 @@
 # 线索
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303031008534.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303031008534.png)
 
 linux-------->进程----------->IPC
 
-![image-20210524185027602](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210524185027.png)
+![image-20210524185027602](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210524185027.png)
 
 
 
-![image-20210524185138526](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210524185138.png)
+![image-20210524185138526](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210524185138.png)
 
 
 
@@ -15,7 +15,7 @@ linux-------->进程----------->IPC
 
 ## 是什么？用途？  
 Binder是Android系统中进程间通讯（IPC）的一种方式，也是Android系统中最重要的特性之一。Android中的四大组件Activity，Service，Broadcast，ContentProvider，不同的App等都运行在不同的进程中，它是这些进程间通讯的桥梁。正如其名“粘合剂”一样，它把系统中各个组件粘合到了一起，是各个组件的桥梁。
-![定义](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329094328.png)
+![定义](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329094328.png)
 现在我们可以对 Binder 做个更加全面的定义了：
 -   从进程间通信的角度看，Binder 是一种进程间通信的机制；
 -   从 Server 进程的角度看，Binder 指的是 Server 中的 Binder 实体对象；
@@ -42,7 +42,7 @@ Binder的设计采用了面向对象的思想，在Binder通信模型的四个�
 ### 驱动里面的Binder 
 Binder驱动是Android专用的，但底层的驱动架构与Linux驱动一样。binder驱动在以misc设备进行注册，作为虚拟字符设备，没有直接操作硬件，只是对设备内存的处理。主要是驱动设备的初始化(binder_init)，打开 (binder_open)，映射(binder_mmap)，数据操作(binder_ioctl)。
 
-![binder_driver](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309222632.png)
+![binder_driver](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309222632.png)
 
 
 
@@ -52,7 +52,7 @@ OK，现在大致了解Binder的通信模型，也了解了Binder这个对象在
 
 ### 深入理解Java层的Binder
 
-![image-20210407155008863](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210407155009.png)
+![image-20210407155008863](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210407155009.png)
 
 aidl接口
 
@@ -424,7 +424,7 @@ Intent intent = new Intent();
 
 
 ## 为什么用？
-![image-20210708191239800](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708191239.png)
+![image-20210708191239800](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708191239.png)
 
 [https://blog.csdn.net/universus/article/details/6211589](https://blog.csdn.net/universus/article/details/6211589)
 
@@ -435,7 +435,7 @@ Android 系统是基于 Linux 内核的，Linux 已经提供了管道、消息�
 
 对比 `Linux` （`Android`基于`Linux`）上的其他进程通信方式（管道、消息队列、共享内存、 信号量、`Socket`），`Binder` 机制的优点有：
 
-![示意图](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329104527.png)
+![示意图](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329104527.png)
 
 [https://blog.csdn.net/universus/article/details/6211589](https://blog.csdn.net/universus/article/details/6211589)
 
@@ -445,7 +445,7 @@ Android 系统是基于 Linux 内核的，Linux 已经提供了管道、消息�
 
 首先说说性能上的优势。Socket 作为一款通用接口，其传输效率低，开销大，主要用在跨网络的进程间通信和本机上进程间的低速通信。消息队列和管道采用存储-转发方式，即数据先从发送方缓存区拷贝到内核开辟的缓存区中，然后再从内核缓存区拷贝到接收方缓存区，至少有两次拷贝过程。共享内存虽然无需拷贝，但控制复杂，难以使用。Binder 只需要一次数据拷贝，性能上仅次于共享内存。
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210325154449.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210325154449.jpg)
 
 #### 稳定性
 
@@ -461,15 +461,15 @@ https://blog.csdn.net/javac_jj/article/details/94388255
 
 ### 总结 Binder 的优势
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210325154659.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210325154659.jpg)
 
 ## IPC原理  [[0-进程#Binder IPC原理]]
 ### mmap [[Android匿名共享内存]] [[2-mmap内存映射]]
 
-![binder_physical_memory](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210309223135.jpg)
+![binder_physical_memory](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210309223135.jpg)
 
 
-![binder_memory_map](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519114651.jpg)
+![binder_memory_map](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519114651.jpg)
 
 
 #### mmap 应用 [[mmap应用-京东移动日志]]
@@ -487,7 +487,7 @@ Binder驱动为我们做了一切。
 
 假设Client进程想要调用Server进程的`object`对象的一个方法`add`;对于这个跨进程通信过程，我们来看看Binder机制是如何做的。 （通信是一个广泛的概念，只要一个进程能调用另外一个进程里面某对象的方法，那么具体要完成什么通信内容就很容易了。）
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210729144404.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210729144404.png)
 
 首先，Server进程要向SM注册；告诉自己是谁，自己有什么能力；在这个场景就是Server告诉SM，它叫`zhangsan`，它有一个`object`对象，可以执行`add` 操作；于是SM建立了一张表：`zhangsan`这个名字对应进程Server;
 
@@ -511,15 +511,15 @@ Binder驱动为我们做了一切。
 ## 通信模型
 一次完成的进程间通信必然至少包含两个进程, 通常我们称通信的双方分别为客户端进程(Client) 和服务端进程(Server), 由于进程隔离机制的存在, 通信双方必然需要借助 Binder 来实现.
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528143615.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528143615.jpeg)
 
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519154235.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519154235.png)
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519154331.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519154331.png)
 
 
 ### Client/Server/ServiceManager/Binder驱动
@@ -537,11 +537,11 @@ BInder 是基于 C/S 架构. 是由一些列组件组成. 包括 Client, Server,
 
 > Client, Server, ServiceManager 都是通过系统调用 open, mmap,和ioctl 来访问设备文件 /dev/binder, 从而实现与 Binder 驱动的交互来间接的实现跨进程通信.
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202304130921069.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202304130921069.png)
 
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720180542.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720180542.png)
 
 
 ### Binder 驱动
@@ -559,7 +559,7 @@ ServiceManager 是一个进程, Server 又是一个另外的进程, Server 向
 
 
 ### Binder 进程与线程 [[Binder线程池工作原理]]
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528143951.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528143951.jpeg)
 
 对于底层Binder驱动，通过 binder_procs 链表记录所有创建的 binder_proc 结构体，binder 驱动层的每一个 binder_proc 结构体都与用户空间的一个用于 binder 通信的进程一一对应，且每个进程有且只有一个 ProcessState 对象，这是通过单例模式来保证的。在每个进程中可以有很多个线程，每个线程对应一个 IPCThreadState 对象，IPCThreadState 对象也是单例模式，即一个线程对应一个 IPCThreadState 对象，在 Binder 驱动层也有与之相对应的结构，那就是 Binder_thread 结构体。在 binder_proc 结构体中通过成员变量 rb_root threads，来记录当前进程内所有的 binder_thread。
 
@@ -582,14 +582,14 @@ ServiceManager 是一个进程, Server 又是一个另外的进程, Server 向
 # 核心组成 [[#通信模型]]
 ## Binder驱动
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528143635.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528143635.jpeg)
 
 ### 流程
 
-![binder_driver](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519114333.png)
+![binder_driver](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519114333.png)
 
 ### 系统调用
-![binder_syscall](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519114351.png)
+![binder_syscall](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519114351.png)
 
 
 ## ServerManager [[ServiceManager]]
@@ -603,11 +603,11 @@ ServiceManager 是一个进程, Server 又是一个另外的进程, Server 向
 
 ### mmap原理
 
-![image-20210708161125465](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708161125.png)
+![image-20210708161125465](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708161125.png)
 
-![image-20210708161143411](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708161143.png)
+![image-20210708161143411](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708161143.png)
 
-![image-20210708161206623](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708161206.png)
+![image-20210708161206623](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708161206.png)
 
 
 
@@ -616,21 +616,21 @@ ServiceManager 是一个进程, Server 又是一个另外的进程, Server 向
 ### Binder是如何做到一次拷贝？
 内核空间的**虚拟内存**和接收方的**用户空间**的虚拟内存同时映射在内核地址空间
 
-![image-20210708161102914](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708161102.png)
+![image-20210708161102914](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708161102.png)
 
 
 ### 为什么Binder中客户端不对内存进行映设？
 （如果映设就是内存共享mmap机制，这样就要对比Binder和mmap的区别）
-![image-20210708161353238](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708161353.png)
+![image-20210708161353238](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708161353.png)
 
-![image-20210708161433760](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708161433.png)
+![image-20210708161433760](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708161433.png)
 
 
 
 ### 数据大小 [[一次Binder通信最大可以传输多大的数据]]
 Binder通信最大可传输多大数据 ?
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210701061802.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210701061802.png)
 
 默认多大：1M-8K (通过**ProcessState**.cpp中看到BINDER_VM_SIZE)
 
@@ -675,19 +675,19 @@ oneway：调用方非阻塞（non-block）
 
 #### 非oneway机制
 
-![binder_protocol](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519114511.jpg)
+![binder_protocol](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519114511.jpg)
 
 
 
 #### oneway机制
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528140445.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528140445.png)
 
 
 
 从通信协议的角度来看这个过程:
 
-![binder_transaction](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210729154200.jpg)
+![binder_transaction](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210729154200.jpg)
 
 - Binder客户端或者服务端向Binder Driver发送的命令都是以BC_开头,例如本文的`BC_TRANSACTION`和`BC_REPLY`, 所有Binder Driver向Binder客户端或者服务端发送的命令则都是以BR_开头, 例如本文中的`BR_TRANSACTION`和`BR_REPLY`.
 - 只有当`BC_TRANSACTION`或者`BC_REPLY`时, 才调用binder_transaction()来处理事务. 并且都会回应调用者一个`BINDER_WORK_TRANSACTION_COMPLETE`事务, 经过binder_thread_read()会转变成`BR_TRANSACTION_COMPLETE`.
@@ -697,7 +697,7 @@ oneway：调用方非阻塞（non-block）
 
 上图是非oneway通信过程的协议图, 下图则是对于oneway场景下的通信协议图:
 
-![binder_transaction_oneway](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210729154218.jpg)
+![binder_transaction_oneway](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210729154218.jpg)
 
 当收到BR_TRANSACTION_COMPLETE则程序返回,有人可能觉得好奇,为何oneway怎么还要等待回应消息? 我举个例子,你就明白了.
 
@@ -730,7 +730,7 @@ oneway与非oneway: 都是需要等待Binder Driver的回应消息BR_TRANSACTION
 # Binder四层源码分析
 ## 一次完整通信
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528144609.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528144609.jpeg)
 
 -   我们在使用 Binder 时基本都是调用 framework 层封装好的方法，AIDL 就是 framework 层提供的傻瓜式是使用方式。假设服务已经注册完，我们来看看客户端怎么执行服务端的方法。
   
@@ -754,7 +754,7 @@ http://gityuan.com/2015/11/21/binder-framework/
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210528143541.jpeg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210528143541.jpeg)
 
 
 
@@ -768,13 +768,13 @@ http://gityuan.com/2015/11/21/binder-framework/
 
 ## 架构图
 
-![java_binder](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519142415.jpg)
+![java_binder](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519142415.jpg)
 
 
 
 ## 类图
 
-![class_java_binder](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519142440.jpg)
+![class_java_binder](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519142440.jpg)
 
 
 -   **ServiceManager：**通过getIServiceManager方法获取的是ServiceManagerProxy对象； ServiceManager的addService, getService实际工作都交由ServiceManagerProxy的相应方法来处理；
@@ -793,7 +793,7 @@ http://gityuan.com/2015/11/21/binder-framework/
 
 ## 类分层
 
-![java_binder_framework](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210519142502.jpg)
+![java_binder_framework](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210519142502.jpg)
 
 
 # 借鉴地方-设计巧妙-设计模式？
@@ -825,7 +825,7 @@ http://gityuan.com/2015/11/23/binder-aidl/
 
 
 # 面试题
-![image-20210628111602820](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628111602.png)
+![image-20210628111602820](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628111602.png)
 
 
 ## 为什么Android要采用binder作为IPC机制

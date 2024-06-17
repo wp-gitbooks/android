@@ -106,7 +106,7 @@ if (zygote) {
 
 这时的zygote显然是true，执行的这句话会调用到ZygoteInit.java中main函数中，这儿也通常被认为是android系统的入口，zygote进程也被认为是android的第一个进程。 **1.2.2 Exception注册器启动** 从启动zygote进程来讲解一下这个监听器的是如何被初始化的。 下面是Exception监听器的初始化过程：
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809111638.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809111638.png)
 
 下面从几个启动过程中的关键点来分析一下：
 
@@ -211,7 +211,7 @@ getUncaughtExceptionHandler().uncaughtException(this, e);
 ### 1.3.2 Exception监听器调用
 上面介绍了Exception监听器是什么？也介绍了Exception监听器的设置过程。接下里我们需要搞清楚的是Exception监听器是如何工作的。简而言之，就是什么情况下会调用dispatchUncaughtException(…)函数执行回调过程。 下面直接给出dispatchUncaughtException函数的调用过程，然后讲解一下什么情况下会执行这个调用。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809111726.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809111726.png)
 
 
 在system_server进程启动之后，开始了接下来了注册器回调的过程。 FinalizerWatchdogDaemon继承Daemon，Daemon又实现Runnable，所以执行runInternal就是执行线程，关键点就在这个线程中执行了什么？
@@ -316,7 +316,7 @@ public void uncaughtException(Thread t, Throwable e) {
 
 Exception的处理流程到AMS中，会经历那些过程，下面还是通过一些序列图来解析一下Exception处理中每一步做了什么事情。
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210809111811.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210809111811.png)
 
 - findAppProcess 根据当前传入的binder信息寻找当前出现问题的ProcessRecord信息，获取当前的ProcessRecord对象。
 - addErrorToDropBox 将上面获取的ProcessRecord对象传入，写入发生的问题的堆栈信息和其他的异常相关的信息，保存起来。

@@ -10,16 +10,16 @@ number headings: auto, first-level 1, max 6, 1.1
 
 开篇先定义问题，这篇文章主要是解决哪一类的问题，痛点是什么，之前的方案是怎么设计的，现在的技术方案跟以前相比有什么不同，对其他技术线的同学们来说有什么借鉴价值。这里提醒一句，同学们更喜欢看到方案背后的思考和分析判断，其他相关团队可借鉴复用的部分，深度思考和可借鉴性的价值越大
 
-![image-20210506150743401](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210506150755.png)
+![image-20210506150743401](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210506150755.png)
 
 
 
 
 
-![image-20210628150501458](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210628150501.png)
+![image-20210628150501458](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210628150501.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210731223143.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210731223143.png)
 # 2 概述
 
 

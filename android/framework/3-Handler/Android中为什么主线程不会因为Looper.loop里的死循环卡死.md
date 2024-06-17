@@ -3,7 +3,7 @@
 
 通过这个问题可以考察到面试者4个方面的知识：**Process/Thread，Android Binder IPC，Handler/Looper/MessageQueue消息机制，Linux pipe/epoll机制**。这些知识点也正是阿里非常注重的技术点，而就在这问题上他Pass掉了90%的面试者
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303151702615.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303151702615.png)
 
 
 # 深入细节
@@ -11,12 +11,12 @@
 ## 来源
 
 app程序入口中为主线程准备好了消息队列
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721104516.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721104516.png)
 
 ## 处理
 
 而根据Looper.loop()源码可知里面是一个死循环在遍历消息队列取消息
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721104539.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721104539.png)
 
 而且并也没看见哪里有相关代码为这个死循环准备了一个新线程去运转，但是主线程却并不会因为Looper.loop()中的这个死循环卡死，为什么呢？
 
@@ -90,7 +90,7 @@ ActivityThread的内部类H继承于Handler，通过handler消息机制，简单
 
 **最后，从进程与线程间通信的角度，通过一张图加深大家对App运行过程的理解：**
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210721104828.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210721104828.png)
 
 **system_server进程是系统进程**，java framework框架的核心载体，里面运行了大量的系统服务，比如这里提供ApplicationThreadProxy（简称ATP），ActivityManagerService（简称AMS），这个两个服务都运行在system_server进程的不同线程中，由于ATP和AMS都是基于IBinder接口，都是binder线程，binder线程的创建与销毁都是由binder驱动来决定的。
 

@@ -28,7 +28,7 @@ ActivityManagerService对于FrameWork层的重要性不言而喻，Android的四
 
 我们查看`Context`类的`startActivity`方法，发现这竟然是一个抽象类；查看`Context`的类继承关系图如下：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720204457.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720204457.png)
 
 我们看到诸如`Activity`，`Service`等并没有直接继承`Context`，而是继承了`ContextWrapper`；继续查看`ContextWrapper`的实现：
 

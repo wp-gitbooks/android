@@ -25,13 +25,13 @@ what：
 
 
 
-![image-20210524185246183](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210524185246.png)
+![image-20210524185246183](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210524185246.png)
 
 
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210530215206)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210530215206)
 
 # 3 概述
 
@@ -43,7 +43,7 @@ what：
 
 ### 3.1.1 跨线程原理
 
-![image-20210524184322741](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210524184322.png)
+![image-20210524184322741](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210524184322.png)
 
 [[Handler面试题#13、Handler是如何进行线程切换的呢？]]
 
@@ -107,7 +107,7 @@ Handler、Looper、MessageQueue、线程是一一对应关系吗？
 
 
 ### 3.2.2 架构图
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303031432637.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303031432637.png)
 - **Looper**有一个MessageQueue消息队列；
 - **MessageQueue**有一组待处理的Message；
 - **Message**中有一个用于处理消息的Handler；
@@ -123,11 +123,11 @@ Handler、Looper、MessageQueue、线程是一一对应关系吗？
 ### 3.3.1 流程图
 Looper  同   Thread关联
 
-![handler_java](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310203335.jpg)
+![handler_java](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310203335.jpg)
 
 
 
-![image-20210524184122960](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210524184123.png)
+![image-20210524184122960](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210524184123.png)
 
 
 
@@ -146,7 +146,7 @@ Looper  同   Thread关联
 **Binder/Socket用于进程间通信，而Handler消息机制用于同进程的线程间通信**，Handler消息机制是由一组MessageQueue、Message、Looper、Handler共同组成的，为了方便且称之为Handler消息机制。
 
 
-![handler_communication](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310142802.jpg)
+![handler_communication](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310142802.jpg)
 
 
 ### 3.3.3 生产者-消费者模型
@@ -155,7 +155,7 @@ Looper  同   Thread关联
 
 一个简单的生产者-消费者模型如下图所示：
 
-![Simple Producer-Consumer](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423102736.png)
+![Simple Producer-Consumer](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423102736.png)
 
 在该模型中，有 4 个主要的角色：
 
@@ -169,7 +169,7 @@ Looper  同   Thread关联
 
 Handler 继承了生产者-消费者模型的思想，如下图所示：
 
-![Handler Producer-Consumer](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423102755.png)
+![Handler Producer-Consumer](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423102755.png)
 
 其要点如下：
 
@@ -298,16 +298,16 @@ public Handler(Looper looper, Callback callback, boolean async) {
 
 
 ## 4.3 消息处理
-![image-20210629182841978](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210629182842.png)
+![image-20210629182841978](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210629182842.png)
 
 ### 4.3.1 消息发送(sendMessage、postRunnable) 
 普通消息、空消息、延迟消息、指定时间消息、发送到队列最前面消息
 1、空消息用途？
 2、延迟消息实现？
 
-![image-20210524184045429](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210629182441.png)
+![image-20210524184045429](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210629182441.png)
 
-![java_sendmessage](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423105249.png)
+![java_sendmessage](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423105249.png)
 
 ```plantuml
 Handler -> Handler:sendMesage
@@ -510,7 +510,7 @@ private static Message getPostMessage(Runnable r, Object token) {
 
 ## 4.4 消息分发机制
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423153046)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423153046)
 
 在Looper.loop()中，当发现有消息时，调用消息的目标handler，执行dispatchMessage()方法来分发消息。
 
@@ -637,7 +637,7 @@ nativePollOnce    //block阻塞
 
 nativeWake
 
-![image-20210708153954547](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708153954.png)
+![image-20210708153954547](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708153954.png)
 
 ## 4.10 Handler价值：卡顿监控 [[BlockCanary]]  
 https://juejin.cn/post/7179959600001581116
@@ -1357,7 +1357,7 @@ MessageQueue可以注册HandlerIdle监听,此处对注册的HandlerIdle做回调
 
 从select、poll、epool机制
 
-![Blocked IO](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210423104036.png)
+![Blocked IO](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210423104036.png)
 
 
 
@@ -1602,7 +1602,7 @@ recycle()，将Message加入到消息池的过程，都是把Message加到链表
 
 # 8 总结
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210524110043.png)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210524110043.png)
 
 
 

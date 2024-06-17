@@ -174,7 +174,7 @@ Linux 上IO多路复用方案有 **select、poll、epol**l。它们三个中 epo
 
 Android 是禁止App往MessageQueue插入同步屏障消息的，代码会报错
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227144.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227144.webp)
 
 系统一些高优先级的操作会使用到同步屏障消息，例如View在绘制的时候，最终都要调用`ViewRootImpl`的`scheduleTraversals`方法，会往`MessageQueue`插入同步屏障消息，绘制完成后会移除同步屏障消息。
 
@@ -434,7 +434,7 @@ fun method(){
 
 目前微信的Matrix 使用的卡顿监控方案就是字节码插桩，如下图所示
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227146.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227146.webp)
 
 插桩需要注意的问题：
 
@@ -737,11 +737,11 @@ service、broadcast、provider 的ANR原理都是**埋定时炸弹和拆炸弹**
 
 首先看主线程，搜索 main
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227147.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227147.webp)
 
 ANR日志中有很多信息，可以看到，主线程id是1（tid=1），在等待一个锁，这个锁一直被id为22的程持有，那么看下22号线程的堆栈
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227148.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227148.webp)
 
 id为22的线程是Blocked状态，正在等待一个锁，这个锁被id为1的线程持有，同时这个22号线程还持有一个锁，这个锁是主线程想要的。
 
@@ -770,7 +770,7 @@ _如果是线上问题，怎么样才能拿到ANR日志呢？_
 1、traces.txt 里面包含所有线程的信息，上传之后需要人工过滤分析  
 2、很多高版本系统需要root权限才能读取 /data/anr这个目录
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227149.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227149.webp)
 
 既然这个方案存在问题，那么可还有其它办法？
 
@@ -845,7 +845,7 @@ _如果是线上问题，怎么样才能拿到ANR日志呢？_
 
 ANRWatchDog 会出现漏检测的情况，看图
 
-![ANRWatchDog漏检测](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227150.webp)
+![ANRWatchDog漏检测](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227150.webp)
 
 如上图这种情况，红色表示卡顿，
 
@@ -920,13 +920,13 @@ ANRWatchDog 漏检测的问题，根本原因是因为线程睡眠5s，不知道
 
 ### 测试ANR
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227151.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227151.webp)
 
 ### ANR检测结果
 
 logcat打印所示
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227152.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227152.webp)
 
 主线程卡顿超过5s，会打堆栈信息，如果是卡顿1-5s内，会有warning的log 提示，线下可以做成弹窗或者toast提示，
 
@@ -978,7 +978,7 @@ _此方案可以结合`ProcessLifecycleOwner`，应用在前台才开启检测�
 
 函数：**Monitor::GetContendedMonitor**
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227153.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227153.webp)
 
 从源码和源码的解释可以看出，这个函数是用来获取当前线程等待的Monitor。
 
@@ -1048,7 +1048,7 @@ Java的Class对象包括三部分组成：
 
 **函数：Monitor::GetLockOwnerThreadId**
 
-![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227154.webp)
+![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227154.webp)
 
 用同样的方式来获取这个函数符号地址
 
@@ -1135,7 +1135,7 @@ map[B]=A
 
 最后通过互斥条件判断出死锁线程，把造成死锁的线程堆栈信息输出，如下
 
- ![image.png](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303232227155.webp)
+ ![image.png](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303232227155.webp)
 
 检查出死锁，线下可以弹窗或者toast，线上则可以采集数据上报。
 

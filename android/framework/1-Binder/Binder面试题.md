@@ -105,7 +105,7 @@ https://zhuanlan.zhihu.com/p/92769131
 
 
 
-![nanchen](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210329182020)
+![nanchen](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210329182020)
 
 
 
@@ -301,9 +301,9 @@ http://vanelst.site/2020/08/07/binder-question/
    2. 在内核空间开辟一块内核缓存区，建立内核缓存区和内核中数据接收缓存区之间的映射关系，以及内核中数据接收缓存区和接收进程用户空间地址的映射关系；
    3. 发送方进程通过系统调用 copy*from*user() 将数据 copy 到内核中的内核缓存区，由于内核缓存区和接收进程的用户空间存在内存映射，因此也就相当于把数据发送到了接收进程的用户空间，这样便完成了一次进程间的通信。
 
-   ![IPC](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512144913.png)
+   ![IPC](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512144913.png)
 
-   ![binder-IPC](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512144922.png)
+   ![binder-IPC](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512144922.png)
 
 8. Binder Server都会在ServiceManager中注册吗
 
@@ -360,7 +360,7 @@ http://vanelst.site/2020/08/07/binder-question/
 
     3. 通过第二步 Client 通过 Handle 句柄获取 binder_ref，进而就可以访问 Service服务了。
 
-       ![IPC](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512144939.PNG)
+       ![IPC](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512144939.PNG)
 
     getService 之后，便可以获取 binder_ref 引用，进而获取到 binder_proc 与 binder_node 信息，之后 Client 便可有目的的将 binder_transaction 事务插入到 binder_proc 的待处理列表，并且，如果进程正在睡眠，就唤起进程，其实这里到底是唤起进程还是线程也有讲究，对于 Client 向 Service 发送请求的状况，一般都是唤醒 binder_proc 上睡眠的线程。
 
@@ -504,7 +504,7 @@ http://vanelst.site/2020/08/07/binder-question/
 
 25. Binder 在传输数据的时候是如何层层封装的–不同层次使用的数据结构（命令的封装）
 
-    ![binder-data](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210512144949.jpg)
+    ![binder-data](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210512144949.jpg)
 
 26. ServiceManager addService的限制
 

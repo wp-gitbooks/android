@@ -286,13 +286,13 @@ public class MyData implements Parcelable {
 
 该工程会生成一个apk，安装到手机，打开apk，界面如下：
 
-![apk](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210723102450.png)
+![apk](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210723102450.png)
 
 界面上有三个按钮，分别是功能分别是bindService(绑定Service), unbindService(解除绑定Service), killProcess(杀死Service进程)。
 
 从左往右，依次点击界面，可得：
 
-![apk](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210723102535.png)
+![apk](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210723102535.png)
 
 
 
@@ -425,12 +425,12 @@ https://zhuanlan.zhihu.com/p/338093696
 [[1-Android插件化开发指南#AIDL原理]]
 
 ## 调用图
-![aidl image](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210723102240.jpg)
-![image-20210723104911593](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210723104911.png)
+![aidl image](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210723102240.jpg)
+![image-20210723104911593](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210723104911.png)
 ## 类关系图
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210729145612.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210729145612.png)
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210729150121.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210729150121.png)
 
 ### 获取代理对象Proxy
 
@@ -465,7 +465,7 @@ IRemoteService.Stub.asInterface(service);
 
 
 ## 数据流  [[0-Binder#通信协议]]
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210729151505.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210729151505.png)
 
 
 

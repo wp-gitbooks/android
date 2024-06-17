@@ -422,7 +422,7 @@ Service组件与Activity组件另外一个不同点在于，对同一个Service�
 
 上文指出，我们不能套用Activity的方案实现Service组件的插件化，可以通过手动控制Service组件的生命周期实现；我们先来看一下Service的生命周期：
 
-[![Service生命周期](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210720205132.png)](http://weishu.dimensionalzone.com/201601/1462949033406.png)
+[![Service生命周期](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210720205132.png)](http://weishu.dimensionalzone.com/201601/1462949033406.png)
 
 [*Service生命周期*](http://weishu.dimensionalzone.com/201601/1462949033406.png)
 

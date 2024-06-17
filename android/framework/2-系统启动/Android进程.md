@@ -14,7 +14,7 @@ https://mp.weixin.qq.com/s/k1cd4s18tmF4kqHj4unOTA
 
 http://gityuan.com/tags/#PMS
 
-![image-20210412170724052](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210412170724.png)
+![image-20210412170724052](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210412170724.png)
 
 ## 概述
 
@@ -34,7 +34,7 @@ fork()采用copy on write技术，这是linux创建进程的标准方法，调�
 
 fork()的主要工作是寻找空闲的进程号pid，然后从父进程拷贝进程信息，例如数据段和代码段，fork()后子进程要执行的代码等。 Zygote进程是所有Android进程的母体，包括system_server和各个App进程。zygote利用fork()方法生成新进程，对于新进程A复用Zygote进程本身的资源，再加上新进程A相关的资源，构成新的应用进程A。其中下图中Zygote进程的libc、vm、preloaded classes、preloaded resources是如何生成的，可查看另一个文章[Android系统启动-zygote篇](http://gityuan.com/2016/02/13/android-zygote/#preload)，见下图：
 
-![zygote_fork](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210316154830.jpg)
+![zygote_fork](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210316154830.jpg)
 
 copy-on-write过程：当父子进程任一方修改内存数据时（这是on-write时机），才发生缺页中断，从而分配新的物理内存（这是copy操作）。
 
@@ -50,7 +50,7 @@ copy-on-write原理：写时拷贝是指子进程与父进程的页表都所指�
 
 http://gityuan.com/2016/03/26/app-process-create/
 
-![start_app_process](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310210944.jpg)
+![start_app_process](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310210944.jpg)
 
 
 
@@ -62,7 +62,7 @@ http://gityuan.com/2016/04/16/kill-signal/
 
 ## 进程绝杀技--forceStop
 
-![am_force_stop](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310211436.jpg)
+![am_force_stop](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310211436.jpg)
 
 
 
@@ -74,7 +74,7 @@ http://gityuan.com/2016/04/16/kill-signal/
 
 
 
-![app_process_ipc](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210310211229.jpg)
+![app_process_ipc](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210310211229.jpg)
 
 
 

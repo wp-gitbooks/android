@@ -6,7 +6,7 @@ http://gityuan.com/android/
 
 ## 架构图
 
-![android-stack](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210324215001.png)
+![android-stack](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210324215001.png)
 
 
 
@@ -21,5 +21,5 @@ http://gityuan.com/android/
 
 
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210404112826.jpg)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210404112826.jpg)
 

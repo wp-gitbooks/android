@@ -1,10 +1,10 @@
 # 面试题
-![image-20210524184449133](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210630180039.png)
+![image-20210524184449133](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210630180039.png)
 
-![image-20210722174217207](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210722174217.png)
+![image-20210722174217207](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210722174217.png)
 
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303011508970.png)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303011508970.png)
 
 
 https://www.bilibili.com/video/BV1eX4y1u7aY?p=1
@@ -423,7 +423,7 @@ public class MainActivity extends AppCompatActivity {
 
 运行一下上述代码，发现会Crash，如下图：
 
-![img](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210629184434)
+![img](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210629184434)
 
 报了一个空指针异常，原因就是多线程并发，当主线程执行到sendEnptyMessage时，子线程的Handler还没有创建。因此我们可以在获取Handler的时候让主线程休眠一下在执行，应用就不会Crash了，打开上面代码的注释即可
 
@@ -655,7 +655,7 @@ https://juejin.cn/post/6844903834301497352#heading-5
 
 a、内部类持有外部类引用
 
-![image-20210708153908886](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708153908.png)
+![image-20210708153908886](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708153908.png)
 
 
 
@@ -669,7 +669,7 @@ nativePollOnce    //block阻塞
 
 nativeWake
 
-![image-20210708153954547](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708153954.png)
+![image-20210708153954547](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708153954.png)
 
 
 
@@ -1467,7 +1467,7 @@ Message next() {
 
 ### 常见面试
 
-![image-20210524184449133](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210630180039.png)
+![image-20210524184449133](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210630180039.png)
 
 
 
@@ -1619,7 +1619,7 @@ Message.obtain
 
 单独new Message会存在内存抖动：     new      释放   （内存时大时小，会频繁gc）——>会导致卡顿
 
-![image-20210708154140476](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/20210708154140.png)
+![image-20210708154140476](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/20210708154140.png)
 
 
 

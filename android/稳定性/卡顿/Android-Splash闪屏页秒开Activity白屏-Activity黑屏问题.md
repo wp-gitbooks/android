@@ -86,7 +86,7 @@ splash_icon.xml
 
 这样设置之后，当你点击APP，会立马进入你配置的界面，然后启动欢迎页，效果如下
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303231522170.gif)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303231522170.gif)
 
 那么，将preview window直接设置为图片和设置为xml文件有什么区别或者优劣呢？我先卖个关子。先谈谈这种方案的优劣，首先这种方案已经解决了原生preview window的单调难看的问题，在原来的基础上进一步提升了用户体验。可是我们的APP都是有欢（guang）迎（gao）页的，从preview window跳转到欢（guang）迎（gao）页是不可避免的，这样的话，两个界面的切换就会显得很突兀的，
 
@@ -100,7 +100,7 @@ splash_icon.xml
 
 废话少说，我们先来看效果
 
-![](http://wupan.dns.army:5000/wupan/Typora-Picgo-Gitee/raw/branch/master/img/202303231522171.gif)
+![](https://cdn.jsdelivr.net/gh/wp3355168/Typora-Picgo-Gitee/img/202303231522171.gif)
 
   
 有了动画之后，界面切换顺畅了许多。
